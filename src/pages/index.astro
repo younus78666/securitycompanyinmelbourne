@@ -81,12 +81,14 @@ const schema = {
   ],
 };
 
-const logoSvg = (lt, st, tag) => `
-  <svg class="logo" viewBox="0 0 250 50" role="img" aria-label="${site.brand}">
-    <path d="M16 4l13 5v11c0 9-6.5 15.5-13 18-6.5-2.5-13-9-13-18V9l13-5z" fill="${lt}"/>
-    <path d="M9.5 19.5l4.5 4.5 9-10" fill="none" stroke="${st}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="40" y="26" font-family="Fraunces, Georgia, serif" font-size="21" font-weight="600" fill="${lt}" letter-spacing="1">SENTINEL</text>
-    <text x="41" y="40" font-family="Inter, sans-serif" font-size="8.2" font-weight="600" fill="${tag}" letter-spacing="3">SECURITY · MELBOURNE</text>
+// Refined brand lockup: crest shield + double-chevron (vigilance) mark + editorial wordmark.
+// args: (main = shield+wordmark colour, accent = chevron, tag = tagline colour)
+const logoSvg = (main, accent, tag) => `
+  <svg class="logo" viewBox="0 0 252 52" role="img" aria-label="${site.brand}">
+    <path d="M23 2.5L41.5 9v14.5C41.5 35 33 44.5 23 48 13 44.5 4.5 35 4.5 23.5V9z" fill="${main}"/>
+    <path d="M14 25l9-6.5 9 6.5M14 33l9-6.5 9 6.5" fill="none" stroke="${accent}" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="58" y="30.5" font-family="Fraunces, Georgia, serif" font-size="27" font-weight="600" fill="${main}" letter-spacing="-.3">Sentinel</text>
+    <text x="59.5" y="43.5" font-family="Inter, sans-serif" font-size="8.3" font-weight="600" fill="${tag}" letter-spacing="3.1">SECURITY · MELBOURNE</text>
   </svg>`;
 ---
 <Base>
