@@ -173,6 +173,117 @@ export const services = [
     ],
   },
   {
+    slug: "vip-close-protection-melbourne",
+    primaryKW: "vip security melbourne",
+    breadcrumb: "VIP & Close Protection",
+    title: "VIP Security Melbourne | Close Protection & Bodyguards",
+    metaDesc: "Need VIP security in Melbourne? We provide licensed, discreet close protection officers and bodyguards for executives and events. Insured. Get a quote.",
+    h1: "VIP Security and Close Protection in Melbourne",
+    heroImg: "/assets/feature-vip.webp",
+    heroAlt: "Licensed close protection officer escorting a client in Melbourne",
+    og: "/assets/og/vip-close-protection-melbourne.jpg",
+    intro: "VIP close protection in Melbourne is personal security from a licensed close protection officer who safeguards an individual through travel, events and daily movements. Discreet, planned and confidential, it's the quiet, professional cover that keeps executives, public figures and families safe.",
+    midcta: { b: "Need discreet personal protection?", span: "Licensed, confidential close protection officers across Melbourne." },
+    related: ["event-security-melbourne", "corporate-security-melbourne", "security-guards-melbourne"],
+    quote: { text: "We brought in close protection for a visiting executive with a packed three-day schedule. The advance work was meticulous, the officers were invisible to everyone but us, and every movement ran on time and without a hitch. Exactly the discretion we needed.", name: "Executive Assistant", role: "Multinational, Melbourne visit", initials: "EA" },
+    sections: [
+      { id: "what", h2: "What is VIP close protection in Melbourne?", type: null, bg: "bg-white", cta: true,
+        leadHtml: "VIP close protection is personal security provided by a licensed close protection officer who safeguards an individual from threats during travel, events and daily movements. It blends planning, discretion and trained response, keeping the client safe without turning their day into a spectacle. It's a specialist part of our <a href='/security-services-melbourne/'>full range of security services</a>.",
+        bodyHtml: "<p>Good close protection is mostly invisible. The work happens before the client even arrives: routes checked, venues scoped, risks weighed. On the day, the officer stays close enough to act and far enough back to let the client live their life. Done right, the only people who notice the protection are the ones who'd think twice because of it.</p>",
+        bool: { q: "Is a bodyguard the same as a close protection officer?", a: "Yes, more or less. Close protection officer is the professional term for what people call a bodyguard. The difference is training and licensing. A licensed close protection officer plans, assesses risk and works to a protocol, rather than just standing beside someone." } },
+      { id: "why-need", h2: "Why do you need VIP close protection?", type: "iconlist", bg: "bg-mist",
+        lead: "You need VIP close protection for executive travel, public appearances, specific threats, high-net-worth lifestyles, or simply discreet escort through a busy event. A trained officer manages risk you can't see and lets you focus on why you're there, not on who's around you.",
+        bodyHtml: "<p>Protection isn't only for the famous. Executives carrying sensitive deals, public figures facing online threats, visiting dignitaries on tight schedules, and high-net-worth families all have reasons to want a trained professional nearby. The point isn't to look important. It's to make sure a known risk, or an unknown one, never gets the chance to become a problem.</p>",
+        items: [
+          { icon: "briefcase", b: "Executive travel", p: "Safe, smooth movement for business leaders on the move." },
+          { icon: "users", b: "Public figures", p: "Discreet cover at appearances, events and in public." },
+          { icon: "shieldcheck", b: "Specific threats", p: "A trained response when there's a real, named risk." },
+          { icon: "heart", b: "High-net-worth families", p: "Quiet, ongoing protection that fits family life." },
+          { icon: "event", b: "Event escort", p: "Calm, low-profile escort through busy functions." },
+        ] },
+      { id: "services", h2: "What do our VIP and close protection services include?", type: "cards", bg: "bg-white", cta: true,
+        leadHtml: "Our close protection covers personal protection officers, secure transport, advance route planning, event protection and residential details. It draws on the same licensed team behind <a href='/security-guards-melbourne/'>our Melbourne security guards</a> and <a href='/event-security-melbourne/'>event security guards</a>.",
+        items: [
+          { icon: "shieldcheck", name: "Personal protection officers", note: "Trained close protection officers assigned to the client." },
+          { icon: "patrol", name: "Secure transport", note: "Security-trained drivers and planned, checked routes." },
+          { icon: "pin", name: "Advance route planning", note: "Venues and routes scoped and risk-assessed beforehand." },
+          { icon: "event", name: "Event protection", note: "Low-profile cover through functions and public events." },
+          { icon: "home", name: "Residential details", note: "Ongoing protection at home for clients who need it." },
+          { icon: "lock", name: "Confidential service", note: "Every arrangement handled with strict discretion." },
+        ] },
+      { id: "who", h2: "Who do we protect?", type: "pills", bg: "bg-mist",
+        leadHtml: "We protect anyone who needs discreet personal security in Melbourne, often alongside the <a href='/corporate-security-melbourne/'>corporate security services</a> we run for their organisation.",
+        items: [
+          { icon: "briefcase", label: "Executives" }, { icon: "users", label: "Public figures" },
+          { icon: "shieldcheck", label: "Dignitaries" }, { icon: "heart", label: "High-net-worth families" },
+          { icon: "event", label: "Visiting delegations" }, { icon: "home", label: "Private clients" },
+        ] },
+      { id: "how", h2: "How does our close protection service work?", type: null, bg: "bg-white",
+        lead: "Our close protection works to a clear protocol: threat assessment, a protection plan, officer assignment, advance work, the ongoing detail and a debrief. Most of the safety is built in before the client moves, which is exactly why it looks so effortless on the day.",
+        bodyHtml: "<p>This is the part that separates a professional detail from someone just standing around. Every assignment starts with assessment and planning, then advance work checks the ground before the client ever sets foot on it. Here's the path a protection detail follows.</p>",
+        viz: `<svg viewBox="0 0 820 150" role="img" aria-label="VIP close protection detail workflow, step by step">
+  <g font-family="Inter, system-ui, sans-serif">
+    <g><rect x="6" y="28" width="124" height="86" rx="11" fill="#3B3B25"/><text x="68" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">1</text><text x="68" y="74" text-anchor="middle" font-size="12.5" fill="#F5F1E8">Threat</text><text x="68" y="91" text-anchor="middle" font-size="12.5" fill="#F5F1E8">assessment</text></g>
+    <g><rect x="142" y="28" width="124" height="86" rx="11" fill="#3B3B25"/><text x="204" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">2</text><text x="204" y="74" text-anchor="middle" font-size="12.5" fill="#F5F1E8">Protection</text><text x="204" y="91" text-anchor="middle" font-size="12.5" fill="#F5F1E8">plan</text></g>
+    <g><rect x="278" y="28" width="124" height="86" rx="11" fill="#3B3B25"/><text x="340" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">3</text><text x="340" y="74" text-anchor="middle" font-size="12.5" fill="#F5F1E8">Advance</text><text x="340" y="91" text-anchor="middle" font-size="12.5" fill="#F5F1E8">work</text></g>
+    <g><rect x="414" y="28" width="124" height="86" rx="11" fill="#3B3B25"/><text x="476" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">4</text><text x="476" y="74" text-anchor="middle" font-size="12.5" fill="#F5F1E8">Secure</text><text x="476" y="91" text-anchor="middle" font-size="12.5" fill="#F5F1E8">transport</text></g>
+    <g><rect x="550" y="28" width="124" height="86" rx="11" fill="#3B3B25"/><text x="612" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">5</text><text x="612" y="74" text-anchor="middle" font-size="12.5" fill="#F5F1E8">Close</text><text x="612" y="91" text-anchor="middle" font-size="12.5" fill="#F5F1E8">escort</text></g>
+    <g><rect x="686" y="28" width="124" height="86" rx="11" fill="#C7D43F"/><text x="748" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#2D2D1C">6</text><text x="748" y="74" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2D2D1C">Debrief</text><text x="748" y="91" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2D2D1C">&amp; report</text></g>
+    <path d="M132 71 l8 0 M137 67 l5 4 -5 4" fill="none" stroke="#3B3B25" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M268 71 l8 0 M273 67 l5 4 -5 4" fill="none" stroke="#3B3B25" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M404 71 l8 0 M409 67 l5 4 -5 4" fill="none" stroke="#3B3B25" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M540 71 l8 0 M545 67 l5 4 -5 4" fill="none" stroke="#3B3B25" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M676 71 l8 0 M681 67 l5 4 -5 4" fill="none" stroke="#3B3B25" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
+<p class="viz-cap">How a protection detail is planned and run. Most of the safety is built in before the client moves.</p>` },
+      { id: "why-choose", h2: "Why choose us for VIP security in Melbourne?", type: "iconlist", bg: "bg-mist",
+        leadHtml: "Choose us for VIP security because our close protection officers are licensed, discreet and experienced, we keep every arrangement confidential, and we're insured, police-checked and available 24/7. We're a <a href='/licensing-compliance/'>fully licensed and insured</a> Victorian firm built for discretion.",
+        items: [
+          { icon: "shieldcheck", b: "Licensed officers", p: "Bodyguard-endorsed Victorian licences, police-checked." },
+          { icon: "lock", b: "Strict confidentiality", p: "Your arrangements stay private, always." },
+          { icon: "users", b: "Discreet & experienced", p: "Low-profile officers who blend in and stay sharp." },
+          { icon: "clock", b: "24/7 availability", p: "Rapid, on-demand cover whenever you need it." },
+        ] },
+      { id: "licence", h2: "What licence does a close protection officer need in Victoria?", type: "table", bg: "bg-white",
+        leadHtml: "A close protection officer in Victoria needs a Private Security Individual Operator Licence with a bodyguard category, endorsed by Victoria Police under the Private Security Act. Carrying a firearm needs a separate endorsement and is rare. You can always ask to see the licence. See our <a href='/licensing-compliance/'>licensing and compliance</a> page.",
+        bodyHtml: "<p>This is worth knowing before you hire anyone. A bodyguard category is a specific endorsement, not a general guard licence, and it signals the officer has trained for one-on-one protection work. Firearms are a separate matter again, tightly controlled and uncommon in Australian close protection. Here's how the credentials stack up.</p>",
+        head: ["Credential", "What it covers", "VIC status"],
+        rows: [
+          ["Bodyguard / CPO category", "One-on-one personal protection", "Required, endorsed by Victoria Police"],
+          ["Unarmed close protection", "Almost all CP work in Victoria", "Standard"],
+          ["Firearms endorsement", "Carrying a firearm on a detail", "Rare, tightly controlled, role-justified"],
+        ],
+        note: "All our close protection officers hold the bodyguard category and are police-checked.",
+        bool: { q: "Can a close protection officer carry a firearm in Victoria?", a: "No, not unless they hold a specific firearms endorsement justified by the role. Almost all close protection in Victoria is unarmed, relying on planning, awareness and trained response. Armed details are rare and tightly controlled under Victorian law." } },
+      { id: "cost", h2: "How much does close protection cost in Melbourne?", type: "table", bg: "bg-mist", cta: true,
+        lead: "Close protection in Melbourne is usually priced as a day rate per officer in 2026, with multi-day rates, after-hours loadings and team pricing for higher-risk work. A single officer costs less than a two-officer team or a detail with secure transport. Get a confidential quote for your needs.",
+        bodyHtml: "<p>Because every assignment is different, close protection is quoted to the job rather than a flat hourly rate. A few hours of discreet event escort is a world away from a multi-day detail with advance work and secure transport. We'll scope the risk, recommend the right level, and give you a clear day-rate quote with no surprises. <a href='/contact/'>Get a confidential quote</a> to start.</p>",
+        head: ["Service level", "Day rate", "Multi-day", "Notes"],
+        rows: [
+          ["Single officer", "from a set day rate", "discounted", "Discreet personal escort"],
+          ["Two-officer team", "higher day rate", "discounted", "Higher-risk or busy schedules"],
+          ["Secure transport + driver", "quoted", "quoted", "Security-trained driver included"],
+        ],
+        note: "Estimate only for 2026. Priced to the assignment. Get a confidential quote for exact rates." },
+      { id: "areas", h2: "Where do we provide close protection across Melbourne?", type: "areas", bg: "bg-white",
+        lead: "We provide VIP close protection across Melbourne and Victoria, from the CBD and airport to events, venues and private residences, plus Geelong and Dandenong. We travel with the client wherever the schedule takes them.",
+        items: ["Melbourne CBD", "Melbourne Airport", "Events & venues", "Private residences", "Statewide travel", "Geelong", "Dandenong"],
+        link: { href: "/service-areas/", label: "See all areas we cover" } },
+    ],
+    faqs: [
+      { q: "What does a close protection officer do?", a: "A close protection officer safeguards a client through travel, events and daily movements. They assess threats, plan routes, do advance work on venues, stay close during the day, and respond to any risk, all while staying discreet and keeping the client's schedule on track." },
+      { q: "What licence does a bodyguard need in Victoria?", a: "A bodyguard, or close protection officer, needs a Private Security Individual Operator Licence with a bodyguard category, endorsed by Victoria Police under the Private Security Act. It's a specific endorsement, not a general guard licence, and you can ask to see it." },
+      { q: "Can a close protection officer carry a firearm in Victoria?", a: "No, not unless they hold a specific firearms endorsement justified by the role. Almost all close protection in Victoria is unarmed, relying on planning, awareness and trained response. Armed details are rare and tightly controlled under Victorian law." },
+      { q: "Can I hire close protection for a single day or event?", a: "Yes. We provide close protection for single days, events and short engagements, as well as ongoing details. Tell us the schedule and the risk, and we'll assign the right officer or team just for that period, with no lock-in." },
+      { q: "Are your close protection officers licensed in Victoria?", a: "Yes. Every officer holds a current Victorian Private Security Individual Operator Licence with a bodyguard category and is police-checked. Our business holds a Private Security Business Licence you can verify with Victoria Police at any time." },
+      { q: "Are your officers insured and police-checked?", a: "Yes. We carry public liability insurance and every close protection officer passes a national police check before any assignment, so you get experienced, properly vetted protection you can trust with your safety." },
+      { q: "How quickly can I arrange close protection?", a: "Often within hours for urgent needs, though more notice lets us do proper advance work, which is where much of the value sits. We run a 24/7 team across Melbourne, so call us and we'll move as fast as your situation requires." },
+      { q: "Do you keep VIP arrangements confidential?", a: "Yes, always. Confidentiality is central to close protection. We keep every arrangement, schedule and client detail strictly private, and our officers are experienced in discreet, low-profile work that never draws attention to you." },
+    ],
+  },
+
+  {
     slug: "k9-security-melbourne",
     primaryKW: "k9 security melbourne",
     breadcrumb: "K9 Dog Security",
