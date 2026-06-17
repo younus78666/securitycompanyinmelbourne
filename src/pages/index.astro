@@ -84,11 +84,13 @@ const schema = {
 // Refined brand lockup: crest shield + double-chevron (vigilance) mark + editorial wordmark.
 // args: (main = shield+wordmark colour, accent = chevron, tag = tagline colour)
 const logoSvg = (main, accent, tag) => `
-  <svg class="logo" viewBox="0 0 252 52" role="img" aria-label="${site.brand}">
-    <path d="M23 2.5L41.5 9v14.5C41.5 35 33 44.5 23 48 13 44.5 4.5 35 4.5 23.5V9z" fill="${main}"/>
-    <path d="M14 25l9-6.5 9 6.5M14 33l9-6.5 9 6.5" fill="none" stroke="${accent}" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="58" y="29.5" font-family="Fraunces, Georgia, serif" font-size="30" font-weight="600" fill="${main}" letter-spacing=".5">SCM</text>
-    <text x="59.5" y="43" font-family="Inter, sans-serif" font-size="7.2" font-weight="600" fill="${tag}" letter-spacing="1.55">SECURITY COMPANY MELBOURNE</text>
+  <svg class="logo" viewBox="0 0 232 54" role="img" aria-label="${site.brand}">
+    <path d="M24 3L43 9.7v14.8C43 36.4 34.3 46 24 49.6 13.7 46 5 36.4 5 24.5V9.7z" fill="${main}"/>
+    <path d="M14.5 25.5l9.5-7 9.5 7M14.5 34l9.5-7 9.5 7" fill="none" stroke="${accent}" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="58" y="36" font-family="Fraunces, Georgia, serif" font-size="30" font-weight="600" fill="${main}" letter-spacing="0">SCM</text>
+    <rect x="123" y="15" width="1.6" height="24" rx="0.8" fill="${accent}"/>
+    <text x="133" y="27" font-family="Inter, sans-serif" font-size="8" font-weight="700" fill="${main}" letter-spacing="1.2">SECURITY COMPANY</text>
+    <text x="133" y="38.5" font-family="Inter, sans-serif" font-size="8" font-weight="600" fill="${tag}" letter-spacing="4.55">MELBOURNE</text>
   </svg>`;
 
 // Animated brand mark (pulsing ring + scanning chevrons) — used as emblem + background watermark
