@@ -14,10 +14,11 @@ export const logoSvg = (main, accent, tag) => `
 // Animated brand mark (pulsing ring + scanning chevrons)
 export const animMark = (shield, chev, ring) => `
   <svg class="amark" viewBox="0 0 46 50" aria-hidden="true">
-    <circle class="ring" cx="23" cy="25" r="20" fill="none" stroke="${ring}" stroke-width="1"/>
+    <circle class="ring" cx="23" cy="24" r="20" fill="none" stroke="${ring}" stroke-width="1"/>
     <path d="M23 2.5L41.5 9v14.5C41.5 35 33 44.5 23 48 13 44.5 4.5 35 4.5 23.5V9z" fill="${shield}"/>
-    <path class="c1" d="M14 25l9-6.5 9 6.5" fill="none" stroke="${chev}" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
-    <path class="c2" d="M14 33l9-6.5 9 6.5" fill="none" stroke="${chev}" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="c1" d="M13 22l10-7 10 7" fill="none" stroke="${chev}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="c2" d="M13 30l10-7 10 7" fill="none" stroke="${chev}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="dia" d="M23 35.5l4.6 4.6L23 44.7l-4.6-4.6z" fill="none" stroke="${chev}" stroke-width="2.4" stroke-linejoin="round"/>
   </svg>`;
 
 export const icons = {

@@ -305,7 +305,7 @@ em{font-style:italic}
 .wm-how{bottom:-80px;left:-60px;width:380px;height:420px}
 .wm-cta{top:50%;left:50%;width:340px;height:370px;transform:translate(-50%,-50%)}
 .amark .ring{transform-box:fill-box;transform-origin:center}
-.amark .c1,.amark .c2{transform-box:fill-box;transform-origin:center}
+.amark .c1,.amark .c2,.amark .dia{transform-box:fill-box;transform-origin:center}
 
 /* visible animated emblem (hero) */
 .emblem{position:absolute;top:-24px;right:-16px;width:98px;height:98px;border-radius:50%;
@@ -340,6 +340,7 @@ em{font-style:italic}
   @keyframes wmPulseC{0%,100%{opacity:.05;transform:translate(-50%,-50%) scale(1)}50%{opacity:.1;transform:translate(-50%,-50%) scale(1.05)}}
   .amark .c1{animation:chev 2.6s ease-in-out infinite}
   .amark .c2{animation:chev 2.6s ease-in-out infinite .3s}
+  .amark .dia{animation:chev 2.6s ease-in-out infinite .6s}
   @keyframes chev{0%,100%{opacity:.4;transform:translateY(2px)}50%{opacity:1;transform:translateY(-2px)}}
   .amark .ring{animation:ringPulse 2.8s ease-out infinite}
   @keyframes ringPulse{0%{opacity:.55;transform:scale(.75)}100%{opacity:0;transform:scale(1.5)}}
