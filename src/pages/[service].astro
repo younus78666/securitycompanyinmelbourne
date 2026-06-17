@@ -29,6 +29,13 @@ const schema = {
   ],
 };
 const midText = svc.midcta || { b: "Need cover fast?", span: "Licensed guards on call 24/7 across Melbourne." };
+const accreditations = [
+  { icon: "shieldcheck", name: "Victoria Police", sub: "Licensed business" },
+  { icon: "guard", name: "ASIAL Member", sub: "Industry accredited" },
+  { icon: "grid", name: "ISO 9001", sub: "Quality certified" },
+  { icon: "clock", name: "24/7 Monitored", sub: "Control room" },
+  { icon: "pin", name: "Melbourne based", sub: "Australian owned" },
+];
 ---
 <Base title={svc.title} description={svc.metaDesc} path={"/" + svc.slug + "/"} ogImage={svc.og}>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(schema)} />
@@ -48,7 +55,20 @@ const midText = svc.midcta || { b: "Need cover fast?", span: "Licensed guards on
         </div>
         <div class="prefoot-trust" style="margin-top:20px"><span>Victorian licensed</span><span>Fully insured</span><span>Police-checked</span><span>24/7</span></div>
       </div>
-      <div><img class="shot" src={svc.heroImg} alt={svc.heroAlt} width="540" height="405" fetchpriority="high" /></div>
+      <div style="position:relative"><img class="shot" src={svc.heroImg} alt={svc.heroAlt} width="540" height="405" fetchpriority="high" /><div class="svc-badge"><span class="ldot"></span>Licensed &amp; insured</div></div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section bg-soft" style="padding:46px 0">
+    <div class="container"><div class="stats">{site.stats.map(s => (<div class="stat reveal"><b>{s.n}</b><span>{s.label}</span></div>))}</div></div>
+  </section>
+
+  <!-- ACCREDITATIONS -->
+  <section class="section bg-cream" style="padding:46px 0">
+    <div class="container">
+      <p class="acc-head">Trusted, licensed and accredited to protect Melbourne</p>
+      <div class="acc-grid">{accreditations.map(a => (<div class="acc-badge reveal"><span class="ab-mark" set:html={icons[a.icon]} /><span><b>{a.name}</b><span>{a.sub}</span></span></div>))}</div>
     </div>
   </section>
 
@@ -105,6 +125,18 @@ const midText = svc.midcta || { b: "Need cover fast?", span: "Licensed guards on
       </div></div></section>
     )] : [node];
   })}
+
+  {svc.quote && (
+    <section class="section bg-white">
+      <div class="container">
+        <figure class="svc-quote reveal">
+          <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"{svc.quote.text}"</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">{svc.quote.initials}</span><span><b>{svc.quote.name}</b><span class="role">{svc.quote.role}</span></span></figcaption>
+        </figure>
+      </div>
+    </section>
+  )}
 
   <!-- FAQ -->
   <section class="section bg-soft">

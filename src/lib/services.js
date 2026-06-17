@@ -15,6 +15,7 @@ export const services = [
     intro: "Every security guard we supply in Melbourne holds a current Victorian security licence, carries insurance, and passes a national police check. We deploy fast across the city, around the clock, for sites and events of any size.",
     midcta: { b: "Need security guards fast?", span: "Licensed guards on call 24/7 across Greater Melbourne." },
     related: ["mobile-patrol-security-melbourne", "event-security-melbourne", "commercial-security-melbourne"],
+    quote: { text: "Their guards turned up on time, looked the part, and our overnight incidents dropped to zero. Easily the most reliable security team we've used in Melbourne.", name: "Operations Manager", role: "Retail group, eastern suburbs", initials: "OM" },
     sections: [
       { id: "types", h2: "What types of security guards do we provide?", type: "cards", bg: "bg-white", cta: true,
         leadHtml: "We provide every main type of security guard in Melbourne, all licensed, insured and police-checked. Need the bigger picture? Browse our <a href='/security-services-melbourne/'>full range of security services</a>.",
@@ -101,6 +102,7 @@ export const services = [
     intro: "Commercial security means licensed guards and systems protecting your business premises, staff and assets from theft, vandalism and trespass. We secure offices, retail, warehouses and industrial sites across Melbourne, with insured, police-checked guards around the clock.",
     midcta: { b: "Protect your business premises", span: "Licensed commercial security on call 24/7 across Melbourne." },
     related: ["security-guards-melbourne", "mobile-patrol-security-melbourne", "construction-site-security-melbourne"],
+    quote: { text: "SCM secured our offices and warehouse under one contract, integrated with our access control. Fewer invoices, tighter security, and reporting we actually read.", name: "Facilities Manager", role: "Corporate HQ, Melbourne CBD", initials: "FM" },
     sections: [
       { id: "included", h2: "What's included in our commercial security services?", type: "cards", bg: "bg-white", cta: true,
         leadHtml: "Commercial security in Melbourne covers far more than a guard at the door. We integrate people and systems so security supports how your business runs. See our <a href='/security-services-melbourne/'>full range of security services</a>.",
