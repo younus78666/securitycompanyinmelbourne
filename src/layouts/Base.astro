@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+import { site } from "../site.js";
+const {
+  title = "Security Company Melbourne | Licensed Guards 24/7",
+  description = "Looking for a licensed security company in Melbourne? We've got fully insured, police-checked guards on call 24/7. Get a fast free quote for your site today.",
+  path = "/",
+} = Astro.props;
+const canonical = site.url + path;
+---
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={site.url + "/assets/hero.webp"} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <slot name="head" />
+</head>
+<body>
+  <slot />
+</body>
+</html>

@@ -1,0 +1,70 @@
+// ONE-FILE BRAND SWAP — edit this and the whole site updates.
+// Placeholders flagged CLIENT INPUT come straight from the SEO research
+// (web-entity.md). Swap them when the real business details are confirmed.
+
+export const site = {
+  // Brand (working name — swap for the real trading name)
+  brand: "Sentinel Security",
+  brandShort: "Sentinel",
+  tagline: "Security · Melbourne",
+  domain: "securitycompanyinmelbourne.com",
+  url: "https://securitycompanyinmelbourne.com",
+
+  // Contact — CLIENT INPUT
+  phone: "1300 000 000",            // CLIENT INPUT
+  phoneHref: "tel:1300000000",      // CLIENT INPUT
+  email: "info@securitycompanyinmelbourne.com",
+  address: "Melbourne, Victoria",   // CLIENT INPUT (full NAP for LocalBusiness schema)
+
+  // Trust / EEAT — CLIENT INPUT (do not invent; shown as placeholders)
+  licenceNo: "Private Security Business Licence #______",  // CLIENT INPUT
+  insurance: "$20M public liability",                       // CLIENT INPUT (confirm)
+  abn: "ABN __ ___ ___ ___",                                // CLIENT INPUT
+  founded: "20XX",                                          // CLIENT INPUT
+  guardCount: "100+",                                       // CLIENT INPUT
+  reviewRating: "5.0",                                      // CLIENT INPUT
+  reviewCount: "—",                                         // CLIENT INPUT
+  responseWindow: "within hours",                           // CLIENT INPUT (confirm exact)
+
+  // Palette (Kindsight-inspired, olive + cream + lime)
+  colors: {
+    cream: "#F5F1E8",
+    creamSoft: "#EFEADD",
+    olive: "#3B3B25",
+    oliveDeep: "#2D2D1C",
+    lime: "#C7D43F",
+    limeSoft: "#DCE77A",
+    ink: "#1C1C16",
+    muted: "#6B6B57",
+    line: "#E2DCCD",
+    blush: "#F3CFC6",
+  },
+
+  nav: [
+    { label: "Services", href: "/security-services-melbourne/" },
+    { label: "Sectors", href: "#sectors" },
+    { label: "Pricing", href: "/security-guard-cost-melbourne/" },
+    { label: "Resources", href: "/blog/" },
+    { label: "Company", href: "/about/" },
+  ],
+
+  services: [
+    { name: "Security Guards", href: "/security-guards-melbourne/", icon: "guard",
+      blurb: "Licensed, police-checked static and manned guards for sites, buildings and retail across Melbourne." },
+    { name: "Mobile Patrols", href: "/mobile-patrol-security-melbourne/", icon: "patrol",
+      blurb: "GPS-verified patrols and rapid alarm response, lock-up and unlock, 24/7 across Greater Melbourne." },
+    { name: "Event Security", href: "/event-security-melbourne/", icon: "event",
+      blurb: "Crowd control, entry screening and RSA-trained crowd controllers for events of any size." },
+    { name: "Commercial Security", href: "/commercial-security-melbourne/", icon: "building",
+      blurb: "End-to-end protection for offices, warehouses, construction sites and retail businesses." },
+  ],
+
+  sectors: [
+    { name: "Construction", href: "/construction-site-security-melbourne/", img: "/assets/sector-construction.webp",
+      alt: "Security guard at a Melbourne construction site" },
+    { name: "Commercial & retail", href: "/commercial-security-melbourne/", img: "/assets/sector-commercial.webp",
+      alt: "Concierge security officer in a Melbourne corporate lobby" },
+    { name: "Events", href: "/event-security-melbourne/", img: "/assets/sector-events.webp",
+      alt: "Event security staff managing a Melbourne event entrance" },
+  ],
+};
