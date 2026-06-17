@@ -66,7 +66,12 @@ const icons = {
   event: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="2.4"/><circle cx="16" cy="9" r="2"/><path d="M3 19c0-3 2.7-5 6-5s6 2 6 5M14.5 19c0-2 1-3.4 2.5-3.9"/></svg>',
   building: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="10" height="18" rx="1"/><path d="M14 9h6v12h-6M7 7h2M7 11h2M7 15h2"/></svg>',
   chev: '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>',
+  clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>',
+  shieldcheck: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>',
+  bolt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>',
+  tag: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12V4h8l10 10-8 8L3 12z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor" stroke="none"/></svg>',
 };
+const industries = ["Retail", "Construction sites", "Events & venues", "Healthcare", "Warehouses & logistics", "Corporate offices", "Hospitality", "Body corporate & strata", "Schools", "Shopping centres"];
 const tags = ["Most requested", "", "Seasonal", "Highest value"];
 
 const schema = {
@@ -190,18 +195,25 @@ const animMark = (shield, chev, ring) => `
           <a class="btn btn-primary" href="/contact/">Get a Free Quote</a>
           <a class="btn btn-ghost" style="border-color:var(--lime);color:var(--cream)" href={site.phoneHref}>Talk to our team</a>
         </div>
-        <p style="margin-top:18px;font-size:.86rem;color:#B9B7A6">Victorian licensed &middot; Fully insured &middot; Guards on site in hours</p>
+        <div class="hero-chips">
+          <span class="chip"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 rating</span>
+          <span class="chip"><span set:html={icons.shieldcheck} style="width:14px;height:14px;color:var(--lime);display:inline-flex"/> Licensed &amp; insured</span>
+          <span class="chip"><span class="ldot"></span> 24/7 monitoring</span>
+        </div>
       </div>
       <div class="hero-media">
         <img src="/assets/hero.webp" width="720" height="540" alt="Licensed SCM security guard outside a modern Melbourne building" fetchpriority="high" />
-        <div class="radar" aria-hidden="true"><i></i><i></i><i></i><span class="sweep"></span><span class="blip"></span></div>
         <div class="emblem" aria-hidden="true">
           <span class="scanner"></span>
           <span set:html={animMark('#3B3B25', '#C7D43F', '#3B3B25')} />
         </div>
-        <div class="hero-badge">
-          <strong class="live"><b></b>24/7</strong>
-          <span>Live monitoring &amp; guards on call across Greater Melbourne</span>
+        <div class="fcard fcard-1">
+          <span class="ldot"></span>
+          <div><b>Guard on site</b><span>Southbank &middot; live now</span></div>
+        </div>
+        <div class="fcard fcard-2">
+          <span class="ic" set:html={icons.clock} />
+          <div><b class="big">&lt;2 hrs</b><span>average response</span></div>
         </div>
       </div>
     </div>
@@ -216,6 +228,14 @@ const animMark = (shield, chev, ring) => `
       <span class="trust-pill">Police-Checked Guards</span>
       <span class="trust-pill">ASIAL Standards</span>
       <span class="trust-pill">24/7 Rapid Response</span>
+    </div>
+  </div>
+
+  <!-- INDUSTRIES MARQUEE -->
+  <div class="marquee" aria-label="Industries we protect">
+    <div class="marquee-track">
+      {industries.map(i => <span>{i}</span>)}
+      {industries.map(i => <span aria-hidden="true">{i}</span>)}
     </div>
   </div>
 
@@ -313,14 +333,17 @@ const animMark = (shield, chev, ring) => `
       </div>
       <div class="diff">
         <div class="col reveal">
+          <div class="dic" set:html={icons.shieldcheck} />
           <h3>Licensed &amp; insured</h3>
           <p>A current Victorian Private Security Business Licence, public liability cover and police-checked guards on every shift. Verify us with Victoria Police any time.</p>
         </div>
-        <div class="col reveal">
+        <div class="col feat reveal">
+          <div class="dic" set:html={icons.bolt} />
           <h3>Rapid local response</h3>
           <p>A 24/7 Melbourne dispatch team and GPS-verified patrols mean we deploy fast and prove it with real-time reporting, not vague promises.</p>
         </div>
         <div class="col reveal">
+          <div class="dic" set:html={icons.tag} />
           <h3>Transparent pricing</h3>
           <p>Clear hourly ranges up front and itemised quotes with no hidden loadings, so you know exactly what you're paying and why.</p>
         </div>
@@ -443,6 +466,32 @@ const animMark = (shield, chev, ring) => `
       reveals.forEach(el => io.observe(el));
     } else {
       reveals.forEach(el => el.classList.add('in'));
+    }
+    // Count-up stats (animate the numeric part on first view)
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const countEls = document.querySelectorAll('.stat b');
+    const animateCount = (el) => {
+      const raw = el.textContent.trim();
+      if (raw.indexOf('/') !== -1) return;           // skip ratios like 24/7
+      const m = raw.match(/^(\D*)(\d+)(\D*)$/);
+      if (!m) return;
+      const pre = m[1], target = parseInt(m[2], 10), suf = m[3];
+      if (prefersReduced) return;
+      let start = null; const dur = 1100;
+      const tick = (t) => {
+        if (start === null) start = t;
+        const p = Math.min((t - start) / dur, 1);
+        const val = Math.round((1 - Math.pow(1 - p, 3)) * target);
+        el.textContent = pre + val + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    if ('IntersectionObserver' in window) {
+      const cio = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); cio.unobserve(e.target); } });
+      }, { threshold: 0.6 });
+      countEls.forEach(el => cio.observe(el));
     }
     // Mobile drawer
     const drawer = document.getElementById('drawer');
