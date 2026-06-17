@@ -72,7 +72,11 @@ const icons = {
   shieldcheck: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>',
   bolt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>',
   tag: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12V4h8l10 10-8 8L3 12z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor" stroke="none"/></svg>',
+  book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M19 17H6a2 2 0 0 0-2 2"/></svg>',
+  pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>',
+  grid: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>',
 };
+const drawerIcon = { Pricing: "tag", Resources: "book", Company: "building" };
 const industries = ["Retail", "Construction sites", "Events & venues", "Healthcare", "Warehouses & logistics", "Corporate offices", "Hospitality", "Body corporate & strata", "Schools", "Shopping centres"];
 const testimonials = [
   { quote: "SCM's guards turned up on time, looked the part, and our incidents dropped to zero. They feel like part of our team.", name: "Facilities Manager", role: "Melbourne CBD commercial property", initials: "FM" },
@@ -159,33 +163,45 @@ const animMark = (shield, chev, ring) => `
         <a class="btn btn-ghost" href={site.phoneHref}>Call {site.phone}</a>
         <a class="btn btn-primary" href="/contact/">Get a Free Quote</a>
       </div>
-      <button class="menu-btn" id="openDrawer" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <button class="menu-btn" id="openDrawer" aria-label="Open menu" aria-expanded="false"><span class="ham"><i></i><i></i><i></i></span></button>
     </div>
   </header>
 
-  <!-- MOBILE DRAWER -->
+  <!-- MOBILE DRAWER (off-canvas) -->
   <div class="drawer" id="drawer" aria-hidden="true">
     <div class="drawer-bg" data-close></div>
     <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
       <div class="drawer-head">
-        <span set:html={logoSvg('#3B3B25', '#C7D43F', '#6B6B57')} />
-        <button class="drawer-close" data-close aria-label="Close menu">&times;</button>
+        <a href="/" aria-label={site.brand + " home"} set:html={logoSvg('#3B3B25', '#C7D43F', '#6B6B57')} />
+        <button class="drawer-close" data-close aria-label="Close menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
       </div>
-      <details open>
-        <summary>Services</summary>
-        {site.mega.services.columns.flatMap(c => c.items).map(it => <a href={it.href}>{it.name}</a>)}
-        <a href={site.mega.services.hubHref}>All services</a>
-      </details>
-      {site.mega.menus.map(m => (
-        <details>
-          <summary>{m.label}</summary>
-          {m.items.map(it => <a href={it.href}>{it.name}</a>)}
+      <nav class="drawer-nav" aria-label="Mobile">
+        <details class="dacc" open>
+          <summary><span class="di" set:html={icons.shieldcheck} /><span class="dlabel">Services</span><span class="dchev" set:html={icons.chev} /></summary>
+          <div class="dacc-body">
+            {site.mega.services.columns.flatMap(c => c.items).map(it => <a href={it.href}>{it.name}</a>)}
+            <a class="dacc-all" href={site.mega.services.hubHref}>All services &rarr;</a>
+          </div>
         </details>
-      ))}
-      <a href="/service-areas/" style="display:block;font-family:var(--serif);font-size:1.2rem;padding:14px 4px;border-bottom:1px solid var(--line)">Service areas</a>
-      <div class="drawer-cta">
+        {site.mega.menus.map(m => (
+          <details class="dacc">
+            <summary><span class="di" set:html={icons[drawerIcon[m.label]]} /><span class="dlabel">{m.label}</span><span class="dchev" set:html={icons.chev} /></summary>
+            <div class="dacc-body">
+              {m.items.map(it => <a href={it.href}>{it.name}</a>)}
+            </div>
+          </details>
+        ))}
+        <a class="drow" href="/service-areas/"><span class="di" set:html={icons.pin} /><span class="dlabel">Service areas</span><span class="darrow" set:html={icons.chev} /></a>
+      </nav>
+      <div class="drawer-foot">
         <a class="btn btn-primary" href="/contact/">Get a Free Quote</a>
         <a class="btn btn-dark" href={site.phoneHref}>Call {site.phone}</a>
+        <div class="drawer-contact">
+          <a href={"mailto:" + site.email}>{site.email}</a>
+          <span>Licensed &middot; Insured &middot; 24/7</span>
+        </div>
       </div>
     </div>
   </div>
@@ -549,6 +565,7 @@ const animMark = (shield, chev, ring) => `
     };
     openBtn.addEventListener('click', () => setDrawer(true));
     drawer.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', () => setDrawer(false)));
+    if (location.hash === '#menu') setDrawer(true);
 
     // Desktop dropdown: click/keyboard toggle (hover handled by CSS)
     document.querySelectorAll('.has-menu .menu-trigger').forEach(btn => {
