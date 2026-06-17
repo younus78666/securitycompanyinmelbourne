@@ -93,6 +93,97 @@ export const locations = [
     ],
   },
   {
+    slug: "security-company-dandenong",
+    primaryKW: "security company dandenong",
+    breadcrumb: "Dandenong",
+    areaServed: "Dandenong and Melbourne's south-east, Victoria, Australia",
+    title: "Security Company Dandenong | Licensed Guards 24/7",
+    metaDesc: "Need a security company in Dandenong? We're licensed, insured and on call 24/7 for the Market, retail and the industrial precinct. Get a fast free quote.",
+    h1: "Security Company in Dandenong, Licensed Guards 24/7",
+    heroImg: "/assets/feature-dandenong.webp",
+    heroAlt: "Licensed security guard protecting a business in Dandenong, south-east Melbourne",
+    og: "/assets/og/security-company-dandenong.jpg",
+    intro: "We're a licensed, insured security company in Dandenong, with guards and mobile patrols across the south-east 24/7. From the crowds at Dandenong Market and the Lonsdale Street strip to the warehouses of Dandenong South, we know the area's two very different security needs and cover both.",
+    midcta: { b: "Need a Dandenong security team?", span: "Licensed guards and patrols across the south-east, 24/7." },
+    related: ["security-guards-melbourne", "warehouse-security-melbourne", "retail-security-melbourne"],
+    quote: { text: "We've got a warehouse in Dandenong South and a shopfront near the Market, two completely different problems. SCM handles both: overnight patrols on the estate and a guard for busy retail days. One local company, and they actually know the area.", name: "Business Owner", role: "Retail & logistics, Dandenong", initials: "BO" },
+    sections: [
+      { id: "what", h2: "What does our Dandenong security company do?", type: null, bg: "bg-white", cta: true,
+        leadHtml: "Our Dandenong security company supplies licensed guards, crowd management, mobile patrols and industrial site cover across the south-east, 24/7. We protect retail, the Market, logistics estates and civic sites, from a single shopfront to a multi-building warehouse. See our <a href='/security-services-melbourne/'>full range of security services</a>.",
+        bodyHtml: "<p>Dandenong is really two security jobs in one suburb. By day it's one of Melbourne's busiest, most multicultural retail and market precincts, with crowds, foot traffic and loss prevention to manage. After dark, the focus shifts out to Dandenong South, one of Victoria's biggest manufacturing and logistics zones, where the risk is perimeter breaches, stock theft and trespass. We staff for both, with local crews who know the difference.</p>" },
+      { id: "why-need", h2: "Why do Dandenong businesses need a security company?", type: "iconlist", bg: "bg-mist",
+        lead: "Dandenong businesses need security because the suburb runs two distinct risk profiles: busy multicultural retail and market crowds by day, and a large industrial and logistics precinct exposed after hours. Each needs a different setup, and a local team that understands both beats a city firm driving in.",
+        bodyHtml: "<p>That split is the whole point. A market trader near Lonsdale Street worries about daytime theft and crowd pressure. A warehouse in Dandenong South worries about overnight break-ins across a big perimeter. Generic cover treats them the same, which serves neither. Here's how the two sides compare.</p>",
+        viz: `<svg viewBox="0 0 820 268" role="img" aria-label="The two sides of Dandenong security: market and retail by day versus industrial after hours">
+  <g font-family="Inter, system-ui, sans-serif">
+    <rect x="16" y="20" width="384" height="232" rx="16" fill="#FFFFFF" stroke="#E2DCCD" stroke-width="1.5"/>
+    <text x="40" y="58" font-size="16" font-weight="700" fill="#1C1C16">Market &amp; retail, by day</text>
+    <rect x="40" y="70" width="60" height="5" rx="2.5" fill="#C7D43F"/>
+    <g fill="#3B3B25" font-size="13.5">
+      <circle cx="48" cy="104" r="4" fill="#C7D43F"/><text x="64" y="109">Busy, multicultural crowds</text>
+      <circle cx="48" cy="140" r="4" fill="#C7D43F"/><text x="64" y="145">Retail loss prevention</text>
+      <circle cx="48" cy="176" r="4" fill="#C7D43F"/><text x="64" y="181">Market trading-day crowds</text>
+      <circle cx="48" cy="212" r="4" fill="#C7D43F"/><text x="64" y="217">High daytime foot traffic</text>
+    </g>
+    <rect x="420" y="20" width="384" height="232" rx="16" fill="#3B3B25"/>
+    <text x="444" y="58" font-size="16" font-weight="700" fill="#F5F1E8">Industrial, after hours</text>
+    <rect x="444" y="70" width="60" height="5" rx="2.5" fill="#C7D43F"/>
+    <g fill="#EDEBDD" font-size="13.5">
+      <circle cx="452" cy="104" r="4" fill="#C7D43F"/><text x="468" y="109">Dandenong South estates</text>
+      <circle cx="452" cy="140" r="4" fill="#C7D43F"/><text x="468" y="145">Perimeter &amp; gate control</text>
+      <circle cx="452" cy="176" r="4" fill="#C7D43F"/><text x="468" y="181">Stock &amp; asset theft risk</text>
+      <circle cx="452" cy="212" r="4" fill="#C7D43F"/><text x="468" y="217">Overnight patrols &amp; CCTV</text>
+    </g>
+  </g>
+</svg>
+<p class="viz-cap">Two sides of Dandenong: busy market and retail by day, large industrial estates after hours. We cover both.</p>`,
+        items: [
+          { icon: "cart", b: "Dandenong Market & retail", p: "Crowd and theft pressure on busy trading days." },
+          { icon: "building", b: "Dandenong South industrial", p: "Big logistics estates exposed after hours." },
+          { icon: "users", b: "Lonsdale St strip", p: "Retail and dining foot traffic to manage." },
+          { icon: "patrol", b: "Perimeter & asset risk", p: "Overnight break-ins and stock theft on estates." },
+          { icon: "event", b: "Civic & events", p: "Drum Theatre and civic-precinct event crowds." },
+        ],
+        bool: { q: "Does a Dandenong industrial site need a different security setup?", a: "Yes. A Dandenong South industrial site needs perimeter patrols, after-hours cover and asset protection across a large footprint, while a Market or retail site needs daytime crowd and loss-prevention cover. We match the setup to which side of Dandenong you're on." } },
+      { id: "services", h2: "What security services do we run in Dandenong?", type: "cards", bg: "bg-white", cta: true,
+        leadHtml: "We run the full range across Dandenong, mapped to its two sides. From <a href='/security-guards-melbourne/'>professional security guards</a> on busy retail days to <a href='/warehouse-security-melbourne/'>warehouse security</a> across the industrial estates, each service fits where it works.",
+        items: [
+          { icon: "cart", name: "Retail & Plaza guards", note: "Static cover for shopfronts and Dandenong Plaza tenancies." },
+          { icon: "users", name: "Market crowd management", note: "Crowd and loss-prevention cover on busy trading days." },
+          { icon: "patrol", name: "Mobile patrols (Dandenong South)", note: "GPS-verified overnight checks across the logistics estate." },
+          { icon: "building", name: "Warehouse & logistics", note: "Gatehouse guards and patrols for industrial sites." },
+          { icon: "clock", name: "After-hours (Lonsdale St)", note: "Lock-up, alarm response and late patrols on the strip." },
+          { icon: "hardhat", name: "Construction security", note: "Site cover for Dandenong's ongoing redevelopment." },
+        ] },
+      { id: "areas", h2: "Which Dandenong areas and precincts do we cover?", type: "areas", bg: "bg-mist",
+        lead: "We cover Dandenong and the wider south-east, from the Market and the retail strip to the Dandenong South industrial estates and the neighbouring suburbs. Wherever your site sits, a local crew is close by.",
+        items: ["Dandenong CBD", "Dandenong Market", "Lonsdale & Foster St", "Dandenong Plaza", "Dandenong South", "Noble Park", "Springvale", "Keysborough"],
+        link: { href: "/service-areas/", label: "See all areas we cover" } },
+      { id: "why-choose", h2: "Why choose our Dandenong security company?", type: "iconlist", bg: "bg-white",
+        leadHtml: "Choose us because we're a <a href='/licensing-compliance/'>fully licensed and insured</a> Victorian firm with local south-east crews who handle both market crowds and industrial sites. Every guard is licensed, insured and police-checked, with rapid response across Dandenong and the surrounding suburbs.",
+        items: [
+          { icon: "shieldcheck", b: "Licensed & insured", p: "Police-checked guards and a verifiable business licence." },
+          { icon: "bolt", b: "Rapid south-east response", p: "Local crews, not a city firm driving in." },
+          { icon: "pin", b: "Knows both sides", p: "Experienced with market crowds and industrial sites." },
+          { icon: "clock", b: "24/7 cover", p: "Guards, patrols and alarm response any hour." },
+        ] },
+      { id: "response", h2: "How fast can you get a guard to a Dandenong site?", type: "null2", bg: "bg-mist",
+        leadHtml: "We can usually get a licensed guard to a Dandenong site within hours, and faster for an alarm response on a site we already patrol, because our crews work the south-east. For ongoing cover we scope your site and set a roster. See <a href='/our-process/'>our process</a>.",
+        bodyHtml: "<p>Being local to the south-east is the point. We're not stuck on the freeway when a Dandenong South alarm trips at 2am. For urgent jobs we'll give you a realistic window on the spot, and for planned cover we'll match the setup to your side of Dandenong. Want pricing first? See <a href='/security-guard-cost-melbourne/'>how much security guards cost</a>.</p>" },
+    ],
+    faqs: [
+      { q: "Are you a local Dandenong security company?", a: "Yes. We run licensed guards and mobile patrols across Dandenong and the south-east with local crews, so we reach your site fast and know the area, from the Market and retail strip to the Dandenong South industrial estates." },
+      { q: "Does a Dandenong industrial site need a different security setup?", a: "Yes. A Dandenong South industrial site needs perimeter patrols, after-hours cover and asset protection across a large footprint, while a Market or retail site needs daytime crowd and loss-prevention cover. We match the setup to your site and its risk." },
+      { q: "Do you provide security for Dandenong Market and retail?", a: "Yes. We provide crowd management and retail loss prevention for Dandenong Market trading days, the Lonsdale Street strip and Dandenong Plaza tenancies, with guards experienced in busy, multicultural high-traffic retail environments." },
+      { q: "Do you cover warehouse and industrial security in Dandenong South?", a: "Yes. Dandenong South is a core patrol area for us. We run gatehouse guards, GPS-verified overnight patrols, CCTV and alarm response to protect warehousing, plant and stock across one of Victoria's biggest logistics zones." },
+      { q: "Are your Dandenong security guards licensed in Victoria?", a: "Yes. Every guard holds a current Victorian security licence and is police-checked, and our business holds a Private Security Business Licence you can verify with the Victoria Police Licensing and Regulation Division at any time." },
+      { q: "How much do security guards cost in Dandenong?", a: "Licensed guards in Dandenong sit in the same Melbourne range, about $45 to $80 an hour in 2026 depending on guard type, before loadings. See our security guard cost guide for the full breakdown, then get a quote for your site." },
+      { q: "How quickly can you get a guard to a Dandenong site?", a: "Usually within hours for new cover, and faster for an alarm response on a site we already patrol. Our crews work the south-east, so we're not driving in from the city. Call us and we'll confirm a realistic deployment window." },
+      { q: "Do you cover Noble Park, Springvale and Keysborough too?", a: "Yes. We cover Dandenong and the surrounding south-east suburbs, including Noble Park, Springvale and Keysborough. Tell us where your site is and we'll confirm cover and a local response time for that area." },
+    ],
+  },
+
+  {
     slug: "security-services-melbourne-cbd",
     primaryKW: "security guards melbourne cbd",
     breadcrumb: "Melbourne CBD",
