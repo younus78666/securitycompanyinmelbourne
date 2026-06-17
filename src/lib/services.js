@@ -173,6 +173,122 @@ export const services = [
     ],
   },
   {
+    slug: "k9-security-melbourne",
+    primaryKW: "k9 security melbourne",
+    breadcrumb: "K9 Dog Security",
+    title: "K9 Security Melbourne | Licensed Dog Handler Units",
+    metaDesc: "Need K9 security in Melbourne? We deploy licensed dog handler units for sites, events and patrols, with trained, welfare-managed dogs. Insured. Get a quote.",
+    h1: "K9 Security in Melbourne, Licensed Dog Handler Units",
+    heroImg: "/assets/feature-k9.webp",
+    heroAlt: "Licensed K9 security dog handler unit patrolling a Melbourne site",
+    og: "/assets/og/k9-security-melbourne.jpg",
+    intro: "K9 security in Melbourne is guarding by a licensed dog handler working with a trained security dog to deter intruders, sweep areas fast and detect threats. One handler-and-dog unit covers more ground than several guards, making it ideal for large or high-risk sites.",
+    midcta: { b: "Large site needing real deterrence?", span: "Licensed K9 dog handler units across Melbourne, 24/7." },
+    related: ["construction-site-security-melbourne", "mobile-patrol-security-melbourne", "static-security-guards-melbourne"],
+    quote: { text: "We had repeat trespassers on a big industrial yard that static guards couldn't cover end to end. One K9 unit changed everything. The dog's presence alone cleared the problem within two weeks, and the handler's reports are spot on.", name: "Yard Supervisor", role: "Industrial site, western Melbourne", initials: "YS" },
+    sections: [
+      { id: "what", h2: "What is K9 security in Melbourne?", type: null, bg: "bg-white", cta: true,
+        leadHtml: "K9 security in Melbourne is guarding by a licensed dog handler working with a trained security dog to deter intruders, sweep areas fast and detect threats. The dog's presence is a powerful deterrent, and a single handler-and-dog unit can cover ground that would take several guards. It's part of our <a href='/security-services-melbourne/'>full range of security services</a>.",
+        bodyHtml: "<p>There's a reason a security dog stops trouble before it starts. Most intruders will chance a fence or a camera, but very few will take on a trained dog and handler. The unit works as a team: the handler reads the site and makes the calls, the dog covers ground fast, picks up what a person would miss, and turns a large dark yard into somewhere nobody wants to test.</p>",
+        bool: { q: "Are K9 security dogs trained and licensed?", a: "Yes. The handler holds a current Victorian security licence and dog-handling qualifications, and the dog is professionally trained for security work. Both are assessed as a team. The dogs are also welfare-managed, with proper rest, handling and care between and during shifts." } },
+      { id: "why-need", h2: "Why do you need K9 security?", type: "iconlist", bg: "bg-mist",
+        lead: "You need K9 security when you want a strong deterrent, fast area sweeps, threat detection, and large-site coverage with fewer guards. A handler-and-dog unit patrols ground that would take several officers, which makes it both effective and cost-efficient after hours.",
+        bodyHtml: "<p>The maths works in your favour on a big site. Posting enough static guards to cover a sprawling yard or a multi-hectare build gets expensive fast. One K9 unit patrols the whole perimeter, responds to anything that moves, and deters intruders who'd happily risk a camera but not a dog. For large, dark or high-risk sites, it's often the smartest cover you can buy.</p>",
+        items: [
+          { icon: "dog", b: "Powerful deterrent", p: "Few intruders will take on a trained security dog." },
+          { icon: "bolt", b: "Fast area sweeps", p: "A dog covers a large site far quicker than a guard on foot." },
+          { icon: "eye", b: "Threat detection", p: "Dogs pick up what people and cameras miss in the dark." },
+          { icon: "grid", b: "Large-site coverage", p: "One unit covers ground that would take several guards." },
+          { icon: "clock", b: "After-hours cover", p: "Strong overnight protection for empty, high-risk sites." },
+        ] },
+      { id: "services", h2: "What do our K9 security services include?", type: "cards", bg: "bg-white", cta: true,
+        leadHtml: "Our K9 services cover handler patrols, perimeter sweeps, detection units, event support and after-hours guarding. Each unit works alongside <a href='/security-guards-melbourne/'>our Melbourne security guards</a> when a site needs both dogs and fixed posts.",
+        items: [
+          { icon: "dog", name: "Dog handler patrols", note: "A handler-and-dog team patrolling your site on schedule." },
+          { icon: "shieldcheck", name: "Perimeter sweeps", note: "Fast, thorough sweeps of large yards and boundaries." },
+          { icon: "eye", name: "Detection units", note: "Trained dogs for detection tasks where the risk calls for it." },
+          { icon: "event", name: "Event K9 support", note: "Dog units adding deterrence and reach at larger events." },
+          { icon: "clock", name: "After-hours guarding", note: "Overnight K9 cover for vacant and high-risk sites." },
+          { icon: "check", name: "Incident reporting", note: "Clear handler reports after every patrol and event." },
+        ] },
+      { id: "who", h2: "Who do we protect with K9 units?", type: "pills", bg: "bg-mist",
+        leadHtml: "We deploy K9 units across large and high-risk Melbourne sites where ground to cover and deterrence both matter. They're a strong fit for the <a href='/construction-site-security-melbourne/'>business security solutions</a> we run on big build and industrial sites.",
+        items: [
+          { icon: "hardhat", label: "Construction sites" }, { icon: "building", label: "Warehouses" },
+          { icon: "patrol", label: "Industrial yards" }, { icon: "event", label: "Events" },
+          { icon: "home", label: "Vacant property" }, { icon: "grid", label: "Logistics & depots" },
+        ] },
+      { id: "how", h2: "How does our K9 security service work?", type: "steps",
+        leadHtml: "Our K9 service works in five steps, matching the right handler-and-dog unit to your site. See <a href='/our-process/'>our process</a> for the full method.",
+        items: [
+          { icon: "eye", n: "1", t: "Assess", d: "A site risk assessment of size, access and hot spots." },
+          { icon: "dog", n: "2", t: "Match unit", d: "The right handler-and-dog unit for your site and risk." },
+          { icon: "grid", n: "3", t: "Schedule", d: "Patrol scheduling that keeps timing unpredictable." },
+          { icon: "shieldcheck", n: "4", t: "Patrol", d: "Handler-led sweeps and response across the shift." },
+          { icon: "check", n: "5", t: "Report", d: "Verified handler reports after every patrol." },
+        ] },
+      { id: "why-choose", h2: "Why choose us for K9 security in Melbourne?", type: "iconlist", bg: "bg-white",
+        leadHtml: "Choose us for K9 security because our handlers are licensed, our dogs are trained and welfare-managed, and we're insured, police-checked and on call 24/7. We're a <a href='/licensing-compliance/'>fully licensed and insured</a> Victorian firm that treats its dogs as the professionals they are.",
+        items: [
+          { icon: "shieldcheck", b: "Licensed handlers", p: "Victorian security licence plus dog-handling qualifications." },
+          { icon: "heart", b: "Welfare-managed dogs", p: "Trained, cared-for dogs with proper rest and handling." },
+          { icon: "bolt", b: "Rapid deployment", p: "K9 units on site fast across Melbourne, 24/7." },
+          { icon: "pin", b: "Local Victorian team", p: "We know the big sites where K9 earns its keep." },
+        ] },
+      { id: "vs", h2: "K9 patrol vs static guard: which suits your site?", type: null, bg: "bg-mist",
+        leadHtml: "A K9 patrol suits large or high-risk sites where fast deterrence and area sweeps matter, while a static guard suits fixed entry points needing constant presence. Many big sites use both: a static guard on the gate and a <a href='/mobile-patrol-security-melbourne/'>K9 patrol</a> covering the perimeter.",
+        bodyHtml: "<p>The right answer comes down to your site's shape and risk. If you've got one busy entrance to control, a <a href='/static-security-guards-melbourne/'>static guard</a> is the call. If you've got a large, dark perimeter where intruders could come from anywhere, a K9 unit covers far more ground and deters far harder than a guard on foot. Here's the quick comparison.</p>",
+        viz: `<svg viewBox="0 0 820 268" role="img" aria-label="K9 patrol unit versus static guard comparison for Melbourne sites">
+  <g font-family="Inter, system-ui, sans-serif">
+    <rect x="16" y="20" width="384" height="232" rx="16" fill="#3B3B25"/>
+    <text x="40" y="58" font-size="17" font-weight="700" fill="#F5F1E8">K9 patrol unit</text>
+    <rect x="40" y="70" width="60" height="5" rx="2.5" fill="#C7D43F"/>
+    <g fill="#EDEBDD" font-size="14">
+      <circle cx="48" cy="104" r="4" fill="#C7D43F"/><text x="64" y="109">Covers large areas fast</text>
+      <circle cx="48" cy="140" r="4" fill="#C7D43F"/><text x="64" y="145">Strongest visual deterrent</text>
+      <circle cx="48" cy="176" r="4" fill="#C7D43F"/><text x="64" y="181">Sweeps and detects threats</text>
+      <circle cx="48" cy="212" r="4" fill="#C7D43F"/><text x="64" y="217">Best for big or high-risk sites</text>
+    </g>
+    <rect x="420" y="20" width="384" height="232" rx="16" fill="#FFFFFF" stroke="#E2DCCD" stroke-width="1.5"/>
+    <text x="444" y="58" font-size="17" font-weight="700" fill="#1C1C16">Static guard</text>
+    <rect x="444" y="70" width="60" height="5" rx="2.5" fill="#C7D43F"/>
+    <g fill="#3B3B25" font-size="14">
+      <circle cx="452" cy="104" r="4" fill="#C7D43F"/><text x="468" y="109">Holds one fixed post</text>
+      <circle cx="452" cy="140" r="4" fill="#C7D43F"/><text x="468" y="145">Constant on-site presence</text>
+      <circle cx="452" cy="176" r="4" fill="#C7D43F"/><text x="468" y="181">Controls a single entry point</text>
+      <circle cx="452" cy="212" r="4" fill="#C7D43F"/><text x="468" y="217">Best for busy entrances</text>
+    </g>
+  </g>
+</svg>
+<p class="viz-cap">K9 patrol or static guard? Big, open sites favour K9 reach. Busy fixed entrances favour a static post.</p>` },
+      { id: "cost", h2: "How much does K9 security cost in Melbourne?", type: "table", bg: "bg-white", cta: true,
+        lead: "K9 security in Melbourne usually costs $60 to $95 per hour for a handler-plus-dog unit in 2026, with higher rates at night and loadings for weekends and public holidays. A unit costs more per hour than a single guard but covers far more ground. Most bookings have a minimum shift.",
+        bodyHtml: "<p>A handler-and-dog unit is priced as one unit, not two people, and on a large site it often works out cheaper than the three or four static guards you'd need to cover the same ground. Detection and event units sit a little higher. <a href='/contact/'>Get a free quote</a> and we'll work out whether K9, static or a mix gives you the best value.</p>",
+        head: ["Unit type", "Day ($/hr)", "Night ($/hr)", "Min shift"],
+        rows: [
+          ["Handler + patrol dog", "$60 to $80", "$70 to $95", "~4 hrs"],
+          ["Handler + detection dog", "$70 to $95", "$80 to $110", "~4 hrs"],
+          ["Event K9 unit", "quoted", "+ loadings", "~4 hrs"],
+        ],
+        note: "Estimate only for 2026. Weekend and public-holiday loadings apply. Get a quote for your site." },
+      { id: "areas", h2: "Where do we provide K9 security across Melbourne?", type: "areas", bg: "bg-mist",
+        lead: "We provide K9 security across the Melbourne metro area, the industrial precincts and growth corridors, plus Geelong and Dandenong. Wherever you've got a large or high-risk site, a local handler-and-dog unit can cover it.",
+        items: ["Melbourne metro", "Northern corridor", "Western suburbs", "South-east", "Industrial precincts", "Geelong", "Dandenong"],
+        link: { href: "/service-areas/", label: "See all areas we cover" } },
+    ],
+    faqs: [
+      { q: "Are K9 security dogs and handlers licensed in Victoria?", a: "Yes. The handler holds a current Victorian security licence and dog-handling qualifications, and the dog is professionally trained for security work. They're assessed as a team, and the dogs are welfare-managed with proper rest, handling and care." },
+      { q: "What is the difference between K9 patrol and a static guard?", a: "A K9 patrol unit covers large areas fast and gives a powerful deterrent, ideal for big or high-risk sites. A static guard holds one fixed post with constant presence, ideal for a busy entrance. Many large sites use both together." },
+      { q: "Do your dog handlers carry weapons?", a: "No. Our K9 handlers are unarmed, like almost all security work in Victoria. The deterrent is the trained dog and the handler's presence, not a weapon. Armed work needs a separate licence class and is rare outside specialist roles." },
+      { q: "Are your guards insured and police-checked?", a: "Yes. We carry public liability insurance and every handler passes a national police check before their first shift, so your site, your staff and anyone nearby are properly protected throughout every K9 patrol." },
+      { q: "How quickly can I get a K9 unit on site?", a: "Usually within hours for urgent cover, depending on unit availability. We run a 24/7 dispatch team across Melbourne, so we'll confirm a deployment window the moment you call and get a licensed handler-and-dog unit moving." },
+      { q: "Can I hire K9 security for a one-day event?", a: "Yes. We supply K9 units for one-off events and short-term bookings with no lock-in. Tell us the site, date and expected numbers, and we'll roster the right handler-and-dog unit just for that event." },
+      { q: "Is there a minimum shift length for a K9 unit?", a: "Most K9 bookings have a minimum shift, commonly around four hours, because the unit needs travel and setup time and the dog needs managed working periods. We'll confirm the minimum in your written quote before you commit." },
+      { q: "Are there extra charges for night, weekend or public holiday work?", a: "Yes. Like most security work, K9 units carry loadings for nights, weekends and public holidays, which is when many large sites most need them. We'll set out every rate and the minimum in your written quote before you commit." },
+    ],
+  },
+
+  {
     slug: "static-security-guards-melbourne",
     primaryKW: "static guards melbourne",
     breadcrumb: "Static Guards",
