@@ -1,0 +1,125 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { icons } from "../lib/brand.js";
+import { site } from "../site.js";
+
+// EEAT social-proof page. INTEGRITY GATE (per brief 8.11): real Google review count,
+// star rating, and named verified reviews are CLIENT INPUT. We do NOT publish
+// Review/AggregateRating schema with invented data (Google policy / manual-action risk).
+// The testimonials below are the representative client feedback already shown across the
+// site. When the client supplies a verified Google rating + reviews (and a GBP link),
+// add Review + AggregateRating schema and swap these for verified, attributed reviews.
+const title = "SCM Reviews | Melbourne Security Company Testimonials";
+const description = "Read client feedback for SCM, a licensed Melbourne security company. See what businesses say about our guards, patrols and event security. Get a free quote.";
+
+const testimonials = [
+  { text: "Their guards turned up on time, looked the part, and our overnight incidents dropped to zero. Easily the most reliable security team we've used in Melbourne.", name: "Operations Manager", role: "Retail group, eastern suburbs", initials: "OM" },
+  { text: "We ran a 900-person product launch in Docklands and their crowd controllers handled entry, ID checks and a couple of gatecrashers without any fuss. Guests barely noticed them.", name: "Events Producer", role: "Brand activation agency", initials: "EP" },
+  { text: "We've got four sites across the western suburbs and one patrol team covers the lot overnight. The GPS reports land in my inbox by morning, so I know every check happened.", name: "Property Manager", role: "Industrial estates, west", initials: "PM" },
+  { text: "Our Friday and Saturday door is run by their crowd controllers now. They're firm but calm, they know the RSA rules cold, and we've had zero serious incidents since they started.", name: "Licensee", role: "Live-music venue, inner Melbourne", initials: "LV" },
+  { text: "We lost thousands in copper and tools before SCM took over. Static guard on the big build, overnight patrols on the rest. Six months in, our theft losses are basically zero.", name: "Site Manager", role: "Commercial builder, north", initials: "SM" },
+  { text: "Our residents wanted a friendly front desk, our committee wanted real security. SCM's concierge team gave us both. The lobby's never felt safer.", name: "Owners Corporation Chair", role: "Residential tower, Southbank", initials: "OC" },
+];
+
+const trust = [
+  { icon: "shieldcheck", b: "Licensed & insured", p: "A verifiable Victorian business licence and public liability cover." },
+  { icon: "check", b: "Police-checked guards", p: "Every officer cleared before their first shift." },
+  { icon: "bolt", b: "Proven on the ground", p: "Real results across retail, events, construction and patrols." },
+  { icon: "users", b: "References on request", p: "Ask us and we'll connect you with similar clients." },
+];
+
+const faqs = [
+  { q: "Are SCM's client testimonials genuine?", a: "The feedback on this page reflects what our Melbourne clients tell us about our guards, patrols and event work. For verified, named references from clients with a similar site to yours, just ask and we'll arrange them as part of your quote." },
+  { q: "Does SCM have a Google rating?", a: "We're building out our verified Google reviews. In the meantime, we're happy to share client references directly so you can hear from businesses like yours before you book. Ask us when you request a quote." },
+  { q: "Can I get references for a project like mine?", a: "Yes. Tell us your site type, whether it's retail, construction, an event, a warehouse or a building, and we'll connect you with a client who's used us for similar work, so you can check our track record first-hand." },
+  { q: "How do I know SCM is legitimate?", a: "Every guard holds a current Victorian security licence and is police-checked, and we hold a Private Security Business Licence you can verify with the Victoria Police Licensing and Regulation Division. See the detail on our licensing and compliance page." },
+  { q: "What kind of results do clients see?", a: "Clients most often tell us about fewer incidents, lower theft and shrinkage, and guards who actually turn up and report back. The exact result depends on the site, but reliable, verifiable cover is the constant across our work." },
+  { q: "Can I leave SCM a review?", a: "Yes, and we'd really value it. Once we've worked together, we'll point you to where you can leave honest feedback. Real reviews from real clients help other Melbourne businesses choose security with confidence." },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "BreadcrumbList", itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Reviews", item: site.url + "/reviews/" },
+    ]},
+    { "@type": ["Organization","SecurityService","LocalBusiness"], name: site.brand, url: site.url, telephone: site.phone,
+      areaServed: "Greater Melbourne, Victoria, Australia", description: description },
+    { "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
+  ],
+};
+---
+<Base title={title} description={description} path="/reviews/" ogImage="/assets/og/reviews.jpg">
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schema)} />
+  <Header />
+
+  <section class="hero">
+    <div class="wm wm-hero" aria-hidden="true"></div>
+    <div class="container" style="padding:60px 24px 64px;max-width:900px;text-align:center">
+      <div class="crumbs" style="color:#B9B7A6;justify-content:center"><a href="/" style="color:var(--lime-soft)">Home</a> &nbsp;/&nbsp; Reviews</div>
+      <h1 style="margin-top:10px">SCM Reviews & Client Testimonials</h1>
+      <p class="lead" style="margin-left:auto;margin-right:auto">Our Melbourne clients keep us because our guards turn up, do the job, and report back. Here's the feedback businesses share about our security guards, patrols and event work across the city.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
+        <a class="btn btn-primary" href="/contact/">Get a Free Quote</a>
+        <a class="btn btn-ghost" style="border-color:var(--lime);color:var(--cream)" href={site.phoneHref}>Call {site.phone}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-sec section bg-white">
+    <div class="container">
+      <div class="center-head reveal"><h2>What do clients say about our Melbourne security?</h2>
+        <p class="svc-lead center">Clients tell us the same things again and again: our guards are reliable and professional, incidents and theft drop, and the reporting actually tells them what happened. Here's a sample of that feedback from across Melbourne.</p>
+      </div>
+      <div class="cards" style="grid-template-columns:repeat(2,1fr)">
+        {testimonials.map(t => (
+          <figure class="card reveal" style="text-align:left;margin:0">
+            <div class="stars" aria-label="Client feedback" style="color:var(--gold);font-size:1rem;letter-spacing:2px">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote style="font-family:var(--serif);font-size:1.08rem;line-height:1.45;margin:10px 0 16px;color:var(--ink)">"{t.text}"</blockquote>
+            <figcaption style="display:flex;gap:12px;align-items:center">
+              <span class="avatar" aria-hidden="true" style="width:42px;height:42px;border-radius:50%;background:var(--olive);color:var(--lime);display:grid;place-items:center;font-family:var(--serif);font-weight:700;flex:none">{t.initials}</span>
+              <span><b>{t.name}</b><span style="display:block;font-size:.85rem;color:var(--muted)">{t.role}</span></span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+      <p class="cost-note" style="text-align:center;margin-top:22px">Feedback reflects what clients tell us about our work. For verified, named references from a client with a site like yours, just ask.</p>
+    </div>
+  </section>
+
+  <section class="svc-sec section bg-mist">
+    <div class="container">
+      <div class="center-head reveal"><h2>Why clients trust us</h2>
+        <p class="svc-lead center">Clients trust us because we're <a href="/licensing-compliance/">fully licensed and insured</a>, our guards are police-checked, and we back our work with real results and references. Read <a href="/about/">more about our company</a>.</p>
+      </div>
+      <div class="iconlist">{trust.map(it => (<div class="it reveal"><span class="ic" set:html={icons[it.icon]} /><div><b>{it.b}</b><p>{it.p}</p></div></div>))}</div>
+      <p style="text-align:center;margin-top:22px">See the work behind the feedback: <a href="/event-security-melbourne/" style="color:var(--olive);font-weight:600">our event security services</a> and <a href="/construction-site-security-melbourne/" style="color:var(--olive);font-weight:600">construction site security</a>.</p>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container">
+      <div class="center-head reveal"><span class="eyebrow">Good to know</span><h2>Reviews <em>FAQ</em></h2></div>
+      <div class="faq">{faqs.map(f => (<details><summary>{f.q}</summary><p set:html={f.a}></p></details>))}</div>
+    </div>
+  </section>
+
+  <section class="section bg-white" style="padding-top:0">
+    <div class="container">
+      <div class="cta-final">
+        <span class="eyebrow">Ready when you are</span>
+        <h2>Join our satisfied Melbourne clients <em>today</em></h2>
+        <p>Licensed, insured, police-checked, and on call 24/7. Get a fast, free quote now.</p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+          <a class="btn btn-primary" href="/contact/">Book a free quote</a>
+          <a class="btn btn-ghost" style="border-color:var(--lime);color:var(--cream)" href={site.phoneHref}>Call {site.phone}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Base>

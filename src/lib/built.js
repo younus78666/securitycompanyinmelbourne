@@ -14,6 +14,7 @@ const staticPages = [
   "/licensing-compliance/",
   "/our-process/",
   "/about/",
+  "/reviews/",
   "/blog/",
 ];
 

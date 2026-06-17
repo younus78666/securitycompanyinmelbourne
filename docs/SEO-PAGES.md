@@ -66,7 +66,7 @@ Status legend: ✅ LIVE | ⏳ PLANNED (brief ready, page not built yet)
 | /about/ | about (brand) | LIVE ✅ |
 | /contact/ | contact / quote | ⏳ |
 | /licensing-compliance/ | security licence victoria (buyer) | ⏳ |
-| /reviews/ | reviews | ⏳ |
+| /reviews/ | reviews | LIVE ✅ |
 | /our-process/ | our process | ⏳ |
 | /privacy-policy/ /terms-of-service/ | n/a | ⏳ |
 
