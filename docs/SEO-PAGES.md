@@ -38,7 +38,7 @@ Status legend: ✅ LIVE | ⏳ PLANNED (brief ready, page not built yet)
 ## COST GUIDES (near blue-ocean)
 | Page | Primary KW | Vol | H1 must contain | Status |
 |---|---|---|---|---|
-| /security-guard-cost-melbourne/ | how much do security guards cost / security guard cost melbourne | 20-50 | "security guard cost" + "melbourne" | ⏳ |
+| /security-guard-cost-melbourne/ | how much do security guards cost / security guard cost melbourne | 20-50 | "security guard cost" + "melbourne" | LIVE ✅ |
 | /event-security-cost-melbourne/ | how much does event security cost | 90 | "event security cost" + "melbourne" | ⏳ |
 
 ## LOCATION (selective)

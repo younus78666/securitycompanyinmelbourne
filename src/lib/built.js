@@ -4,6 +4,7 @@
 import { services } from "./services.js";
 import { posts } from "./posts.js";
 import { locations } from "./locations.js";
+import { costguides } from "./costguides.js";
 
 const staticPages = [
   "/",
@@ -19,6 +20,7 @@ export const built = new Set([
   ...staticPages,
   ...services.map(s => "/" + s.slug + "/"),
   ...locations.map(s => "/" + s.slug + "/"),
+  ...costguides.map(s => "/" + s.slug + "/"),
   ...posts.map(p => "/blog/" + p.slug + "/"),
 ]);
 
