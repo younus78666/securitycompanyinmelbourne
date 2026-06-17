@@ -3,6 +3,9 @@
 // (web-entity.md). Swap them when the real business details are confirmed.
 
 export const site = {
+  // Analytics
+  ga: "G-S53LH7L7Z8",
+
   // Brand
   brand: "Security Company Melbourne",
   brandShort: "SCM",

@@ -15,6 +15,12 @@ const ogUrl = ogImage.startsWith("http") ? ogImage : site.url + ogImage;
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {site.ga && (
+    <Fragment>
+      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${site.ga}`}></script>
+      <script is:inline set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${site.ga}');`}></script>
+    </Fragment>
+  )}
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
