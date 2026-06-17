@@ -18,7 +18,8 @@ Run this for EVERY page after it goes live. Homepage results filled in (2026-06-
 - [x] Security headers (_headers): HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy
 - [x] Favicon (favicon-512/32 + apple-touch) = SCM shield
 - [ ] CSP header (TODO: add once inline scripts are auditable)
-- [ ] GA4 / Search Console / Bing verification (TODO before marketing)
+- [x] GA4 installed site-wide (G-S53LH7L7Z8, in Base head)
+- [ ] Google Search Console + Bing verification + submit sitemap (TODO)
 
 ## PER-PAGE CHECK (run for each page)
 SEO
