@@ -173,6 +173,131 @@ export const services = [
     ],
   },
   {
+    slug: "construction-site-security-melbourne",
+    primaryKW: "construction site security melbourne",
+    breadcrumb: "Construction Site Security",
+    title: "Construction Site Security Melbourne | Day & Night",
+    metaDesc: "Construction site security in Melbourne stops theft and trespass. We protect builds with licensed guards, patrols and CCTV, day and night. Get a free quote.",
+    h1: "Construction Site Security in Melbourne, Day and Night",
+    heroImg: "/assets/feature-construction.webp",
+    heroAlt: "Construction site security guard protecting a Melbourne build site",
+    og: "/assets/og/construction-site-security-melbourne.jpg",
+    intro: "Construction site security in Melbourne uses licensed guards, mobile patrols and systems to protect your build, plant and materials from theft and trespass. We cover gatehouse guarding, after-hours patrols, access control, CCTV and lock-up, keeping copper, tools and gear safe on site around the clock.",
+    midcta: { b: "Build site exposed after hours?", span: "Licensed guards and GPS-verified patrols across Melbourne." },
+    related: ["mobile-patrol-security-melbourne", "commercial-security-melbourne", "security-guards-melbourne"],
+    quote: { text: "We lost thousands in copper and tools on two sites before SCM took over. Static guard on the big build, overnight patrols on the rest. Six months in, our theft losses are basically zero and the program's stayed on track.", name: "Site Manager", role: "Commercial builder, northern suburbs", initials: "SM" },
+    sections: [
+      { id: "what", h2: "What is construction site security in Melbourne?", type: null, bg: "bg-white", cta: true,
+        leadHtml: "Construction site security in Melbourne uses licensed guards, mobile patrols and systems to protect build sites, plant and materials from theft and trespass. It covers gatehouse guarding, after-hours patrols, access control, CCTV and lock-up, keeping copper, tools and equipment safe on site around the clock. See our <a href='/security-services-melbourne/'>full range of security services</a>.",
+        bodyHtml: "<p>A build site is a soft target by design. It's full of valuable, portable, resaleable gear, it changes shape every week, and for most of the day it's open to dozens of trades coming and going. Then everyone goes home and it sits there, fenced but unwatched. That's when most of the damage happens. Construction security closes that window with people, patrols and proof.</p><p>We're a <a href='/licensing-compliance/'>fully licensed and insured</a> Victorian team, and every guard we put on a site is police-checked and ready for induction. We'll scale cover up and down as your build moves through each phase, so you're not paying for a gatehouse guard when an overnight patrol would do the job.</p>" },
+      { id: "why-need", h2: "Why do construction sites in Melbourne need security?", type: "iconlist", bg: "bg-mist",
+        lead: "Construction sites in Melbourne need security because they're prime targets for copper and tool theft, plant damage, trespass and squatting, especially after hours. A licensed guard or patrol cuts these losses, protects your program and budget, and helps you meet insurance and WHS obligations on site.",
+        bodyHtml: "<p>Site theft isn't petty crime anymore. Copper cable gets stripped and sold by weight, power tools vanish in minutes, and organised crews target unattended builds across Melbourne's growth corridors. Beyond the replacement cost, a single break-in can stall your program, blow your insurance excess, and create a WHS mess if intruders hurt themselves on your site. Security pays for itself the first time it stops one of those.</p>",
+        items: [
+          { icon: "bolt", b: "Copper & tool theft", p: "The top target on Melbourne builds, stripped and resold fast." },
+          { icon: "hardhat", b: "Plant & equipment damage", p: "Machinery vandalised or stolen costs days and dollars." },
+          { icon: "eye", b: "Trespass & squatting", p: "Unattended sites attract trespassers and illegal dumping." },
+          { icon: "clock", b: "After-hours exposure", p: "Most incidents happen overnight and over long weekends." },
+          { icon: "check", b: "Insurance & WHS", p: "Cover helps meet your obligations and lower your risk." },
+        ] },
+      { id: "targets", h2: "What do thieves target on a build site?", type: null, bg: "bg-white",
+        lead: "Thieves target whatever's valuable, portable and easy to resell. On Melbourne build sites that means copper cable and wiring first, then power tools, fuel, plant and building materials. Knowing the order of risk is how we plan where guards stand, where cameras point and when patrols run.",
+        bodyHtml: "<p>Copper sits at the top of nearly every site-theft report in Victoria, because it's everywhere on a build and trades by weight on a ready market. Tools come next, then diesel siphoned from machinery. We use this risk profile to shape your cover, focusing the gatehouse, CCTV and patrol timing on what's actually most likely to walk off your site.</p>",
+        viz: `<svg viewBox="0 0 820 300" role="img" aria-label="Most-targeted items stolen from Melbourne construction sites">
+  <g font-family="Inter, system-ui, sans-serif">
+    <line x1="204" y1="14" x2="204" y2="282" stroke="#E2DCCD" stroke-width="2"/>
+    <g>
+      <text x="194" y="42" text-anchor="end" font-size="13.5" font-weight="600" fill="#1C1C16">Copper &amp; wiring</text>
+      <rect x="206" y="26" width="440" height="30" rx="7" fill="#3B3B25"/><rect x="638" y="26" width="8" height="30" rx="4" fill="#C7D43F"/>
+      <text x="658" y="46" font-size="12.5" fill="#6B6B57">Very high</text>
+    </g>
+    <g>
+      <text x="194" y="94" text-anchor="end" font-size="13.5" font-weight="600" fill="#1C1C16">Power tools</text>
+      <rect x="206" y="78" width="360" height="30" rx="7" fill="#3B3B25"/><rect x="558" y="78" width="8" height="30" rx="4" fill="#C7D43F"/>
+      <text x="578" y="98" font-size="12.5" fill="#6B6B57">High</text>
+    </g>
+    <g>
+      <text x="194" y="146" text-anchor="end" font-size="13.5" font-weight="600" fill="#1C1C16">Fuel &amp; diesel</text>
+      <rect x="206" y="130" width="270" height="30" rx="7" fill="#3B3B25"/><rect x="468" y="130" width="8" height="30" rx="4" fill="#C7D43F"/>
+      <text x="488" y="150" font-size="12.5" fill="#6B6B57">Medium-high</text>
+    </g>
+    <g>
+      <text x="194" y="198" text-anchor="end" font-size="13.5" font-weight="600" fill="#1C1C16">Plant &amp; machinery</text>
+      <rect x="206" y="182" width="210" height="30" rx="7" fill="#3B3B25"/><rect x="408" y="182" width="8" height="30" rx="4" fill="#C7D43F"/>
+      <text x="428" y="202" font-size="12.5" fill="#6B6B57">Medium</text>
+    </g>
+    <g>
+      <text x="194" y="250" text-anchor="end" font-size="13.5" font-weight="600" fill="#1C1C16">Materials &amp; fixtures</text>
+      <rect x="206" y="234" width="170" height="30" rx="7" fill="#3B3B25"/><rect x="368" y="234" width="8" height="30" rx="4" fill="#C7D43F"/>
+      <text x="388" y="254" font-size="12.5" fill="#6B6B57">Medium</text>
+    </g>
+    <text x="14" y="294" font-size="12" font-style="italic" fill="#6B6B57">Illustrative risk profile for Melbourne build sites. Copper and tools top the list.</text>
+  </g>
+</svg>
+<p class="viz-cap">What thieves target on Melbourne build sites. We plan guards, cameras and patrol timing around this risk order.</p>` },
+      { id: "included", h2: "What's included in our construction site security?", type: "cards", bg: "bg-mist", cta: true,
+        leadHtml: "Our construction security covers the site day and night: static gatehouse guards, after-hours patrols, access control, CCTV, lock-up and alarm response. Many builders pair a daytime gatehouse with <a href='/mobile-patrol-security-melbourne/'>after-hours mobile patrols</a> to cut cost without leaving a gap.",
+        items: [
+          { icon: "shieldcheck", name: "Static gatehouse guards", note: "A licensed presence on the gate, controlling who comes on site." },
+          { icon: "patrol", name: "After-hours patrols", note: "GPS-verified overnight and weekend checks across the site." },
+          { icon: "lock", name: "Access control & sign-in", note: "Site sign-in, inductions checked and entry points managed." },
+          { icon: "camera", name: "CCTV monitoring", note: "Cameras on the high-risk zones, watched and recorded." },
+          { icon: "clock", name: "After-hours lock-up", note: "Securing gates, sheds and compounds at the end of each day." },
+          { icon: "alert", name: "Alarm response", note: "Fast attendance and escalation when an alarm trips on site." },
+        ] },
+      { id: "who", h2: "Which construction sites do we protect?", type: "pills", bg: "bg-white",
+        lead: "We protect build sites of every kind across Melbourne, from a single residential block to a multi-stage commercial project or a civil works program. If there's plant, copper or gear on site, we can cover it.",
+        items: [
+          { icon: "building", label: "Commercial builds" }, { icon: "home", label: "Residential developments" },
+          { icon: "hardhat", label: "Civil & infrastructure" }, { icon: "bolt", label: "Demolition sites" },
+          { icon: "grid", label: "Fit-outs" }, { icon: "patrol", label: "Plant & equipment yards" },
+        ] },
+      { id: "how", h2: "How does our construction site security work?", type: "steps",
+        leadHtml: "Our construction security works in four steps, and our guards meet site induction and white-card requirements before they start. See <a href='/our-process/'>our process</a> for the full method.",
+        items: [
+          { icon: "eye", n: "1", t: "Assess", d: "A site risk assessment of access, plant and high-value zones." },
+          { icon: "check", n: "2", t: "Induct", d: "Guards meet induction and white-card requirements for your site." },
+          { icon: "shieldcheck", n: "3", t: "Deploy", d: "Licensed guards and GPS-verified patrols, matched to the phase." },
+          { icon: "lock", n: "4", t: "Lock-up & report", d: "After-hours lock-up plus clear reporting on every shift." },
+        ] },
+      { id: "why-choose", h2: "Why choose us for construction site security in Melbourne?", type: "iconlist", bg: "bg-mist",
+        lead: "Choose us for construction site security because our guards are licensed, insured and white-card-ready, our patrols are GPS-verified, and we deploy fast across Melbourne. We're a local Victorian team that understands build-site risks and WHS, so your site, plant and program stay protected.",
+        items: [
+          { icon: "shieldcheck", b: "Licensed & white-card-ready", p: "Victorian licence plus white card for site access." },
+          { icon: "pin", b: "GPS-verified patrols", p: "Proof of every after-hours check, not just a claim." },
+          { icon: "bolt", b: "Fast deployment", p: "Cover on site fast across Melbourne, 24/7 dispatch." },
+          { icon: "hardhat", b: "Build-site savvy", p: "We know WHS, inductions and how a site really runs." },
+        ],
+        bool: { q: "Are your construction site guards licensed and insured?", a: "Yes. Every construction guard holds a current Victorian security licence, is police-checked, and is ready to meet your site induction and white-card requirements. We carry public liability insurance, and you can verify our business licence on our licensing page." } },
+      { id: "cost", h2: "How much does construction site security cost in Melbourne?", type: "table", bg: "bg-white", cta: true,
+        lead: "Construction site security in Melbourne is priced by static guarding or after-hours mobile patrols, usually at an hourly or per-patrol rate with night and weekend loadings. Patrols cost less than full-time static cover. The total depends on site size, hours and risk. Get a quote for your site.",
+        bodyHtml: "<p>Most builders mix the two. A static guard on the gate during the busy build hours, then overnight patrols once the trades leave. That blend gives you presence when the site's open and proof of coverage when it's empty, without paying for a guard to stand on a locked gate all night. <a href='/contact/'>Get a free quote</a> and we'll work out the right mix for your build.</p>",
+        head: ["Cover type", "$/hr or per patrol", "Loadings", "Min shift"],
+        rows: [
+          ["Static gatehouse guard", "$45 to $65 / hr", "+ night / weekend", "~4 hrs"],
+          ["After-hours mobile patrol", "from $40 / visit", "+ public holiday", "per route"],
+          ["Dedicated overnight guard", "$48 to $68 / hr", "+ after midnight", "~8 hrs"],
+          ["CCTV & alarm response", "quoted", "per site", "ongoing"],
+        ],
+        note: "Figures are estimates only. Get a quote for your site." },
+      { id: "areas", h2: "Where do we secure construction sites across Melbourne?", type: "areas", bg: "bg-mist",
+        lead: "We secure construction sites across the Melbourne CBD, the growth corridors and metro suburbs, plus Geelong and Dandenong. From an inner-city tower to a fringe estate, you get a local crew that knows the area and can reach your site fast.",
+        items: ["Melbourne CBD", "Northern growth corridor", "Western suburbs", "Eastern suburbs", "South-east", "Geelong", "Dandenong"],
+        link: { href: "/service-areas/", label: "See all areas we cover" } },
+    ],
+    faqs: [
+      { q: "Are your security guards licensed in Victoria?", a: "Yes. Every construction guard holds a current Victorian security licence and is police-checked, and our business holds a Private Security Business Licence you can verify with the Victoria Police Licensing and Regulation Division at any time." },
+      { q: "Do your guards hold a white card for construction sites?", a: "Yes. Our construction guards are white-card-ready, which is the standard construction-industry induction card required to work on a build site in Victoria. We make sure they meet your specific site induction requirements before they start a shift." },
+      { q: "How quickly can I get a security guard on site?", a: "Usually within hours, not days. We run a 24/7 dispatch team across Melbourne, so for urgent site cover we'll confirm a deployment window the moment you call and get a licensed, induction-ready guard moving fast." },
+      { q: "What is the difference between static guards and mobile patrols on a build site?", a: "A static guard stays on your site for the whole shift, ideal during busy build hours. A mobile patrol visits at set and random times overnight, which costs less. Many builders use a static guard by day and patrols after hours." },
+      { q: "Are your guards insured and police-checked?", a: "Yes. We carry public liability insurance and every guard passes a national police check before their first shift, so your site, your plant and anyone on or near the build are properly protected throughout every shift." },
+      { q: "Is there a minimum shift length for construction security?", a: "Most construction security has a minimum shift, commonly around four hours for static guards, because guards need travel and induction time. Patrols work on a per-route basis. We'll confirm the minimum in your written quote before you commit." },
+      { q: "How much do construction security guards cost per hour?", a: "Licensed construction guards in Melbourne usually sit around $45 to $68 per hour in 2026, with loadings for nights, weekends and public holidays. After-hours patrols cost less. The total depends on site size, hours and risk. Get a quote for an exact figure." },
+      { q: "Do construction site guards have the power to detain someone?", a: "Yes, within limits. Under Victorian law a guard can refuse entry, ask a trespasser to leave, and detain a person until police arrive where the law allows. Our guards are trained to know exactly where that legal line sits on a build site." },
+    ],
+  },
+
+  {
     slug: "concierge-security-melbourne",
     primaryKW: "concierge security melbourne",
     breadcrumb: "Concierge Security",
