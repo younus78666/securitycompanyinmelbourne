@@ -5,8 +5,10 @@ const {
   title = "Security Company Melbourne | Licensed Guards 24/7",
   description = "Looking for a licensed security company in Melbourne? We've got fully insured, police-checked guards on call 24/7. Get a fast free quote for your site today.",
   path = "/",
+  ogImage = "/assets/logo-lockup.png",
 } = Astro.props;
 const canonical = site.url + path;
+const ogUrl = ogImage.startsWith("http") ? ogImage : site.url + ogImage;
 ---
 <!doctype html>
 <html lang="en-AU">
@@ -20,7 +22,7 @@ const canonical = site.url + path;
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
-  <meta property="og:image" content={site.url + "/assets/hero.webp"} />
+  <meta property="og:image" content={ogUrl} />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />

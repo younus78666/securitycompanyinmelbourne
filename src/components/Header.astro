@@ -13,12 +13,12 @@ import { logoSvg, icons, drawerIcon } from "../lib/brand.js";
           <div class="mega-inner">
             {site.mega.services.columns.map(col => (
               <div class="mega-col">
-                <h5>{col.heading}</h5>
+                <div class="mega-h">{col.heading}</div>
                 {col.items.map(it => <a href={it.href}>{it.name}<span>{it.note}</span></a>)}
               </div>
             ))}
             <div class="mega-feat">
-              <h5>Get started</h5>
+              <div class="mega-h">Get started</div>
               <p style="font-family:var(--serif);font-size:1.2rem;color:var(--cream);margin:6px 0">{site.mega.services.featured.title}</p>
               <p>{site.mega.services.featured.text}</p>
               <a class="btn btn-primary" href={site.mega.services.featured.href}>{site.mega.services.featured.cta}</a>

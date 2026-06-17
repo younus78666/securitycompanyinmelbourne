@@ -186,13 +186,13 @@ em{font-style:italic}
 .has-menu:hover .chev,.has-menu .menu-trigger[aria-expanded="true"] .chev{transform:rotate(180deg)}
 .mega-inner{max-width:var(--maxw);margin:0 auto;padding:30px 24px;display:grid;
   grid-template-columns:repeat(3,1fr) 1.1fr;gap:30px}
-.mega-col h5{font-family:var(--sans);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;
-  color:var(--muted);margin:0 0 12px}
+.mega-col .mega-h{font-family:var(--sans);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 12px;font-weight:600}
 .mega-col a{display:block;padding:7px 0;font-weight:600;font-size:.96rem;color:var(--olive)}
 .mega-col a span{display:block;font-weight:400;font-size:.78rem;color:var(--muted)}
 .mega-col a:hover{color:var(--ink)}
 .mega-feat{background:var(--olive);color:var(--cream);border-radius:14px;padding:24px}
-.mega-feat h5{color:var(--lime-soft)}
+.mega-feat .mega-h{color:var(--lime-soft);font-family:var(--sans);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600;margin:0 0 12px}
 .mega-feat p{font-size:.9rem;color:#D8D6C4;margin:8px 0 16px}
 /* simple dropdown list */
 .dropdown.simple{left:auto;right:auto;width:min(280px,90vw);border-radius:14px;border:1px solid var(--line);
