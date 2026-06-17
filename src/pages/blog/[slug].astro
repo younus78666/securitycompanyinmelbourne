@@ -1,0 +1,207 @@
+---
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { posts } from "../../lib/posts.js";
+import { site } from "../../site.js";
+
+export async function getStaticPaths() {
+  return posts.map(p => ({ params: { slug: p.slug }, props: { post: p } }));
+}
+const { post } = Astro.props;
+
+const toc = [...post.content.matchAll(/<h2 id="([^"]+)">(.*?)<\/h2>/g)].map(m => ({ id: m[1], label: m[2].replace(/<[^>]+>/g, "") }));
+const related = (post.related || []).map(s => posts.find(p => p.slug === s)).filter(Boolean);
+const idx = posts.findIndex(p => p.slug === post.slug);
+const prev = posts[idx - 1];
+const next = posts[idx + 1];
+const url = site.url + "/blog/" + post.slug + "/";
+const initials = post.author.split(" ").map(w => w[0]).slice(0, 2).join("");
+
+const share = {
+  facebook: "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url),
+  x: "https://twitter.com/intent/tweet?url=" + encodeURIComponent(url) + "&text=" + encodeURIComponent(post.title),
+  linkedin: "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(url),
+  whatsapp: "https://wa.me/?text=" + encodeURIComponent(post.title + " " + url),
+  email: "mailto:?subject=" + encodeURIComponent(post.title) + "&body=" + encodeURIComponent(url),
+};
+const sIcon = {
+  facebook: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.4-3H14V4.2c0-.9.3-1.5 1.6-1.5H17V.1C16.7 0 15.7 0 14.6 0 12.1 0 10.5 1.5 10.5 4v2H7.5v3h3v9H14z"/></svg>',
+  x: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7 8 8 12h-6l-5-7-6 7H2l8-9L2 2h6l4 6zm-1 18h2L7 4H5z"/></svg>',
+  linkedin: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM0 8h5v16H0zM8 8h4.8v2.2h.1C13.5 9 15 8 17.2 8 22 8 23 11 23 15.3V24h-5v-7.8c0-1.9 0-4.2-2.6-4.2s-3 2-3 4.1V24H8z"/></svg>',
+  whatsapp: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.3 14c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.2-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.4 2.6 1.6.3.1.5.1.7-.1l.8-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg>',
+  email: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg>',
+  link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 15l6-6M10 7l1-1a4 4 0 0 1 6 6l-1 1M14 17l-1 1a4 4 0 0 1-6-6l1-1"/></svg>',
+};
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "BreadcrumbList", itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: site.url + "/blog/" },
+      { "@type": "ListItem", position: 3, name: post.title, item: url },
+    ]},
+    { "@type": "Article", headline: post.title, description: post.excerpt, image: site.url + post.image,
+      datePublished: post.date, dateModified: post.date, author: { "@type": "Organization", name: site.brand },
+      publisher: { "@type": "Organization", name: site.brand }, mainEntityOfPage: url },
+  ],
+};
+---
+<Base title={post.title + " | SCM Melbourne"} description={post.excerpt} path={"/blog/" + post.slug + "/"}>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schema)} />
+  <Header />
+
+  <section class="page-hero" style="padding-bottom:40px">
+    <div class="container">
+      <div class="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; <a href="/blog/">Blog</a> &nbsp;/&nbsp; {post.category}</div>
+      <span class="bcat">{post.category}</span>
+      <h1 style="margin-top:14px;max-width:20ch">{post.title}</h1>
+    </div>
+  </section>
+
+  <section class="section bg-white" style="padding-top:40px">
+    <div class="container blog-layout">
+      <!-- MAIN -->
+      <div class="blog-main">
+        <div class="post-meta">
+          <span class="author"><span class="av">{initials}</span>{post.author}</span>
+          <span>{post.dateLabel}</span>
+          <span>{post.readMins} min read</span>
+          <span class="share" style="margin-left:auto">
+            <a href={share.facebook} target="_blank" rel="noopener" aria-label="Share on Facebook" set:html={sIcon.facebook} />
+            <a href={share.x} target="_blank" rel="noopener" aria-label="Share on X" set:html={sIcon.x} />
+            <a href={share.linkedin} target="_blank" rel="noopener" aria-label="Share on LinkedIn" set:html={sIcon.linkedin} />
+            <a href={share.whatsapp} target="_blank" rel="noopener" aria-label="Share on WhatsApp" set:html={sIcon.whatsapp} />
+            <a class="copy-link" href={url} aria-label="Copy link" set:html={sIcon.link} />
+          </span>
+        </div>
+
+        <img class="post-img" src={post.image} alt={post.imageAlt} width="760" height="500" />
+
+        <div class="aeo-summary">
+          <h2>Quick answer</h2>
+          <p>{post.aeo}</p>
+        </div>
+
+        <div class="prose" set:html={post.content} />
+
+        <div class="author-box">
+          <span class="av">{initials}</span>
+          <div><b>{post.author}</b><span>{post.authorRole}. Licensed in Victoria, protecting Melbourne 24/7.</span></div>
+        </div>
+
+        <!-- COMMENTS -->
+        <h2 style="font-family:var(--serif);font-size:1.5rem;margin:8px 0 16px">Comments</h2>
+        <div class="comments">
+          <div class="comment">
+            <span class="av">DM</span>
+            <div><b>David M.</b> <span class="cmeta">Facility manager</span><p style="margin:6px 0 0">Really useful breakdown. The licence-check tip saved us from a dodgy quote.</p></div>
+          </div>
+          <div class="comment" style="border-bottom:0">
+            <span class="av">SP</span>
+            <div><b>Sarah P.</b> <span class="cmeta">Event organiser</span><p style="margin:6px 0 0">The guards-per-guest table is exactly what I needed for our spring event.</p></div>
+          </div>
+          <form class="cform" id="cForm" novalidate>
+            <input type="text" name="name" placeholder="Your name" required />
+            <textarea name="comment" rows="3" placeholder="Add a comment" required></textarea>
+            <div><button type="submit" class="btn btn-primary">Post comment</button></div>
+            <p class="hf-note" id="cMsg" hidden style="text-align:left">Thanks, your comment is awaiting moderation.</p>
+          </form>
+          <p class="hf-note" style="text-align:left">[CLIENT INPUT: connect a comment system such as Disqus, or a moderated form backend.]</p>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="blog-side">
+        {toc.length > 0 && (
+          <div class="side-card">
+            <h4>On this page</h4>
+            <ul class="toc" id="toc">
+              {toc.map(t => <li><a href={"#" + t.id}>{t.label}</a></li>)}
+            </ul>
+          </div>
+        )}
+        <div class="side-card">
+          <h4>Popular services</h4>
+          <ul class="side-links">
+            {site.services.map(s => <li><a href={s.href}>{s.name} &rarr;</a></li>)}
+            <li><a href="/security-guard-cost-melbourne/">Security guard cost &rarr;</a></li>
+          </ul>
+        </div>
+        <div class="side-card side-cta">
+          <h4>Need security now?</h4>
+          <p>Licensed guards on call across Melbourne, 24/7. Get a fast, free quote.</p>
+          <a class="btn btn-primary" href="/contact/">Get a free quote</a>
+          <a class="btn btn-ghost" style="border-color:var(--lime);color:var(--cream);margin-top:8px" href={site.phoneHref}>Call {site.phone}</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- PREV / NEXT -->
+  <section class="section bg-cream" style="padding:30px 0 0">
+    <div class="container">
+      <div class="related-nav">
+        {prev ? <a href={"/blog/" + prev.slug + "/"}><span class="lbl">&larr; Previous</span><b>{prev.title}</b></a> : <span></span>}
+        {next ? <a class="nxt" href={"/blog/" + next.slug + "/"}><span class="lbl">Next &rarr;</span><b>{next.title}</b></a> : <span></span>}
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED -->
+  {related.length > 0 && (
+    <section class="section bg-cream" style="padding-top:30px">
+      <div class="container">
+        <div class="center-head reveal" style="margin-bottom:30px"><span class="eyebrow">Keep reading</span><h2>Related articles</h2></div>
+        <div class="bgrid">
+          {related.map(p => (
+            <article class="bcard reveal">
+              <a href={"/blog/" + p.slug + "/"} class="bimg"><img src={p.image} alt={p.imageAlt} loading="lazy" width="400" height="267" /></a>
+              <div class="bbody">
+                <span class="bcat">{p.category}</span>
+                <h3><a href={"/blog/" + p.slug + "/"}>{p.title}</a></h3>
+                <p>{p.excerpt}</p>
+                <div class="bmeta"><span>{p.dateLabel}</span><span>{p.readMins} min read</span></div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <Footer />
+
+  <script is:inline>
+    // TOC active highlight on scroll
+    (function(){
+      const links = Array.from(document.querySelectorAll('.toc a'));
+      if(!links.length) return;
+      const ids = links.map(a => a.getAttribute('href').slice(1));
+      const heads = ids.map(id => document.getElementById(id)).filter(Boolean);
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if(e.isIntersecting){
+            links.forEach(l => l.classList.remove('active'));
+            const a = document.querySelector('.toc a[href="#' + e.target.id + '"]');
+            if(a) a.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -70% 0px' });
+      heads.forEach(h => io.observe(h));
+    })();
+    // copy link
+    (function(){
+      const c = document.querySelector('.copy-link');
+      if(!c) return;
+      c.addEventListener('click', (e) => { e.preventDefault(); navigator.clipboard && navigator.clipboard.writeText(c.href); c.style.color = 'var(--lime)'; setTimeout(()=>c.style.color='', 1200); });
+    })();
+    // comment form
+    (function(){
+      const f = document.getElementById('cForm');
+      if(!f) return;
+      f.addEventListener('submit', (e) => { e.preventDefault(); if(!f.checkValidity()){f.reportValidity();return;} f.reset(); document.getElementById('cMsg').hidden = false; });
+    })();
+  </script>
+</Base>

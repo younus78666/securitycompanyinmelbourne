@@ -1,0 +1,92 @@
+---
+import { site } from "../site.js";
+import { logoSvg, animMark } from "../lib/brand.js";
+---
+<!-- PRE-FOOTER: CTA + SUBSCRIBE -->
+<section class="prefooter">
+  <div class="wm wm-cta" aria-hidden="true" set:html={animMark('#C7D43F', '#2D2D1C', '#C7D43F')} />
+  <div class="container prefoot-grid">
+    <div class="prefoot-cta reveal">
+      <span class="eyebrow" style="color:var(--lime-soft)">Protecting Melbourne, around the clock</span>
+      <h2>Talk to a real Melbourne <em>security team</em> today</h2>
+      <p>Get a free, no-obligation quote. Tell us about your site, your event or what's worrying you, and we'll recommend the right cover at a fair price, fast.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:22px">
+        <a class="btn btn-primary" href="/contact/">Book a free quote</a>
+        <a class="btn btn-ghost" style="border-color:var(--lime);color:var(--cream)" href={site.phoneHref}>Call {site.phone}</a>
+      </div>
+      <div class="prefoot-trust">
+        <span>Victorian licensed</span><span>Fully insured</span><span>Police-checked</span><span>24/7 response</span>
+      </div>
+    </div>
+    <div class="subscribe-card reveal">
+      <h3>Security tips for Melbourne businesses</h3>
+      <p class="sub-intro">Get occasional, practical security advice plus seasonal alerts for event and holiday cover. No spam, and you can unsubscribe anytime.</p>
+      <form class="sub-form" id="subForm" novalidate>
+        <label for="subEmail" style="position:absolute;left:-9999px">Your email address</label>
+        <input type="email" id="subEmail" name="email" placeholder="Your email address" required autocomplete="email" />
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+      <p class="sub-note">We only email when it's worth your time.</p>
+      <p class="sub-success" id="subSuccess" hidden>Thanks. You're on the list.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <span set:html={logoSvg('#F5F1E8', '#C7D43F', '#B9B7A6')} />
+      <p style="margin-top:16px">Licensed, insured, 24/7 security guards, mobile patrols, event and commercial security across Greater Melbourne.</p>
+      <p style="font-size:.82rem;color:#B9B7A6">{site.licenceNo}</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        {site.services.map(s => <li><a href={s.href}>{s.name}</a></li>)}
+        <li><a href="/security-services-melbourne/">All services</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/licensing-compliance/">Licensing &amp; compliance</a></li>
+        <li><a href="/reviews/">Reviews</a></li>
+        <li><a href="/service-areas/">Service areas</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <ul>
+        <li><a href={site.phoneHref}>{site.phone}</a></li>
+        <li><a href={"mailto:" + site.email}>{site.email}</a></li>
+        <li><a href="/contact/">Get a free quote</a></li>
+        <li>{site.address}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; {new Date().getFullYear()} {site.brand}. All rights reserved.</span>
+    <span><a href="/privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms-of-service/">Terms</a></span>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA BAR -->
+<div class="mobile-bar">
+  <a class="btn btn-dark" href={site.phoneHref}>Call now</a>
+  <a class="btn btn-primary" href="/contact/">Free quote</a>
+</div>
+
+<script is:inline>
+  const subForm = document.getElementById('subForm');
+  if (subForm) {
+    subForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('subEmail');
+      if (!email.value || !email.checkValidity()) { email.focus(); return; }
+      subForm.hidden = true;
+      document.getElementById('subSuccess').hidden = false;
+    });
+  }
+</script>

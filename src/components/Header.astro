@@ -1,0 +1,130 @@
+---
+import { site } from "../site.js";
+import { logoSvg, icons, drawerIcon } from "../lib/brand.js";
+---
+<header class="site-header">
+  <div class="container nav">
+    <a href="/" aria-label={site.brand + " home"} set:html={logoSvg('#3B3B25', '#C7D43F', '#6B6B57')} />
+
+    <nav class="nav-links" aria-label="Primary">
+      <div class="has-menu wide">
+        <button class="menu-trigger" aria-expanded="false" aria-haspopup="true">Services<span set:html={icons.chev} /></button>
+        <div class="dropdown">
+          <div class="mega-inner">
+            {site.mega.services.columns.map(col => (
+              <div class="mega-col">
+                <h5>{col.heading}</h5>
+                {col.items.map(it => <a href={it.href}>{it.name}<span>{it.note}</span></a>)}
+              </div>
+            ))}
+            <div class="mega-feat">
+              <h5>Get started</h5>
+              <p style="font-family:var(--serif);font-size:1.2rem;color:var(--cream);margin:6px 0">{site.mega.services.featured.title}</p>
+              <p>{site.mega.services.featured.text}</p>
+              <a class="btn btn-primary" href={site.mega.services.featured.href}>{site.mega.services.featured.cta}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {site.mega.menus.map(m => (
+        <div class="has-menu">
+          <button class="menu-trigger" aria-expanded="false" aria-haspopup="true">{m.label}<span set:html={icons.chev} /></button>
+          <div class="dropdown simple">
+            {m.items.map(it => <a href={it.href}>{it.name}</a>)}
+          </div>
+        </div>
+      ))}
+      <a href="/service-areas/" class="menu-trigger">Areas</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href={site.phoneHref}>Call {site.phone}</a>
+      <a class="btn btn-primary" href="/contact/">Get a Free Quote</a>
+    </div>
+    <button class="menu-btn" id="openDrawer" aria-label="Open menu" aria-expanded="false"><span class="ham"><i></i><i></i><i></i></span></button>
+  </div>
+</header>
+
+<!-- MOBILE DRAWER (off-canvas) -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-bg" data-close></div>
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer-head">
+      <a href="/" aria-label={site.brand + " home"} set:html={logoSvg('#3B3B25', '#C7D43F', '#6B6B57')} />
+      <button class="drawer-close" data-close aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer-nav" aria-label="Mobile">
+      <details class="dacc" open>
+        <summary><span class="di" set:html={icons.shieldcheck} /><span class="dlabel">Services</span><span class="dchev" set:html={icons.chev} /></summary>
+        <div class="dacc-body">
+          {site.mega.services.columns.flatMap(c => c.items).map(it => <a href={it.href}>{it.name}</a>)}
+          <a class="dacc-all" href={site.mega.services.hubHref}>All services &rarr;</a>
+        </div>
+      </details>
+      {site.mega.menus.map(m => (
+        <details class="dacc">
+          <summary><span class="di" set:html={icons[drawerIcon[m.label]]} /><span class="dlabel">{m.label}</span><span class="dchev" set:html={icons.chev} /></summary>
+          <div class="dacc-body">
+            {m.items.map(it => <a href={it.href}>{it.name}</a>)}
+          </div>
+        </details>
+      ))}
+      <a class="drow" href="/service-areas/"><span class="di" set:html={icons.pin} /><span class="dlabel">Service areas</span><span class="darrow" set:html={icons.chev} /></a>
+      <a class="drow" href="/blog/"><span class="di" set:html={icons.book} /><span class="dlabel">Blog</span><span class="darrow" set:html={icons.chev} /></a>
+    </nav>
+    <div class="drawer-foot">
+      <a class="btn btn-primary" href="/contact/">Get a Free Quote</a>
+      <a class="btn btn-dark" href={site.phoneHref}>Call {site.phone}</a>
+      <div class="drawer-contact">
+        <a href={"mailto:" + site.email}>{site.email}</a>
+        <span>Licensed &middot; Insured &middot; 24/7</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  document.documentElement.classList.add('js');
+  const drawer = document.getElementById('drawer');
+  const openBtn = document.getElementById('openDrawer');
+  const setDrawer = (open) => {
+    drawer.classList.toggle('open', open);
+    drawer.setAttribute('aria-hidden', String(!open));
+    openBtn.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  openBtn.addEventListener('click', () => setDrawer(true));
+  drawer.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', () => setDrawer(false)));
+  if (location.hash === '#menu') setDrawer(true);
+  document.querySelectorAll('.has-menu .menu-trigger').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const dd = btn.parentElement.querySelector('.dropdown');
+      const isOpen = dd.classList.contains('open');
+      document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+      document.querySelectorAll('.menu-trigger[aria-expanded="true"]').forEach(b => b.setAttribute('aria-expanded','false'));
+      if (!isOpen) { dd.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    });
+  });
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.has-menu')) {
+      document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+      document.querySelectorAll('.menu-trigger[aria-expanded="true"]').forEach(b => b.setAttribute('aria-expanded','false'));
+    }
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { setDrawer(false); document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open')); } });
+  // reveal-on-scroll (shared) — wait for full DOM since Header is early in body
+  const initReveal = () => {
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      reveals.forEach(el => io.observe(el));
+    } else { reveals.forEach(el => el.classList.add('in')); }
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initReveal);
+  else initReveal();
+</script>

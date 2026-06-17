@@ -1,0 +1,58 @@
+---
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { posts } from "../../lib/posts.js";
+const [featured, ...rest] = posts;
+---
+<Base title="Security Guides & Tips for Melbourne | SCM Blog" description="Practical security advice for Melbourne businesses: how to hire guards, what security costs, licensing explained, and more from a licensed local team." path="/blog/">
+  <Header />
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; Blog</div>
+      <span class="eyebrow" style="color:var(--lime-soft)">SCM insights</span>
+      <h1 style="margin-top:10px">Melbourne security guides &amp; tips</h1>
+      <p>No-jargon advice from a licensed local team: how to hire guards, what security really costs, licensing explained, and how to keep your site, event or business safe.</p>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section class="section bg-cream" style="padding-bottom:0">
+    <div class="container">
+      <article class="feature reveal" style="margin-top:0">
+        <a href={"/blog/" + featured.slug + "/"} class="feature-media" style="border-radius:var(--radius);overflow:hidden">
+          <img src={featured.image} alt={featured.imageAlt} width="560" height="373" />
+        </a>
+        <div class="feature-text">
+          <span class="bcat">{featured.category}</span>
+          <h2 style="margin:14px 0 12px">{featured.title}</h2>
+          <p>{featured.excerpt}</p>
+          <div class="bmeta" style="border:0;padding:14px 0 18px"><span>{featured.dateLabel}</span><span>{featured.readMins} min read</span></div>
+          <a class="btn btn-dark" href={"/blog/" + featured.slug + "/"}>Read article &rarr;</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- GRID -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="bgrid">
+        {rest.map(p => (
+          <article class="bcard reveal">
+            <a href={"/blog/" + p.slug + "/"} class="bimg"><img src={p.image} alt={p.imageAlt} loading="lazy" width="400" height="267" /></a>
+            <div class="bbody">
+              <span class="bcat">{p.category}</span>
+              <h3><a href={"/blog/" + p.slug + "/"}>{p.title}</a></h3>
+              <p>{p.excerpt}</p>
+              <div class="bmeta"><span>{p.dateLabel}</span><span>{p.readMins} min read</span></div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Base>
