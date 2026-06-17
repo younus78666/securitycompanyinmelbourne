@@ -3,10 +3,10 @@
 // (web-entity.md). Swap them when the real business details are confirmed.
 
 export const site = {
-  // Brand (working name — swap for the real trading name)
-  brand: "Sentinel Security",
-  brandShort: "Sentinel",
-  tagline: "Security · Melbourne",
+  // Brand
+  brand: "Security Company Melbourne",
+  brandShort: "SCM",
+  tagline: "Security Company · Melbourne",
   domain: "securitycompanyinmelbourne.com",
   url: "https://securitycompanyinmelbourne.com",
 
