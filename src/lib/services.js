@@ -172,6 +172,139 @@ export const services = [
       { q: "Can I request male or female security guards?", a: "Yes. Tell us what your premises or event needs and we'll roster the right team, including female guards where that matters for your staff or visitors." },
     ],
   },
+  {
+    slug: "event-security-melbourne",
+    primaryKW: "event security melbourne",
+    breadcrumb: "Event Security",
+    title: "Event Security Melbourne | Licensed Crowd Control",
+    metaDesc: "Event security in Melbourne with licensed crowd controllers and guards. We manage entry, crowds and RSA for any event, big or small. Get a free quote today.",
+    h1: "Event Security in Melbourne for Safe, Smooth Events",
+    heroImg: "/assets/sector-events.webp",
+    heroAlt: "Licensed crowd controller managing entry at a Melbourne event",
+    og: "/assets/og/event-security-melbourne.jpg",
+    intro: "Event security in Melbourne puts licensed crowd controllers and guards on your event to manage entry, crowds, alcohol and incidents. We scale the team to your guest numbers, handle the door and the floor, and keep things calm from arrival to pack-down.",
+    midcta: { b: "Event coming up fast?", span: "Licensed crowd controllers booked and briefed across Melbourne." },
+    related: ["security-guards-melbourne", "commercial-security-melbourne"],
+    quote: { text: "We ran a 900-person product launch in Docklands and their crowd controllers handled entry, ID checks and a couple of gatecrashers without any fuss. Guests barely noticed them, which is exactly what you want.", name: "Events Producer", role: "Brand activation agency, Melbourne", initials: "EP" },
+    sections: [
+      { id: "what", h2: "What is event security in Melbourne?", type: null, bg: "bg-white", cta: true,
+        leadHtml: "Event security in Melbourne uses licensed crowd controllers and guards to manage safety, entry and crowds at your event. They screen attendees, control access, handle RSA and respond to incidents, helping you meet venue and council conditions while keeping guests safe from arrival to pack-down.",
+        bodyHtml: "<p>Put plainly, it's the team that stands between a good night and a problem you didn't see coming. A crowd controller in Victoria holds a specific licence class, so they're trained to manage entry, refuse troublemakers, and de-escalate a tense moment before it turns into an incident. That's different from a static guard watching a quiet warehouse, and it's why event work has its own rules.</p><p>We're <a href='/licensing-compliance/'>fully licensed and insured</a>, and every controller we put on your door is police-checked and holds a current Victorian crowd control licence. If you'd rather see the bigger picture first, here's our <a href='/security-services-melbourne/'>full range of security services</a>. For an event, though, you'll usually want crowd controllers, a clear entry plan, and enough bodies on the ground to match your headcount.</p>" },
+      { id: "why-need", h2: "Why do you need event security?", type: "iconlist", bg: "bg-mist",
+        lead: "You need event security to meet your duty of care, keep crowds safe, and satisfy venue and council permit conditions. Licensed crowd controllers manage entry, alcohol and incidents, so your event runs smoothly and you're covered if something goes wrong with a guest.",
+        bodyHtml: "<p>Here's the part people forget until it's too late. If you're hosting an event, you carry a legal duty of care for everyone who walks in. Most Melbourne venues won't let you book without proof of licensed security, and many council permits for outdoor or licensed events make it a flat condition. Skip it and you're not just risking the night, you're risking your insurance and your permit.</p>",
+        items: [
+          { icon: "shieldcheck", b: "Duty of care", p: "You're legally responsible for guest safety. Licensed security helps you meet it." },
+          { icon: "users", b: "Crowd safety", p: "Trained controllers manage flow, pinch points and capacity limits." },
+          { icon: "check", b: "Permit conditions", p: "Venues and councils often require licensed security in writing." },
+          { icon: "alert", b: "RSA & alcohol", p: "Controllers handle intoxicated guests and support your RSA marshals." },
+          { icon: "lock", b: "Asset protection", p: "Gear, bar takings and the venue itself stay protected all night." },
+        ] },
+      { id: "included", h2: "What's included in our event security services?", type: "cards", bg: "bg-white", cta: true,
+        leadHtml: "Our event security covers the whole job, not just a guard at the gate. We bring licensed crowd controllers, entry screening, RSA support and emergency cover, then back it with planning so the night runs to a brief. Need general guards too? Meet <a href='/security-guards-melbourne/'>our Melbourne security guards</a>.",
+        bodyHtml: "<p>Every controller listed below holds a Victorian crowd control licence, not a generic guard licence. That matters, because crowd control is a separate class with its own training in conflict management and use of force. We won't roster someone who isn't ticketed for the job, and we'll show you the licences if you ask.</p>",
+        items: [
+          { icon: "users", name: "Crowd controllers", note: "Licensed, RSA-aware controllers managing the floor and the crowd." },
+          { icon: "shieldcheck", name: "Door & entry screening", note: "ID checks, guest lists, ticket scanning and refusing entry where needed." },
+          { icon: "alert", name: "RSA marshals", note: "Spotting and managing intoxicated guests, supporting your bar staff." },
+          { icon: "guard", name: "VIP & artist escort", note: "Discreet close cover for talent, speakers or high-profile guests." },
+          { icon: "lock", name: "Bag & wand checks", note: "Bag searches and metal detection where your risk plan calls for it." },
+          { icon: "bolt", name: "Emergency & evacuation", note: "Trained response and evacuation support if something goes wrong." },
+        ] },
+      { id: "events", h2: "What events do we cover?", type: "pills", bg: "bg-mist",
+        lead: "We cover events of every size and shape across Melbourne, from a backyard milestone party to a festival with thousands through the gate. If people are gathering and you want it safe, there's a crowd controller for it.",
+        bodyHtml: "<p>Party security in Melbourne is one of our most-booked jobs, and so are corporate functions where the brief is to keep things low-key and professional. We scale the same way for both. A wedding might need two friendly faces on the door, while a music festival needs a layered plan with zone leaders, radios and a command point. We'll match the team to the event, not the other way around.</p>",
+        items: [
+          { icon: "event", label: "Festivals & concerts" }, { icon: "briefcase", label: "Corporate functions" },
+          { icon: "heart", label: "Weddings" }, { icon: "users", label: "Private & house parties" },
+          { icon: "shieldcheck", label: "Sporting events" }, { icon: "building", label: "Conferences & expos" },
+          { icon: "home", label: "Venue & nightclub" },
+        ] },
+      { id: "how-many", h2: "How many security guards do you need for an event?", type: "ordered", bg: "bg-white", cta: true,
+        lead: "As a general guide, plan roughly one licensed crowd controller for every 100 guests, then adjust for alcohol, venue layout, VIPs and risk. A licensed event, late finish or outdoor site needs more. We'll calculate the exact number against your headcount and conditions.",
+        bodyHtml: "<p>That one-per-100 rule is a starting point, not a law. It's the figure most venues and councils lean on, but the real number moves with your event. Alcohol service, a late finish, an outdoor footprint, multiple entry points or a crowd that's likely to get rowdy all push the count up. A seated, dry conference of 200 might need fewer bodies than a 150-person 21st with a free bar.</p><p>Here's how the bands tend to work out in practice. Use them to sense-check a quote, then let us run the real numbers for your specific venue and permit.</p>",
+        items: [
+          { b: "Up to 50 guests", p: "1 to 2 controllers. Small parties and intimate functions." },
+          { b: "Around 100 guests", p: "2 controllers as a baseline, more if alcohol's flowing." },
+          { b: "Around 250 guests", p: "3 to 4 controllers, plus a lead if there are multiple doors." },
+          { b: "Around 500 guests", p: "5 to 6 controllers, zoned cover and radios." },
+          { b: "1,000+ guests", p: "10+ controllers, a command point and a written crowd plan." },
+        ],
+        viz: `<svg viewBox="0 0 820 318" role="img" aria-label="Guards per guests ratio guide for Melbourne events">
+  <g font-family="Inter, system-ui, sans-serif">
+    <line x1="208" y1="18" x2="208" y2="300" stroke="#E2DCCD" stroke-width="2"/>
+    <g>
+      <text x="196" y="46" text-anchor="end" font-size="14" font-weight="600" fill="#1C1C16">Up to 50</text>
+      <rect x="210" y="30" width="56" height="30" rx="7" fill="#3B3B25"/>
+      <rect x="258" y="30" width="8" height="30" rx="4" fill="#C7D43F"/>
+      <text x="278" y="50" font-size="13" fill="#6B6B57">1 to 2 controllers</text>
+    </g>
+    <g>
+      <text x="196" y="100" text-anchor="end" font-size="14" font-weight="600" fill="#1C1C16">~100</text>
+      <rect x="210" y="84" width="96" height="30" rx="7" fill="#3B3B25"/>
+      <rect x="298" y="84" width="8" height="30" rx="4" fill="#C7D43F"/>
+      <text x="318" y="104" font-size="13" fill="#6B6B57">2 controllers</text>
+    </g>
+    <g>
+      <text x="196" y="154" text-anchor="end" font-size="14" font-weight="600" fill="#1C1C16">~250</text>
+      <rect x="210" y="138" width="180" height="30" rx="7" fill="#3B3B25"/>
+      <rect x="382" y="138" width="8" height="30" rx="4" fill="#C7D43F"/>
+      <text x="402" y="158" font-size="13" fill="#6B6B57">3 to 4 controllers</text>
+    </g>
+    <g>
+      <text x="196" y="208" text-anchor="end" font-size="14" font-weight="600" fill="#1C1C16">~500</text>
+      <rect x="210" y="192" width="264" height="30" rx="7" fill="#3B3B25"/>
+      <rect x="466" y="192" width="8" height="30" rx="4" fill="#C7D43F"/>
+      <text x="486" y="212" font-size="13" fill="#6B6B57">5 to 6 controllers</text>
+    </g>
+    <g>
+      <text x="196" y="262" text-anchor="end" font-size="14" font-weight="600" fill="#1C1C16">1,000+</text>
+      <rect x="210" y="246" width="420" height="30" rx="7" fill="#3B3B25"/>
+      <rect x="622" y="246" width="8" height="30" rx="4" fill="#C7D43F"/>
+      <text x="642" y="266" font-size="13" fill="#6B6B57">10+ controllers</text>
+    </g>
+    <text x="14" y="296" font-size="12" fill="#6B6B57" font-style="italic">Guests across, controllers needed by bar length. A starting guide only.</text>
+  </g>
+</svg>
+<p class="viz-cap">Rough guards-per-guests guide for Melbourne events. Alcohol, late finishes and outdoor sites push the numbers higher.</p>` },
+      { id: "why-choose", h2: "Why choose us for event security in Melbourne?", type: "iconlist", bg: "bg-mist",
+        lead: "Choose us because our crowd controllers are licensed and insured, we plan fast, and we know Melbourne venues and council requirements. We scale guard numbers to your crowd, handle RSA and entry, and give you one accountable team from planning through to pack-down.",
+        bodyHtml: "<p>We've worked enough Melbourne venues to know which ones run tight on capacity, which councils want a written crowd plan, and how to read a room before it turns. That local knowledge saves you the headaches that come with a crew who've never worked the city. You get one point of contact, one team, and one invoice, not a scramble of subcontractors.</p>",
+        items: [
+          { icon: "shieldcheck", b: "Licensed controllers", p: "Victorian crowd control licences, police-checked, insured." },
+          { icon: "pin", b: "Melbourne know-how", p: "We know the venues, the councils and the permit conditions." },
+          { icon: "users", b: "Scaled to your crowd", p: "Right number of controllers for your headcount and risk." },
+          { icon: "check", b: "One accountable team", p: "From planning to pack-down, you deal with us the whole way." },
+        ],
+        bool: { q: "Is hiring event security worth it for a small event?", a: "Yes. Even a small function carries a duty of care, and one licensed controller on the door handles ID checks, gatecrashers and the odd intoxicated guest before they spoil the night. For most hosts, that peace of mind costs less than a single bar tab." } },
+      { id: "cost", h2: "How much does event security cost in Melbourne?", type: "table", bg: "bg-white", cta: true,
+        lead: "Event security in Melbourne is usually priced per crowd controller per hour, with night, weekend and public-holiday loadings and a minimum shift. A small event often starts from a set range, scaling with guest numbers and the guards-per-100 ratio. Get a quote for your event.",
+        bodyHtml: "<p>Most of what you'll pay comes down to three things: how many controllers your event needs, how many hours they're on, and when those hours fall. A Saturday-night finish or a public holiday carries a loading, and there's almost always a minimum shift of around four hours because controllers need travel and briefing time. Want exact numbers for your date and venue? <a href='/contact/'>Get a free quote</a> and we'll price the real job.</p>",
+        head: ["Role", "Rate ($/hr)", "Loadings", "Min shift"],
+        rows: [
+          ["Crowd controller", "$55 to $80", "+ night / weekend", "~4 hrs"],
+          ["Event guard (static)", "$50 to $70", "+ public holiday", "~4 hrs"],
+          ["RSA marshal", "$50 to $70", "+ after midnight", "~4 hrs"],
+          ["Event supervisor", "$70 to $95", "per event", "~4 hrs"],
+        ],
+        note: "Figures are estimates only. Get a quote for your event." },
+      { id: "areas", h2: "Where do we provide event security across Melbourne?", type: "areas", bg: "bg-mist",
+        lead: "We provide event security across the Melbourne CBD, all metro venues and suburbs, plus Geelong and Dandenong. From a Docklands launch to a regional festival, you get a local crowd control team that knows the venue and the route in.",
+        items: ["Melbourne CBD", "Southbank & Docklands", "Inner suburbs", "Eastern suburbs", "Western suburbs", "Geelong", "Dandenong"],
+        link: { href: "/service-areas/", label: "See all areas we cover" } },
+    ],
+    faqs: [
+      { q: "How many security guards do I need for my event?", a: "As a rough guide, plan one licensed crowd controller for every 100 guests, then adjust up for alcohol, late finishes, outdoor sites and VIPs. A 200-person dry conference needs fewer than a 150-person party with a free bar. We'll calculate the exact number for your event." },
+      { q: "How much does event security cost in Melbourne?", a: "Event security is usually priced per crowd controller per hour, commonly $55 to $80, with loadings for nights, weekends and public holidays and a minimum shift of around four hours. Your total depends on guest numbers and hours. Get a quote for an exact figure." },
+      { q: "Can I hire a security guard for one day or a short-term event?", a: "Yes. We cover one-off events, single-day functions and short-term bookings with no lock-in contract. Tell us your date, venue and headcount, and we'll roster the right number of licensed crowd controllers just for that event." },
+      { q: "Is hiring a security guard worth it for a small event?", a: "Yes. Even a small event carries a legal duty of care, and many venues require licensed security in writing. One controller on the door handles ID checks, gatecrashers and intoxicated guests, which is usually cheaper than the cost of one thing going wrong." },
+      { q: "Do you provide security for Christmas and holiday-season events?", a: "Yes. The festive season is our busiest stretch, so we book up fast. Get in early for work functions, end-of-year parties and New Year's events, and we'll lock in licensed crowd controllers before the calendar fills up." },
+      { q: "What does crowd control involve at an event?", a: "Crowd control means managing how people enter, move and behave at your event. Licensed controllers run the door, check IDs and tickets, watch capacity and pinch points, manage intoxicated guests, and step in to de-escalate or remove anyone causing trouble." },
+      { q: "Are your event security staff licensed in Victoria?", a: "Yes. Every controller holds a current Victorian crowd control licence, not just a general guard licence, and is police-checked. Our business holds a Private Security Business Licence you can verify on our licensing and compliance page at any time." },
+      { q: "Can security guards carry firearms at events in Victoria?", a: "No, almost never. The vast majority of event security and crowd control in Victoria is unarmed. Armed work needs a separate licence class and is rare for events. Your crowd controllers manage incidents through training, presence and de-escalation." },
+    ],
+  },
+
 ];
 
 export const getService = (slug) => services.find(s => s.slug === slug);

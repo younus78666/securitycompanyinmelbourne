@@ -81,7 +81,7 @@ export const posts = [
 </ul>
 <h2 id="save">How can I keep event security costs down?</h2>
 <p>Book early, especially in November and December when Melbourne crowd controllers fill up fast. Share a clear run sheet so we roster the exact numbers you need, not a guess. And bundle setup, event and pack-down into one booking rather than separate call-outs.</p>
-<p>Planning an event? <a href="/contact/">Get a quick quote</a> and we'll scope the right crowd-control team.</p>
+<p>Planning an event? See our <a href="/event-security-melbourne/">event security services</a> in Melbourne, or get a quick quote and we'll scope the right crowd-control team.</p>
 `,
   },
   {

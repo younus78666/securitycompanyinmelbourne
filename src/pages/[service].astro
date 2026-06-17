@@ -89,6 +89,11 @@ const accreditations = [
             <h2>{sec.h2}</h2>
             {sec.leadHtml ? <p class="svc-lead center" set:html={sec.leadHtml} /> : (sec.lead && <p class="svc-lead center">{sec.lead}</p>)}
           </div>
+          {sec.bodyHtml && <div class="svc-prose reveal" set:html={sec.bodyHtml} />}
+          {sec.type === "ordered" && (
+            <ol class="svc-ol">{sec.items.map(it => (<li class="reveal"><b>{it.b}</b><span set:html={it.p}></span></li>))}</ol>
+          )}
+          {sec.viz && <div class="svc-viz reveal" set:html={sec.viz} />}
           {sec.type === "cards" && (
             <div class="cards">{sec.items.map(c => (<div class="card reveal"><div class="ic" set:html={icons[c.icon]} /><h3 style="font-size:1.05rem">{c.name}</h3><p style="margin-bottom:0">{c.note}</p></div>))}</div>
           )}
