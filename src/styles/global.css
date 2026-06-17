@@ -59,7 +59,7 @@ em{font-style:italic}
   background-image:radial-gradient(rgba(255,255,255,.12) 1px,transparent 1.4px);background-size:24px 24px;
   -webkit-mask:linear-gradient(175deg,#000,transparent 72%);mask:linear-gradient(175deg,#000,transparent 72%)}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;
-  padding:64px 0 76px}
+  padding:64px 24px 76px}
 .hero h1{color:var(--cream)}
 .hero h1 em{color:var(--lime)}
 .hero p.lead{color:#D8D6C4;font-size:1.12rem;max-width:34ch;margin:24px 0 30px}
