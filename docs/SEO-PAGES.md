@@ -39,7 +39,7 @@ Status legend: ✅ LIVE | ⏳ PLANNED (brief ready, page not built yet)
 | Page | Primary KW | Vol | H1 must contain | Status |
 |---|---|---|---|---|
 | /security-guard-cost-melbourne/ | how much do security guards cost / security guard cost melbourne | 20-50 | "security guard cost" + "melbourne" | LIVE ✅ |
-| /event-security-cost-melbourne/ | how much does event security cost | 90 | "event security cost" + "melbourne" | ⏳ |
+| /event-security-cost-melbourne/ | how much does event security cost | 90 | "event security cost" + "melbourne" | LIVE ✅ |
 
 ## LOCATION (selective)
 | Page | Primary KW | Vol | SD | H1 must contain | Status |

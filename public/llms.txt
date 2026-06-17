@@ -27,6 +27,7 @@ SCM is a Melbourne-based private security provider. Every officer holds a curren
 
 ## Pricing guides
 - [Security Guard Cost Melbourne 2026](https://securitycompanyinmelbourne.com/security-guard-cost-melbourne/): How much security guards cost in Melbourne, with a dated 2026 hourly-rate table by guard type, night/weekend/public-holiday loadings, scenario worked examples and hidden costs to watch.
+- [Event Security Cost Melbourne 2026](https://securitycompanyinmelbourne.com/event-security-cost-melbourne/): How much event security costs in Melbourne, with a 2026 per-role rate table, a guards-per-100-guests ratio-to-cost mapping by event type, and council/permit cost notes.
 
 ## Company
 - [Service Areas](https://securitycompanyinmelbourne.com/service-areas/): Melbourne CBD, metro suburbs, Geelong and Dandenong.
