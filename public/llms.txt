@@ -9,6 +9,7 @@ SCM is a Melbourne-based private security provider. Every officer holds a curren
 - [Event Security Melbourne](https://securitycompanyinmelbourne.com/event-security-melbourne/): Licensed crowd controllers and guards for festivals, parties, weddings, corporate functions and sporting events. Includes a guards-per-100-guests ratio guide.
 - [Mobile Patrol Security Melbourne](https://securitycompanyinmelbourne.com/mobile-patrol-security-melbourne/): Licensed guards in marked vehicles running scheduled and random patrols with GPS-verified reports and alarm response. Includes a sample GPS-verified patrol report.
 - [Crowd Control Melbourne](https://securitycompanyinmelbourne.com/crowd-control-melbourne/): Licensed, RSA-certified crowd controllers for venues, pubs, festivals and events. Explains the Victorian crowd control licence, RSA requirement, de-escalation and ejection protocol, and detain powers.
+- [Concierge Security Melbourne](https://securitycompanyinmelbourne.com/concierge-security-melbourne/): Licensed front-of-house concierge guards for apartments, corporate lobbies and hotels. Covers the security-plus-reception hybrid role, visitor management workflow, and residential vs corporate concierge.
 - [Commercial Security Melbourne](https://securitycompanyinmelbourne.com/commercial-security-melbourne/): Manned guarding, access control, mobile patrols, alarm response and CCTV for businesses.
 - [All Security Services](https://securitycompanyinmelbourne.com/security-services-melbourne/): Full range of guarding and electronic security services.
 

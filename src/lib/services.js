@@ -173,6 +173,119 @@ export const services = [
     ],
   },
   {
+    slug: "concierge-security-melbourne",
+    primaryKW: "concierge security melbourne",
+    breadcrumb: "Concierge Security",
+    title: "Concierge Security Melbourne | Front-of-House Guards",
+    metaDesc: "Need concierge security in Melbourne? We provide licensed, well-presented front-of-house guards for apartments, lobbies and hotels. Insured. Get a quote.",
+    h1: "Concierge Security in Melbourne, Front-of-House Guards",
+    heroImg: "/assets/feature-concierge.webp",
+    heroAlt: "Licensed concierge security guard at a Melbourne apartment lobby desk",
+    og: "/assets/og/concierge-security-melbourne.jpg",
+    intro: "Concierge security in Melbourne blends front-of-house reception with licensed security. One well-presented guard welcomes visitors, controls who comes and goes, manages parcels and helps residents, all while keeping your building safe. It's the friendly face on the door and the trained eye behind it.",
+    midcta: { b: "Apartment or lobby needs a front desk?", span: "Licensed, well-presented concierge guards across Melbourne." },
+    related: ["commercial-security-melbourne", "security-guards-melbourne", "mobile-patrol-security-melbourne"],
+    quote: { text: "Our residents wanted a friendly front desk, our committee wanted real security. SCM's concierge team gave us both. They know every resident by name, sign in every visitor, and the lobby's never felt safer.", name: "Owners Corporation Chair", role: "Residential tower, Southbank", initials: "OC" },
+    sections: [
+      { id: "what", h2: "What is concierge security in Melbourne?", type: null, bg: "bg-white", cta: true,
+        leadHtml: "Concierge security in Melbourne combines front-of-house reception with licensed security duties, so one guard welcomes visitors while controlling access and keeping a building safe. They sign in guests, manage deliveries, help residents and watch the lobby, blending customer service with real security in a single role. See our <a href='/security-services-melbourne/'>full range of security services</a>.",
+        bodyHtml: "<p>It's the role that makes a building feel both welcoming and secure at the same time. A concierge security guard greets you like a hotel front desk would, then quietly does the work of access control, visitor screening and incident response in the background. Residents get a familiar, helpful face. Anyone who shouldn't be there gets noticed straight away.</p>",
+        bool: { q: "Is a concierge security guard the same as a receptionist?", a: "No. A receptionist answers phones and greets visitors, but a concierge security guard does that and holds a Victorian security licence. They're trained to control access, screen visitors, respond to incidents and protect the building, not just staff the desk." } },
+      { id: "why-need", h2: "Why do you need concierge security?", type: "iconlist", bg: "bg-mist",
+        lead: "You need concierge security to control who enters your building, manage visitors properly, deter trouble with a visible presence, and give residents or staff a helpful first point of contact. One guard covers reception and security at once, which is tidy and cost-effective.",
+        bodyHtml: "<p>For an apartment tower or a corporate lobby, the front door is your biggest weak point. Tailgating, unannounced visitors and parcel theft all happen right there. A concierge security guard closes that gap without turning your foyer into a checkpoint. People feel looked after, not policed, and you still get a proper record of everyone who came through.</p>",
+        items: [
+          { icon: "users", b: "Welcoming presence", p: "A friendly first point of contact for residents and guests." },
+          { icon: "lock", b: "Access control", p: "Only the right people get past the lobby, every time." },
+          { icon: "eye", b: "Visitor management", p: "Every guest signed in, verified and accounted for." },
+          { icon: "shieldcheck", b: "Visible deterrence", p: "A uniformed guard at the door warns off opportunists." },
+          { icon: "clock", b: "After-hours cover", p: "The building stays staffed and safe overnight." },
+          { icon: "heart", b: "Resident assistance", p: "Parcels, directions and a helping hand when it's needed." },
+        ] },
+      { id: "services", h2: "What do our concierge security services include?", type: "cards", bg: "bg-white", cta: true,
+        leadHtml: "Our concierge security runs the whole front of house: reception, visitor sign-in, access control, parcel handling, resident assistance and incident response. For roving cover beyond the desk, pair it with <a href='/security-guards-melbourne/'>our Melbourne security guards</a>.",
+        items: [
+          { icon: "briefcase", name: "Front-desk reception", note: "A professional, well-presented presence at your entrance." },
+          { icon: "eye", name: "Visitor sign-in", note: "Guests verified, logged and directed to the right place." },
+          { icon: "lock", name: "Access control", note: "Fobs, intercoms and entry points managed properly." },
+          { icon: "grid", name: "Parcel & mail handling", note: "Deliveries received, logged and held securely for residents." },
+          { icon: "heart", name: "Resident assistance", note: "Everyday help that keeps residents and tenants happy." },
+          { icon: "alert", name: "Incident response", note: "Trained, calm response and clear escalation when needed." },
+        ] },
+      { id: "who", h2: "Who do we provide concierge security for?", type: "pills", bg: "bg-mist",
+        leadHtml: "We provide concierge security for any Melbourne building where people arrive and access matters. It works alongside wider <a href='/commercial-security-melbourne/'>commercial security in Melbourne</a> for larger sites and mixed-use developments.",
+        items: [
+          { icon: "home", label: "Residential apartments" }, { icon: "briefcase", label: "Corporate lobbies" },
+          { icon: "building", label: "Hotels" }, { icon: "grid", label: "Mixed-use developments" },
+          { icon: "users", label: "Owners corporations" }, { icon: "shieldcheck", label: "Student & co-living" },
+        ] },
+      { id: "workflow", h2: "How do you manage visitors at the front desk?", type: null, bg: "bg-white",
+        lead: "We manage visitors with a clear, repeatable workflow at the front desk. Our concierge guard greets each visitor, verifies who they are and why they're there, signs them in, notifies the resident or host, then grants or denies access and logs it. Nothing slips through unnoticed.",
+        bodyHtml: "<p>This is the part that turns a friendly hello into real security. Most buildings either wave people through or run a cold, awkward checkpoint. Our workflow does neither. It's warm at the front and tight underneath, so residents trust it and intruders can't talk their way past it. Here's the path every visitor follows.</p>",
+        viz: `<svg viewBox="0 0 820 150" role="img" aria-label="Concierge security visitor management workflow at a Melbourne front desk">
+  <g font-family="Inter, system-ui, sans-serif">
+    <g><rect x="6" y="28" width="124" height="86" rx="11" fill="#3B3B25"/><text x="68" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">1</text><text x="68" y="74" text-anchor="middle" font-size="12.5" fill="#F5F1E8">Greet &amp;</text><text x="68" y="91" text-anchor="middle" font-size="12.5" fill="#F5F1E8">welcome</text></g>
+    <g><rect x="142" y="28" width="124" height="86" rx="11" fill="#3B3B25"/><text x="204" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">2</text><text x="204" y="74" text-anchor="middle" font-size="12.5" fill="#F5F1E8">Verify ID</text><text x="204" y="91" text-anchor="middle" font-size="12.5" fill="#F5F1E8">&amp; purpose</text></g>
+    <g><rect x="278" y="28" width="124" height="86" rx="11" fill="#3B3B25"/><text x="340" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">3</text><text x="340" y="74" text-anchor="middle" font-size="12.5" fill="#F5F1E8">Sign in</text><text x="340" y="91" text-anchor="middle" font-size="12.5" fill="#F5F1E8">&amp; log</text></g>
+    <g><rect x="414" y="28" width="124" height="86" rx="11" fill="#3B3B25"/><text x="476" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">4</text><text x="476" y="74" text-anchor="middle" font-size="12.5" fill="#F5F1E8">Notify</text><text x="476" y="91" text-anchor="middle" font-size="12.5" fill="#F5F1E8">resident</text></g>
+    <g><rect x="550" y="28" width="124" height="86" rx="11" fill="#3B3B25"/><text x="612" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">5</text><text x="612" y="74" text-anchor="middle" font-size="12.5" fill="#F5F1E8">Grant or</text><text x="612" y="91" text-anchor="middle" font-size="12.5" fill="#F5F1E8">deny entry</text></g>
+    <g><rect x="686" y="28" width="124" height="86" rx="11" fill="#C7D43F"/><text x="748" y="52" text-anchor="middle" font-size="13" font-weight="700" fill="#2D2D1C">6</text><text x="748" y="74" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2D2D1C">Monitor</text><text x="748" y="91" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2D2D1C">&amp; report</text></g>
+    <path d="M132 71 l8 0 M137 67 l5 4 -5 4" fill="none" stroke="#3B3B25" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M268 71 l8 0 M273 67 l5 4 -5 4" fill="none" stroke="#3B3B25" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M404 71 l8 0 M409 67 l5 4 -5 4" fill="none" stroke="#3B3B25" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M540 71 l8 0 M545 67 l5 4 -5 4" fill="none" stroke="#3B3B25" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M676 71 l8 0 M681 67 l5 4 -5 4" fill="none" stroke="#3B3B25" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
+<p class="viz-cap">Our front-desk visitor management workflow. Warm at the front, tight underneath, every visitor logged.</p>` },
+      { id: "how", h2: "How does our concierge security service work?", type: "steps",
+        leadHtml: "Setting up concierge security takes five steps, and we train guards to your building's tone and rules. See <a href='/our-process/'>our process</a> for the full method.",
+        items: [
+          { icon: "eye", n: "1", t: "Assess", d: "A site assessment of your lobby, access points and flow." },
+          { icon: "grid", n: "2", t: "Plan", d: "A front-of-house plan and clear desk procedures." },
+          { icon: "users", n: "3", t: "Place & train", d: "Well-presented guards, trained to your building's tone." },
+          { icon: "shieldcheck", n: "4", t: "Supervise", d: "Ongoing supervision and consistent shift cover." },
+          { icon: "check", n: "5", t: "Report", d: "Clear logs and reports your committee can actually read." },
+        ] },
+      { id: "why-choose", h2: "Why choose us for concierge security in Melbourne?", type: "iconlist", bg: "bg-mist",
+        leadHtml: "Choose us for concierge security because our guards are licensed, insured and police-checked, well-presented and customer-service trained, and we cover Melbourne 24/7. We're a <a href='/licensing-compliance/'>fully licensed and insured</a> Victorian firm, so you get warmth at the desk and real security behind it.",
+        items: [
+          { icon: "shieldcheck", b: "Licensed & insured", p: "Police-checked guards and a verifiable business licence." },
+          { icon: "heart", b: "Well-presented", p: "Customer-service trained, the right face for your front desk." },
+          { icon: "clock", b: "24/7 cover", p: "Consistent shifts and reliable overnight presence." },
+          { icon: "pin", b: "Local Victorian team", p: "We know Melbourne buildings and the people in them." },
+        ] },
+      { id: "diff", h2: "Residential vs corporate concierge security: what's the difference?", type: null, bg: "bg-white",
+        lead: "Residential concierge security serves apartment buildings and owners corporations, focusing on residents, visitors and parcels. Corporate concierge serves office lobbies and reception areas, focusing on staff, clients and access control. Both blend reception with licensed security, but the tone and tasks differ.",
+        bodyHtml: "<p>In a residential tower, the job leans toward service. Your concierge guard knows the residents, takes their parcels, lets in their guests and keeps the building calm around the clock. In a corporate lobby, it leans toward control. The guard manages a steady flow of staff and visitors, issues passes, and keeps the reception professional and on-brand. We match the guard and the procedures to whichever building you run, and you can fold either into a wider business security plan when you need roving guards or patrols as well.</p>" },
+      { id: "cost", h2: "How much does concierge security cost in Melbourne?", type: "table", bg: "bg-mist", cta: true,
+        lead: "Concierge security in Melbourne usually costs $45 to $70 per hour in 2026, with higher rates overnight and loadings for weekends and public holidays. Residential concierge often sits at the lower end, corporate at the higher. Most buildings book a minimum shift of around four hours.",
+        bodyHtml: "<p>Because concierge is usually an ongoing daily presence rather than a one-off, most clients run set shifts that cover their busiest hours or a full 24-hour roster. The more hours and the later they run, the more it costs, but a single concierge guard doing reception and security together is cheaper than paying for both separately. <a href='/contact/'>Get a free quote</a> and we'll price your roster.</p>",
+        head: ["Concierge type", "Day ($/hr)", "Night ($/hr)", "Min shift"],
+        rows: [
+          ["Residential concierge", "$45 to $60", "$55 to $70", "~4 hrs"],
+          ["Corporate concierge", "$50 to $70", "$60 to $80", "~4 hrs"],
+          ["Overnight concierge", "$50 to $65", "$60 to $75", "~8 hrs"],
+        ],
+        note: "Estimate only for 2026. Weekend and public-holiday loadings apply. Get a quote for your building." },
+      { id: "areas", h2: "Where do we provide concierge security across Melbourne?", type: "areas", bg: "bg-white",
+        lead: "We provide concierge security across the Melbourne CBD, Southbank and Docklands towers, inner-city apartments and corporate lobbies, plus Geelong and Dandenong. Wherever your building stands, you get a local, licensed front-of-house team that fits in.",
+        items: ["Melbourne CBD", "Southbank & Docklands", "Inner suburbs", "Eastern suburbs", "Western suburbs", "Geelong", "Dandenong"],
+        link: { href: "/service-areas/", label: "See all areas we cover" } },
+    ],
+    faqs: [
+      { q: "What does a concierge security guard do?", a: "A concierge security guard runs your front desk and your security at once. They welcome visitors, sign guests in, control access, handle parcels, help residents and respond to incidents, all while holding a Victorian security licence and keeping the building safe." },
+      { q: "Is a concierge security guard the same as a receptionist?", a: "No. A receptionist greets visitors and handles admin, but a concierge security guard does that plus licensed security work. They're trained and licensed to control access, screen visitors and respond to incidents, so you get reception and protection in one role." },
+      { q: "Can I request male or female concierge guards?", a: "Yes. Tell us what your building or front desk needs and we'll roster the right team, including female guards where that suits your residents, staff or visitors. We match the guard to your building's tone and requirements." },
+      { q: "How do I hire concierge security in Melbourne?", a: "Tell us about your building, your hours and your front-desk needs. We'll assess the site, recommend the right cover, and give you a clear written quote. Once you approve it, we place and train well-presented licensed guards on your schedule." },
+      { q: "Are your concierge guards licensed in Victoria?", a: "Yes. Every concierge guard holds a current Victorian security licence and is police-checked, and our business holds a Private Security Business Licence you can verify with the Victoria Police Licensing and Regulation Division at any time." },
+      { q: "Are your guards insured and police-checked?", a: "Yes. We carry public liability insurance and every guard passes a national police check before their first shift, so your building, your residents and your visitors are properly protected throughout every shift." },
+      { q: "How quickly can I get a concierge guard on site?", a: "Usually within days for an ongoing roster, and faster for urgent cover. We run a 24/7 team across Melbourne, so we'll assess your building and confirm a start date and shift pattern as soon as you're ready to go." },
+      { q: "Are there extra charges for night, weekend or public holiday cover?", a: "Yes. Like most security work, concierge carries loadings for nights, weekends and public holidays, and there's usually a minimum shift. We'll set every rate and the minimum out clearly in your written quote before you commit." },
+    ],
+  },
+
+  {
     slug: "crowd-control-melbourne",
     primaryKW: "crowd control melbourne",
     breadcrumb: "Crowd Control",

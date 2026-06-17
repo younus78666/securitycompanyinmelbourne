@@ -25,7 +25,7 @@ Status legend: ✅ LIVE | ⏳ PLANNED (brief ready, page not built yet)
 | /event-security-melbourne/ | event security melbourne | 210 | 7 ⭐ | "event security melbourne" | LIVE ✅ |
 | /construction-site-security-melbourne/ | construction site security melbourne | 70 | 14 ⭐ | "construction site security melbourne" | ⏳ |
 | /crowd-control-melbourne/ | crowd control melbourne | 20-70 | 8 ⭐ | "crowd control melbourne" | LIVE ✅ |
-| /concierge-security-melbourne/ | concierge security melbourne | low | 12 ⭐ | "concierge security melbourne" | ⏳ |
+| /concierge-security-melbourne/ | concierge security melbourne | low | 12 ⭐ | "concierge security melbourne" | LIVE ✅ |
 | /static-security-guards-melbourne/ | static guards melbourne | low | ~30 | "static security guards melbourne" | ⏳ |
 | /corporate-security-melbourne/ | corporate security melbourne | 70 | 28 | "corporate security melbourne" | ⏳ |
 | /retail-security-melbourne/ | retail security melbourne | low | ~ | "retail security melbourne" | ⏳ |
