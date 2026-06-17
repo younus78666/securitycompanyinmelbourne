@@ -173,6 +173,123 @@ export const services = [
     ],
   },
   {
+    slug: "retail-security-melbourne",
+    primaryKW: "retail security melbourne",
+    breadcrumb: "Retail Security",
+    title: "Retail Security Melbourne | Loss Prevention Guards",
+    metaDesc: "Need retail security in Melbourne? We supply uniformed and plain-clothes loss prevention guards for stores and shopping centres. Insured. Get a fast quote.",
+    h1: "Retail Security in Melbourne for Stores and Shopping Centres",
+    heroImg: "/assets/feature-retail.webp",
+    heroAlt: "Licensed retail security guard monitoring a Melbourne store entrance",
+    og: "/assets/og/retail-security-melbourne.jpg",
+    intro: "Retail security in Melbourne protects stores and shopping centres from theft and aggression using uniformed guards, plain-clothes loss prevention officers and CCTV support. We cut shrinkage, keep staff and shoppers safe, and handle offenders by the book, from a single boutique to a busy centre.",
+    midcta: { b: "Shrinkage eating your margin?", span: "Uniformed and plain-clothes retail guards across Melbourne." },
+    related: ["commercial-security-melbourne", "security-guards-melbourne", "corporate-security-melbourne"],
+    quote: { text: "We added a plain-clothes officer on our two busiest days and stock loss dropped noticeably within a month. They catch the repeat offenders our cameras only recorded, and they handle it calmly without scaring off genuine customers.", name: "Store Manager", role: "Fashion retailer, Melbourne CBD", initials: "SR" },
+    sections: [
+      { id: "what", h2: "What is retail security in Melbourne?", type: null, bg: "bg-white", cta: true,
+        leadHtml: "Retail security in Melbourne protects stores and shopping centres from theft and aggression using uniformed guards, plain-clothes loss prevention officers and CCTV support. It cuts shrinkage, keeps staff and shoppers safe, and handles offenders within the law. It's a focused part of our <a href='/commercial-security-melbourne/'>commercial security in Melbourne</a>.",
+        bodyHtml: "<p>Retail is its own beast. The threat isn't a break-in at 3am, it's a steady leak during trading hours: concealed theft, grab-and-runs, aggressive returns, and organised crews working stores in a strip. Good retail security reads that environment and matches the response, sometimes a visible uniform on the door, sometimes a plain-clothes officer quietly watching the aisles.</p>",
+        bool: { q: "Is a loss prevention officer the same as a retail security guard?", a: "No. A loss prevention officer works covertly to detect and intercept theft, often in plain clothes. A retail security guard usually works in uniform for visible deterrence and access control. Most stores use a mix of both, depending on the day and the risk." } },
+      { id: "why-need", h2: "Why do retailers need security?", type: "iconlist", bg: "bg-mist",
+        lead: "Retailers need security to cut shoplifting and organised retail crime, keep staff safe from aggression, protect stock and takings, and cover after-hours break-ins. A trained presence both deters opportunists and catches the repeat offenders who cost you the most.",
+        bodyHtml: "<p>Shrinkage is the quiet killer of retail margin, and a big chunk of it is preventable. Beyond the lost stock, retail staff increasingly face aggression and threats, especially around refunds, alcohol and closing time. Security protects your people first, then your product, and a uniformed or plain-clothes presence changes the behaviour of anyone weighing up whether to chance it.</p>",
+        items: [
+          { icon: "cart", b: "Shoplifting", p: "Deter and intercept the everyday theft that erodes margin." },
+          { icon: "users", b: "Organised retail crime", p: "Spot and disrupt the crews who target stores in waves." },
+          { icon: "heart", b: "Staff safety", p: "Protect your team from aggression and threats on the floor." },
+          { icon: "shieldcheck", b: "Stock & takings", p: "Guard product, registers and the back-of-house too." },
+          { icon: "clock", b: "After-hours break-ins", p: "Patrols and alarm response when the shutters are down." },
+        ] },
+      { id: "services", h2: "What do our retail security services include?", type: "cards", bg: "bg-white", cta: true,
+        leadHtml: "Our retail security spans uniformed guards, plain-clothes loss prevention officers, CCTV monitoring support, entry and exit checks and shopping-centre patrols. It's staffed by the same licensed <a href='/security-guards-melbourne/'>Melbourne security guards</a> we run citywide, with retail-specific training on top.",
+        items: [
+          { icon: "shieldcheck", name: "Uniformed retail guards", note: "Visible deterrence on the door and across the shop floor." },
+          { icon: "eye", name: "Plain-clothes officers", note: "Covert loss prevention that catches concealed theft." },
+          { icon: "tag", name: "Loss prevention officers", note: "Trained to observe, intercept and gather evidence lawfully." },
+          { icon: "camera", name: "CCTV monitoring support", note: "Guards working alongside your cameras and control room." },
+          { icon: "lock", name: "Entry & exit checks", note: "Bag checks and door control where your policy allows." },
+          { icon: "patrol", name: "Shopping-centre patrols", note: "Roving cover across centres, car parks and common areas." },
+        ] },
+      { id: "who", h2: "Which retail businesses do we protect?", type: "pills", bg: "bg-mist",
+        lead: "We protect retail of every size and format across Melbourne, from a single boutique to a full shopping centre. If you sell to the public and lose stock to theft, we've got a retail guard or loss prevention officer for it.",
+        items: [
+          { icon: "building", label: "Shopping centres" }, { icon: "cart", label: "Supermarkets" },
+          { icon: "grid", label: "Department stores" }, { icon: "tag", label: "Boutiques" },
+          { icon: "lock", label: "Liquor retail" }, { icon: "home", label: "Strip-mall traders" },
+        ] },
+      { id: "lpo", h2: "What does a loss prevention officer do?", type: null, bg: "bg-white",
+        lead: "A loss prevention officer covertly observes a store, intercepts theft within legal limits, gathers evidence and works with police. Often in plain clothes, they target concealed theft and organised retail crime that a uniformed guard or a camera alone won't catch. Choosing uniformed or plain-clothes depends on your store.",
+        bodyHtml: "<p>Here's the call most retailers get wrong. A uniform deters the casual opportunist but tells the determined thief exactly where the guard is. A plain-clothes officer blends in, watches the known hot spots, and steps in only when they've seen enough. Most stores get the best result from a mix: a uniform for presence, plain clothes for the offenders who've learned to work around it.</p>",
+        viz: `<svg viewBox="0 0 820 268" role="img" aria-label="Uniformed retail guard versus plain-clothes loss prevention officer">
+  <g font-family="Inter, system-ui, sans-serif">
+    <rect x="16" y="20" width="384" height="232" rx="16" fill="#FFFFFF" stroke="#E2DCCD" stroke-width="1.5"/>
+    <text x="40" y="58" font-size="17" font-weight="700" fill="#1C1C16">Uniformed guard</text>
+    <rect x="40" y="70" width="60" height="5" rx="2.5" fill="#C7D43F"/>
+    <g fill="#3B3B25" font-size="14">
+      <circle cx="48" cy="104" r="4" fill="#C7D43F"/><text x="64" y="109">Visible deterrence at the door</text>
+      <circle cx="48" cy="140" r="4" fill="#C7D43F"/><text x="64" y="145">Access control and bag checks</text>
+      <circle cx="48" cy="176" r="4" fill="#C7D43F"/><text x="64" y="181">Reassures staff and shoppers</text>
+      <circle cx="48" cy="212" r="4" fill="#C7D43F"/><text x="64" y="217">Best for open theft and aggression</text>
+    </g>
+    <rect x="420" y="20" width="384" height="232" rx="16" fill="#3B3B25"/>
+    <text x="444" y="58" font-size="17" font-weight="700" fill="#F5F1E8">Plain-clothes LP officer</text>
+    <rect x="444" y="70" width="60" height="5" rx="2.5" fill="#C7D43F"/>
+    <g fill="#EDEBDD" font-size="14">
+      <circle cx="452" cy="104" r="4" fill="#C7D43F"/><text x="468" y="109">Covert observation in the aisles</text>
+      <circle cx="452" cy="140" r="4" fill="#C7D43F"/><text x="468" y="145">Catches concealed theft</text>
+      <circle cx="452" cy="176" r="4" fill="#C7D43F"/><text x="468" y="181">Gathers evidence for police</text>
+      <circle cx="452" cy="212" r="4" fill="#C7D43F"/><text x="468" y="217">Best for organised retail crime</text>
+    </g>
+  </g>
+</svg>
+<p class="viz-cap">Uniformed guard or plain-clothes loss prevention officer? Most Melbourne stores get the best result from a mix.</p>`,
+        bool: { q: "Do retail security guards have the power to detain a shoplifter?", a: "Yes, within limits. Under Victoria's citizen's-arrest provisions a guard or loss prevention officer can detain someone they've seen steal, using only reasonable force, until police arrive. They're trained to act on clear evidence, not suspicion, and to stay inside the law." } },
+      { id: "how", h2: "How does our retail security service work?", type: "steps",
+        leadHtml: "Our retail security works in five steps, built around your store and its risk pattern. See <a href='/our-process/'>our process</a> for the full method.",
+        items: [
+          { icon: "eye", n: "1", t: "Assess", d: "A store risk assessment of layout, hot spots and hours." },
+          { icon: "grid", n: "2", t: "Plan", d: "A deployment plan: uniformed, plain-clothes or both." },
+          { icon: "shieldcheck", n: "3", t: "Deploy", d: "Licensed, retail-trained guards and LP officers on site." },
+          { icon: "users", n: "4", t: "Supervise", d: "Ongoing supervision and consistent shift cover." },
+          { icon: "check", n: "5", t: "Report", d: "Incident and loss reports you can act on and use." },
+        ] },
+      { id: "why-choose", h2: "Why choose us for retail security in Melbourne?", type: "iconlist", bg: "bg-mist",
+        leadHtml: "Choose us for retail security because our guards and loss prevention officers are licensed, insured and police-checked, we offer uniformed and plain-clothes options, and we cover Melbourne 24/7. We're a <a href='/licensing-compliance/'>fully licensed and insured</a> Victorian firm that handles offenders lawfully and calmly.",
+        items: [
+          { icon: "shieldcheck", b: "Licensed & insured", p: "Police-checked guards and a verifiable business licence." },
+          { icon: "eye", b: "Uniformed or plain-clothes", p: "The right approach for your store and its risk." },
+          { icon: "tag", b: "Lawful handling", p: "Trained on detain powers and evidence, not guesswork." },
+          { icon: "bolt", b: "Fast local response", p: "24/7 Melbourne dispatch and rapid cover." },
+        ] },
+      { id: "cost", h2: "How much does retail security cost in Melbourne?", type: "table", bg: "bg-white", cta: true,
+        lead: "Retail security in Melbourne usually costs $48 to $75 per hour in 2026, depending on whether you need a uniformed guard, a plain-clothes guard or a loss prevention officer. Night rates and weekend or public-holiday loadings apply, and most stores book a minimum shift of around four hours.",
+        bodyHtml: "<p>Many retailers run guards only on their highest-risk days and trading peaks rather than every hour they're open, which keeps the cost proportional to the risk. Plain-clothes and loss prevention officers sit a little higher than a standard uniformed guard because of the extra training. <a href='/contact/'>Get a free quote</a> and we'll build cover around your store's real pattern.</p>",
+        head: ["Guard type", "Day ($/hr)", "Night ($/hr)", "Min shift"],
+        rows: [
+          ["Uniformed retail guard", "$48 to $62", "$58 to $72", "~4 hrs"],
+          ["Plain-clothes guard", "$52 to $70", "$62 to $80", "~4 hrs"],
+          ["Loss prevention officer", "$55 to $75", "$65 to $85", "~4 hrs"],
+        ],
+        note: "Estimate only for 2026. Weekend and public-holiday loadings apply. Get a quote for your store." },
+      { id: "areas", h2: "Where do we provide retail security across Melbourne?", type: "areas", bg: "bg-mist",
+        lead: "We provide retail security across the Melbourne CBD retail core, the major shopping centres, suburban strips and supermarkets, plus Geelong and Dandenong. Wherever you trade, a local retail-trained team can cover it.",
+        items: ["Melbourne CBD", "Bourke St Mall", "Major shopping centres", "Suburban strips", "Eastern suburbs", "Geelong", "Dandenong"],
+        link: { href: "/service-areas/", label: "See all areas we cover" } },
+    ],
+    faqs: [
+      { q: "What does a loss prevention officer do?", a: "A loss prevention officer covertly observes a store, often in plain clothes, to detect and intercept theft. They gather evidence, target organised retail crime and repeat offenders, work with police, and act within legal limits, focusing on clear evidence rather than suspicion." },
+      { q: "Do retail security guards have the power to detain a shoplifter?", a: "Yes, within limits. Under Victoria's citizen's-arrest provisions a guard can detain someone they've seen steal, using only reasonable force, until police arrive. Our guards act on clear evidence, not suspicion, and stay inside the law at all times." },
+      { q: "Do your retail guards wear plain clothes or uniform?", a: "Both, depending on your needs. Uniformed guards give visible deterrence and access control, while plain-clothes officers catch concealed theft and organised crime. Most stores use a mix, and we'll recommend the right balance for your store and its risk pattern." },
+      { q: "Are your retail security guards licensed in Victoria?", a: "Yes. Every retail guard and loss prevention officer holds a current Victorian security licence and is police-checked, and our business holds a Private Security Business Licence you can verify with Victoria Police at any time." },
+      { q: "Are your guards insured and police-checked?", a: "Yes. We carry public liability insurance and every guard and officer passes a national police check before their first shift, so your store, your staff and your customers are properly protected throughout every shift." },
+      { q: "How quickly can I get a retail guard on site?", a: "Usually within hours for urgent cover, and within a day or two for an ongoing roster. We run a 24/7 dispatch team across Melbourne, so we'll confirm a deployment window the moment you call, including plain-clothes cover for busy trading days." },
+      { q: "Is there a minimum shift length for retail security?", a: "Most retail security has a minimum shift, commonly around four hours, because guards need travel and briefing time. We'll confirm the minimum in your written quote before you commit, and many stores book cover only on their highest-risk days." },
+      { q: "Are there extra charges for night, weekend or public holiday cover?", a: "Yes. Like most security work, retail cover carries loadings for nights, weekends and public holidays, which matter for late-night trading and festive periods. We'll set out every rate and the minimum shift clearly in your written quote before you commit." },
+    ],
+  },
+
+  {
     slug: "corporate-security-melbourne",
     primaryKW: "corporate security melbourne",
     breadcrumb: "Corporate Security",
