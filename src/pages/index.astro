@@ -90,6 +90,15 @@ const logoSvg = (main, accent, tag) => `
     <text x="58" y="30.5" font-family="Fraunces, Georgia, serif" font-size="27" font-weight="600" fill="${main}" letter-spacing="-.3">Sentinel</text>
     <text x="59.5" y="43.5" font-family="Inter, sans-serif" font-size="8.3" font-weight="600" fill="${tag}" letter-spacing="3.1">SECURITY · MELBOURNE</text>
   </svg>`;
+
+// Animated brand mark (pulsing ring + scanning chevrons) — used as emblem + background watermark
+const animMark = (shield, chev, ring) => `
+  <svg class="amark" viewBox="0 0 46 50" aria-hidden="true">
+    <circle class="ring" cx="23" cy="25" r="20" fill="none" stroke="${ring}" stroke-width="1"/>
+    <path d="M23 2.5L41.5 9v14.5C41.5 35 33 44.5 23 48 13 44.5 4.5 35 4.5 23.5V9z" fill="${shield}"/>
+    <path class="c1" d="M14 25l9-6.5 9 6.5" fill="none" stroke="${chev}" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="c2" d="M14 33l9-6.5 9 6.5" fill="none" stroke="${chev}" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`;
 ---
 <Base>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(schema)} />
@@ -169,6 +178,7 @@ const logoSvg = (main, accent, tag) => `
 
   <!-- HERO -->
   <section class="hero">
+    <div class="wm wm-hero" aria-hidden="true" set:html={animMark('#F5F1E8', '#C7D43F', '#C7D43F')} />
     <div class="container hero-grid">
       <div>
         <span class="eyebrow" style="color:var(--lime-soft)">Licensed security company in Melbourne</span>
@@ -182,9 +192,14 @@ const logoSvg = (main, accent, tag) => `
       </div>
       <div class="hero-media">
         <img src="/assets/hero.webp" width="720" height="540" alt="Licensed Sentinel security guard outside a modern Melbourne building" fetchpriority="high" />
+        <div class="radar" aria-hidden="true"><i></i><i></i><i></i><span class="sweep"></span><span class="blip"></span></div>
+        <div class="emblem" aria-hidden="true">
+          <span class="scanner"></span>
+          <span set:html={animMark('#3B3B25', '#C7D43F', '#3B3B25')} />
+        </div>
         <div class="hero-badge">
-          <strong>24/7</strong>
-          <span>Licensed guards on call across Greater Melbourne</span>
+          <strong class="live"><b></b>24/7</strong>
+          <span>Live monitoring &amp; guards on call across Greater Melbourne</span>
         </div>
       </div>
     </div>
@@ -206,7 +221,7 @@ const logoSvg = (main, accent, tag) => `
   <section class="section">
     <div class="container">
       {features.map(f => (
-        <div class={"feature" + (f.rev ? " rev" : "")}>
+        <div class={"feature reveal" + (f.rev ? " rev" : "")}>
           <div class="feature-text">
             <h2>{f.title}</h2>
             <p>{f.body}</p>
@@ -214,6 +229,7 @@ const logoSvg = (main, accent, tag) => `
             <a class="link" href={f.link.href}>{f.link.label} &rarr;</a>
           </div>
           <div class="feature-media">
+            <span class="scan" aria-hidden="true"></span>
             <img src={f.img} width="560" height="420" alt={f.alt} loading="lazy" />
           </div>
         </div>
@@ -226,7 +242,7 @@ const logoSvg = (main, accent, tag) => `
     <div class="container">
       <div class="stats">
         {site.stats.map(s => (
-          <div class="stat"><b>{s.n}</b><span>{s.label}</span></div>
+          <div class="stat reveal"><b>{s.n}</b><span>{s.label}</span></div>
         ))}
       </div>
     </div>
@@ -235,14 +251,14 @@ const logoSvg = (main, accent, tag) => `
   <!-- SERVICES -->
   <section class="section" id="services" style="background:var(--cream-soft)">
     <div class="container">
-      <div class="center-head">
+      <div class="center-head reveal">
         <span class="eyebrow">What we do</span>
         <h2>Security services built <em>around your site</em></h2>
         <p style="color:var(--muted);margin-top:10px">From a single guard to a full event team, every service uses licensed, insured, police-checked people.</p>
       </div>
       <div class="cards">
         {site.services.map((s, i) => (
-          <div class="card">
+          <div class="card reveal">
             {tags[i] && <span class="tag">{tags[i]}</span>}
             <div class="ic" set:html={icons[s.icon]} />
             <h3>{s.name}</h3>
@@ -260,7 +276,7 @@ const logoSvg = (main, accent, tag) => `
   <!-- TESTIMONIAL -->
   <section class="section">
     <div class="container">
-      <div class="quote-band">
+      <div class="quote-band reveal">
         <span class="eyebrow">Client story &middot; [CLIENT INPUT]</span>
         <blockquote>"Sentinel's guards turned up on time, looked the part, and our incidents dropped to zero. They feel like part of our team."</blockquote>
         <cite>Facilities Manager, Melbourne CBD property [placeholder &mdash; swap for a real review]</cite>
@@ -271,13 +287,13 @@ const logoSvg = (main, accent, tag) => `
   <!-- SECTORS -->
   <section class="section" id="sectors" style="background:var(--cream-soft)">
     <div class="container">
-      <div class="center-head">
+      <div class="center-head reveal">
         <span class="eyebrow">Sectors we serve</span>
         <h2>Security tailored to <em>every kind of site</em></h2>
       </div>
       <div class="sectors">
         {site.sectors.map(s => (
-          <a class="sector" href={s.href}>
+          <a class="sector reveal" href={s.href}>
             <img src={s.img} alt={s.alt} loading="lazy" />
             <span class="label">{s.name} &nearr;</span>
           </a>
@@ -289,20 +305,20 @@ const logoSvg = (main, accent, tag) => `
   <!-- DIFFERENCE -->
   <section class="section">
     <div class="container">
-      <div class="center-head">
+      <div class="center-head reveal">
         <span class="eyebrow">The Sentinel difference</span>
         <h2>Built on trust, response <em>and real accountability</em></h2>
       </div>
       <div class="diff">
-        <div class="col">
+        <div class="col reveal">
           <h3>Licensed &amp; insured</h3>
           <p>A current Victorian Private Security Business Licence, public liability cover and police-checked guards on every shift. Verify us with Victoria Police any time.</p>
         </div>
-        <div class="col">
+        <div class="col reveal">
           <h3>Rapid local response</h3>
           <p>A 24/7 Melbourne dispatch team and GPS-verified patrols mean we deploy fast and prove it with real-time reporting, not vague promises.</p>
         </div>
-        <div class="col">
+        <div class="col reveal">
           <h3>Transparent pricing</h3>
           <p>Clear hourly ranges up front and itemised quotes with no hidden loadings, so you know exactly what you're paying and why.</p>
         </div>
@@ -312,14 +328,15 @@ const logoSvg = (main, accent, tag) => `
 
   <!-- HOW IT WORKS -->
   <section class="section" style="background:var(--olive);color:var(--cream);border-radius:var(--radius-lg)">
+    <div class="wm wm-how" aria-hidden="true" set:html={animMark('#C7D43F', '#2D2D1C', '#C7D43F')} />
     <div class="container">
-      <div class="center-head">
+      <div class="center-head reveal">
         <span class="eyebrow" style="color:var(--lime-soft)">How it works</span>
         <h2 style="color:var(--cream)">Protection in <em style="color:var(--lime)">four simple steps</em></h2>
       </div>
       <div class="diff" style="grid-template-columns:repeat(4,1fr)">
         {steps.map(s => (
-          <div class="col" style="background:var(--olive-deep);border-color:rgba(255,255,255,.1)">
+          <div class="col reveal" style="background:var(--olive-deep);border-color:rgba(255,255,255,.1)">
             <b style="font-family:var(--serif);font-size:1.8rem;color:var(--lime)">{s.n}</b>
             <h3 style="color:var(--cream);margin:8px 0 8px">{s.t}</h3>
             <p style="color:#CFCDBC">{s.d}</p>
@@ -335,7 +352,7 @@ const logoSvg = (main, accent, tag) => `
   <!-- FAQ -->
   <section class="section">
     <div class="container">
-      <div class="center-head">
+      <div class="center-head reveal">
         <span class="eyebrow">Good to know</span>
         <h2>Security company Melbourne <em>FAQ</em></h2>
       </div>
@@ -353,12 +370,15 @@ const logoSvg = (main, accent, tag) => `
   <!-- CTA -->
   <section class="section" style="padding-top:0">
     <div class="cta-band">
-      <span class="eyebrow">Ready when you are</span>
-      <h2>Ready to protect <em>what matters?</em></h2>
-      <p style="color:var(--muted);max-width:48ch;margin:8px auto 24px">Get a fast, free quote from a licensed Melbourne security company. We answer the phone 24/7, every day of the year.</p>
-      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-        <a class="btn btn-dark" href="/contact/">Book a free quote</a>
-        <a class="btn btn-ghost" href={site.phoneHref}>Call {site.phone}</a>
+      <div class="wm wm-cta" aria-hidden="true" set:html={animMark('#3B3B25', '#C7D43F', '#3B3B25')} />
+      <div style="position:relative;z-index:2">
+        <span class="eyebrow">Ready when you are</span>
+        <h2>Ready to protect <em>what matters?</em></h2>
+        <p style="color:var(--muted);max-width:48ch;margin:8px auto 24px">Get a fast, free quote from a licensed Melbourne security company. We answer the phone 24/7, every day of the year.</p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+          <a class="btn btn-dark" href="/contact/">Book a free quote</a>
+          <a class="btn btn-ghost" href={site.phoneHref}>Call {site.phone}</a>
+        </div>
       </div>
     </div>
   </section>
@@ -411,6 +431,17 @@ const logoSvg = (main, accent, tag) => `
   </div>
 
   <script is:inline>
+    document.documentElement.classList.add('js');
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      reveals.forEach(el => io.observe(el));
+    } else {
+      reveals.forEach(el => el.classList.add('in'));
+    }
     // Mobile drawer
     const drawer = document.getElementById('drawer');
     const openBtn = document.getElementById('openDrawer');

@@ -122,7 +122,7 @@ em{font-style:italic}
 
 /* CTA band */
 .cta-band{background:var(--cream-soft);border-radius:var(--radius-lg);text-align:center;
-  padding:64px 24px;margin:0 24px}
+  padding:64px 24px;margin:0 24px;position:relative;overflow:hidden}
 .cta-band h2{margin-bottom:8px}
 .cta-band h2 em{color:var(--olive)}
 
@@ -211,9 +211,76 @@ em{font-style:italic}
   border-top:1px solid var(--line)}
 .mobile-bar .btn{flex:1;justify-content:center}
 
+/* ===== SECURITY ANIMATIONS + ANIMATED BRAND ===== */
+.hero,.section{position:relative;overflow:hidden}
+.hero>.container,.section>.container{position:relative;z-index:2}
+
+/* reveal-on-scroll (JS-guarded so content never hides without JS) */
+.js .reveal{opacity:0;transform:translateY(22px)}
+.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}
+
+/* animated logo watermark in backgrounds */
+.wm{position:absolute;z-index:0;pointer-events:none;opacity:.08}
+.wm svg{width:100%;height:100%;display:block}
+.wm-hero{top:-60px;right:-70px;width:460px;height:500px}
+.wm-how{bottom:-80px;left:-60px;width:380px;height:420px}
+.wm-cta{top:50%;left:50%;width:340px;height:370px;transform:translate(-50%,-50%)}
+.amark .ring{transform-box:fill-box;transform-origin:center}
+.amark .c1,.amark .c2{transform-box:fill-box;transform-origin:center}
+
+/* visible animated emblem (hero) */
+.emblem{position:absolute;top:-24px;right:-16px;width:98px;height:98px;border-radius:50%;
+  background:var(--cream);box-shadow:0 16px 38px -16px rgba(0,0,0,.55);display:grid;place-items:center;z-index:3}
+.emblem .amark{width:44px;height:48px}
+.emblem .scanner{position:absolute;inset:7px;border-radius:50%;border:2px dashed rgba(59,59,37,.35)}
+
+/* radar */
+.radar{position:absolute;left:-20px;top:30px;width:108px;height:108px;border-radius:50%;z-index:3;
+  background:radial-gradient(circle,rgba(45,45,28,.85),rgba(45,45,28,.7));
+  border:1px solid rgba(199,212,63,.35);overflow:hidden;box-shadow:0 14px 34px -16px rgba(0,0,0,.6)}
+.radar i{position:absolute;border:1px solid rgba(199,212,63,.22);border-radius:50%}
+.radar i:nth-child(1){inset:8px}.radar i:nth-child(2){inset:26px}.radar i:nth-child(3){inset:44px}
+.radar .sweep{position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(from 0deg,rgba(199,212,63,.55),rgba(199,212,63,0) 65deg)}
+.radar .blip{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--lime);
+  top:30%;left:62%;box-shadow:0 0 10px 2px var(--lime)}
+
+/* live monitoring dot */
+.live{display:inline-flex;align-items:center;gap:7px}
+.live b{position:relative;width:9px;height:9px;border-radius:50%;background:#3fbf59;flex:none}
+
+/* scan-line sweep over feature photos */
+.feature-media{position:relative;overflow:hidden}
+.feature-media .scan{position:absolute;left:0;right:0;top:0;height:34%;pointer-events:none;opacity:0;
+  background:linear-gradient(180deg,transparent,rgba(199,212,63,.30),transparent);transform:translateY(-120%)}
+
+@media (prefers-reduced-motion:no-preference){
+  .wm{animation:wmPulse 8s ease-in-out infinite}
+  @keyframes wmPulse{0%,100%{opacity:.05;transform:scale(1)}50%{opacity:.12;transform:scale(1.05)}}
+  .wm-cta{animation:wmPulseC 8s ease-in-out infinite}
+  @keyframes wmPulseC{0%,100%{opacity:.05;transform:translate(-50%,-50%) scale(1)}50%{opacity:.1;transform:translate(-50%,-50%) scale(1.05)}}
+  .amark .c1{animation:chev 2.6s ease-in-out infinite}
+  .amark .c2{animation:chev 2.6s ease-in-out infinite .3s}
+  @keyframes chev{0%,100%{opacity:.4;transform:translateY(2px)}50%{opacity:1;transform:translateY(-2px)}}
+  .amark .ring{animation:ringPulse 2.8s ease-out infinite}
+  @keyframes ringPulse{0%{opacity:.55;transform:scale(.75)}100%{opacity:0;transform:scale(1.5)}}
+  .emblem .scanner{animation:spin 9s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .radar .sweep{animation:spin 3.4s linear infinite}
+  .radar .blip{animation:blip 3.4s ease-in-out infinite}
+  @keyframes blip{0%,55%{opacity:0}62%{opacity:1}100%{opacity:0}}
+  .live b::after{content:"";position:absolute;inset:0;border-radius:50%;background:#3fbf59;animation:ping 1.9s cubic-bezier(0,0,.2,1) infinite}
+  @keyframes ping{0%{transform:scale(1);opacity:.7}80%,100%{transform:scale(3.2);opacity:0}}
+  .feature:hover .feature-media .scan{opacity:1;animation:scanMove 1.7s ease-in-out}
+  @keyframes scanMove{0%{transform:translateY(-120%)}100%{transform:translateY(330%)}}
+  .trust-pill{transition:transform .2s ease,background .2s ease}
+  .trust-pill:hover{transform:translateY(-3px);background:var(--lime);color:var(--olive-deep)}
+}
+
 /* Responsive */
 @media(max-width:960px){
   .hero-grid,.feature,.feature.rev .feature-text,.feature.rev .feature-media{grid-template-columns:1fr;order:0}
+  .radar{display:none}
   .cards{grid-template-columns:repeat(2,1fr)}
   .sectors,.diff{grid-template-columns:1fr}
   .stats{grid-template-columns:repeat(2,1fr)}
