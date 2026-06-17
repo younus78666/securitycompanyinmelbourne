@@ -173,6 +173,105 @@ export const services = [
     ],
   },
   {
+    slug: "cctv-electronic-security-melbourne",
+    primaryKW: "cctv monitoring melbourne",
+    breadcrumb: "CCTV & Electronic Security",
+    title: "CCTV Monitoring Melbourne | Remote & AI Guarding 24/7",
+    metaDesc: "Need CCTV monitoring in Melbourne? Our 24/7 control room runs live monitoring, remote guarding and AI CCTV with rapid response. Insured. Get a fast quote.",
+    h1: "CCTV Monitoring and Electronic Security in Melbourne",
+    heroImg: "/assets/feature-cctv.webp",
+    heroAlt: "Licensed CCTV monitoring operator in a Melbourne 24/7 control room",
+    og: "/assets/og/cctv-electronic-security-melbourne.jpg",
+    intro: "CCTV monitoring in Melbourne is live oversight of your camera feeds by a control-room operator who watches in real time and responds the moment something happens. We run live monitoring, alarm monitoring, remote guarding and AI-assisted CCTV from a 24/7 control room, with rapid response.",
+    midcta: { b: "Cameras recording but no one watching?", span: "24/7 live CCTV monitoring and remote guarding across Melbourne." },
+    related: ["commercial-security-melbourne", "mobile-patrol-security-melbourne", "security-guards-melbourne"],
+    quote: { text: "We switched our vacant sites from a nightly guard to remote guarding with live CCTV. The control room challenges intruders over speakers before they get near anything, and our costs dropped by more than half. Same protection, fraction of the price.", name: "Asset Manager", role: "Property portfolio, Melbourne", initials: "AM" },
+    sections: [
+      { id: "what", h2: "What is CCTV monitoring in Melbourne?", type: null, bg: "bg-white", cta: true,
+        leadHtml: "CCTV monitoring is live oversight of camera feeds by a control-room operator who watches in real time and responds to incidents as they happen. It's the difference between cameras that just record and cameras that actually protect. It's a core part of our <a href='/security-services-melbourne/'>full range of security services</a>.",
+        bodyHtml: "<p>Most cameras are a recording you watch after the fact, once the damage is done. Live monitoring flips that. A licensed operator in our control room watches your feeds as events unfold, challenges intruders, calls in a patrol or police, and logs it all. The camera stops being a witness and becomes a guard who never blinks.</p>",
+        bool: { q: "Is CCTV monitoring the same as just recording footage?", a: "No. Recording captures footage you review later, after something's already happened. CCTV monitoring means a live operator watches your feeds in real time and responds as events unfold, so a problem gets stopped, not just filmed for the insurance claim." } },
+      { id: "why-need", h2: "Why do you need CCTV and electronic security?", type: "iconlist", bg: "bg-mist",
+        lead: "You need CCTV and electronic security for round-the-clock oversight, faster response, lower guarding cost, court-ready evidence, strong deterrence, and cover across multiple sites at once. One control room can watch many sites that on-site guards could never staff affordably.",
+        bodyHtml: "<p>The big shift is cost-efficiency. A single control room operator can watch dozens of cameras across many sites at once, which on-site guarding could never match on price. You get eyes on everything overnight, an instant response when something trips, and clean recorded evidence if you ever need it. For multi-site portfolios and vacant property, it's hard to beat.</p>",
+        items: [
+          { icon: "clock", b: "24/7 oversight", p: "A live operator watching your sites around the clock." },
+          { icon: "bolt", b: "Faster response", p: "Action the moment an alert fires, not minutes later." },
+          { icon: "tag", b: "Lower guarding cost", p: "One control room covers what many guards never could." },
+          { icon: "eye", b: "Court-ready evidence", p: "Clear, logged footage if an incident goes further." },
+          { icon: "grid", b: "Multi-site coverage", p: "Watch a whole portfolio from one place at once." },
+        ] },
+      { id: "services", h2: "What do our CCTV and electronic security services include?", type: "cards", bg: "bg-white", cta: true,
+        lead: "Our electronic security spans live CCTV monitoring, alarm monitoring, remote guarding, access control and AI-assisted analytics, all run from a 24/7 control room. We blend technology with real guards so each covers the other's blind spots.",
+        items: [
+          { icon: "camera", name: "Live CCTV monitoring", note: "Operators watching your feeds in real time, all night." },
+          { icon: "alert", name: "Alarm monitoring", note: "Verified alarm response, with eyes on before we act." },
+          { icon: "eye", name: "Remote guarding", note: "Monitored cameras plus rapid response, fewer on-site guards." },
+          { icon: "lock", name: "Access control", note: "Remote management of entry points and credentials." },
+          { icon: "grid", name: "AI CCTV analytics", note: "Smart detection that flags real activity, cuts false alarms." },
+          { icon: "patrol", name: "Patrol dispatch", note: "A mobile patrol sent to verify and respond on the ground." },
+        ] },
+      { id: "who", h2: "Who do we protect with CCTV monitoring?", type: "pills", bg: "bg-mist",
+        leadHtml: "We monitor almost any Melbourne site with cameras worth watching, and it folds neatly into wider <a href='/commercial-security-melbourne/'>commercial security in Melbourne</a> for multi-site clients.",
+        items: [
+          { icon: "building", label: "Commercial buildings" }, { icon: "grid", label: "Warehouses" },
+          { icon: "hardhat", label: "Construction sites" }, { icon: "cart", label: "Retail" },
+          { icon: "home", label: "Vacant property" }, { icon: "briefcase", label: "Multi-site portfolios" },
+        ] },
+      { id: "remote", h2: "What is remote (virtual) guarding?", type: "null2", bg: "bg-white",
+        leadHtml: "Remote guarding uses monitored cameras and a rapid-response team to deter and respond, replacing or supplementing on-site guards at lower cost. When the system detects an intruder, an operator can challenge them live over speakers, then dispatch a patrol or police. It pairs well with <a href='/security-guards-melbourne/'>our Melbourne security guards</a> and <a href='/mobile-patrol-security-melbourne/'>after-hours mobile patrols</a>.",
+        bodyHtml: "<p>This is the model that's quietly reshaping after-hours security. Instead of paying a guard to sit on a quiet site all night, you put smart cameras on the risk areas and a control room watches them. The moment someone shouldn't be there, an operator speaks to them directly through on-site speakers, which sends most intruders running, then escalates to a patrol or police if needed. You get presence and response for a fraction of a full-time guard.</p>" },
+      { id: "ai", h2: "How does AI CCTV monitoring work?", type: "null2", bg: "bg-mist",
+        lead: "AI CCTV monitoring works in four steps: the analytics detect activity, the system alerts an operator, the operator verifies whether it's a real threat, then a response is triggered. The AI does the watching, a human makes the call, which cuts false alarms and speeds up real ones.",
+        bodyHtml: "<p>Plain cameras flag every cat, branch and shadow, which buries real threats in noise. AI analytics filter that down to activity that actually matters, a person climbing a fence rather than wind in a tree, then hand it to a human operator to confirm before anyone responds. The result is fewer false alarms and a faster, surer response when it counts. Here's the flow.</p>",
+        viz: `<svg viewBox="0 0 820 150" role="img" aria-label="AI CCTV monitoring workflow from detection to response">
+  <g font-family="Inter, system-ui, sans-serif">
+    <g><rect x="6" y="28" width="185" height="86" rx="12" fill="#3B3B25"/><text x="98" y="54" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">1</text><text x="98" y="78" text-anchor="middle" font-size="13" fill="#F5F1E8">AI detects activity</text><text x="98" y="96" text-anchor="middle" font-size="11" fill="#B9C26B">person, not a shadow</text></g>
+    <g><rect x="207" y="28" width="185" height="86" rx="12" fill="#3B3B25"/><text x="299" y="54" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">2</text><text x="299" y="78" text-anchor="middle" font-size="13" fill="#F5F1E8">Operator alerted</text><text x="299" y="96" text-anchor="middle" font-size="11" fill="#B9C26B">control room, live</text></g>
+    <g><rect x="408" y="28" width="185" height="86" rx="12" fill="#3B3B25"/><text x="500" y="54" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">3</text><text x="500" y="78" text-anchor="middle" font-size="13" fill="#F5F1E8">Operator verifies</text><text x="500" y="96" text-anchor="middle" font-size="11" fill="#B9C26B">real threat or not</text></g>
+    <g><rect x="609" y="28" width="185" height="86" rx="12" fill="#C7D43F"/><text x="701" y="54" text-anchor="middle" font-size="13" font-weight="700" fill="#2D2D1C">4</text><text x="701" y="78" text-anchor="middle" font-size="13" font-weight="600" fill="#2D2D1C">Respond / escalate</text><text x="701" y="96" text-anchor="middle" font-size="11" fill="#3B3B25">audio, patrol, police</text></g>
+    <path d="M193 71 l10 0 M198 67 l5 4 -5 4" fill="none" stroke="#3B3B25" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M394 71 l10 0 M399 67 l5 4 -5 4" fill="none" stroke="#3B3B25" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M595 71 l10 0 M600 67 l5 4 -5 4" fill="none" stroke="#3B3B25" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
+<p class="viz-cap">AI does the watching, a licensed operator makes the call. Fewer false alarms, faster real response.</p>` },
+      { id: "why-choose", h2: "Why choose us for CCTV monitoring in Melbourne?", type: "iconlist", bg: "bg-white",
+        leadHtml: "Choose us for CCTV monitoring because our operators are licensed, insured and police-checked, our control room runs 24/7, and we back screens with real guards and patrols for rapid response. We're a <a href='/licensing-compliance/'>fully licensed and insured</a> Victorian firm, not a camera installer.",
+        items: [
+          { icon: "shieldcheck", b: "Licensed operators", p: "Victorian-licensed monitoring staff, police-checked." },
+          { icon: "clock", b: "24/7 control room", p: "Live eyes on your sites every hour of every day." },
+          { icon: "bolt", b: "Real response", p: "Guards and patrols ready to act on what we see." },
+          { icon: "grid", b: "Guarding + tech", p: "We blend people and technology, not just sell cameras." },
+        ] },
+      { id: "cost", h2: "How much does CCTV monitoring cost in Melbourne?", type: "table", bg: "bg-mist", cta: true,
+        lead: "CCTV monitoring in Melbourne is usually priced monthly by tier in 2026: alarm-only monitoring is cheapest, live CCTV monitoring sits in the middle, and full remote guarding costs more but still far less than a full-time on-site guard. The total depends on cameras, sites and hours.",
+        bodyHtml: "<p>The right tier depends on how much you want the system to do. Alarm-only watches for triggers, live monitoring puts eyes on your feeds, and full remote guarding adds audio challenge and patrol dispatch so it can replace a guard on many sites. <a href='/contact/'>Get a free quote</a> and we'll size the tier to your sites and risk.</p>",
+        head: ["Monitoring tier", "What it covers", "Response", "Cost basis"],
+        rows: [
+          ["Alarm-only monitoring", "Triggered alerts", "Verify & escalate", "Lowest, monthly"],
+          ["Live CCTV monitoring", "Operator watching feeds", "Real-time response", "Mid, monthly"],
+          ["Remote guarding (full)", "Monitoring + audio + patrol", "Challenge & dispatch", "Higher, still under static"],
+        ],
+        note: "Estimate only for 2026. Priced by cameras, sites and hours. Get a quote for your sites." },
+      { id: "areas", h2: "Where do we provide CCTV monitoring across Melbourne?", type: "areas", bg: "bg-white",
+        lead: "We monitor sites across Greater Melbourne and beyond from our control room, since CCTV monitoring isn't limited by distance. We back it with local guards and patrols across the metro area, plus Geelong and Dandenong, for on-the-ground response.",
+        items: ["Greater Melbourne", "Melbourne CBD", "Industrial precincts", "Eastern suburbs", "Western suburbs", "Geelong", "Dandenong"],
+        link: { href: "/service-areas/", label: "See all areas we cover" } },
+    ],
+    faqs: [
+      { q: "What is the difference between CCTV recording and live monitoring?", a: "Recording captures footage you review after an incident has already happened. Live monitoring means a licensed operator watches your feeds in real time and responds as events unfold, challenging intruders and dispatching help, so problems get stopped rather than just filmed." },
+      { q: "What is remote or virtual guarding?", a: "Remote guarding uses monitored cameras and a rapid-response team to deter and respond, replacing or supplementing on-site guards at lower cost. When the system detects an intruder, an operator can challenge them live over speakers, then dispatch a patrol or police." },
+      { q: "Can CCTV monitoring replace on-site guards?", a: "Yes, on many sites. For vacant property, warehouses and after-hours cover, remote guarding with live monitoring and audio challenge often replaces an on-site guard at a fraction of the cost. Higher-risk or public-facing sites may still need a guard on site." },
+      { q: "Does AI CCTV reduce false alarms?", a: "Yes. AI analytics filter out harmless movement like shadows, animals and weather, flagging genuine activity such as a person climbing a fence. A human operator then verifies before responding, which cuts false alarms and speeds up the response to real threats." },
+      { q: "Are your CCTV monitoring operators licensed in Victoria?", a: "Yes. Every monitoring operator holds a current Victorian security licence and is police-checked, and our business holds a Private Security Business Licence you can verify with Victoria Police at any time, working from a 24/7 control room." },
+      { q: "Are your operators insured and police-checked?", a: "Yes. We carry public liability insurance and every control-room operator passes a national police check before their first shift, so your sites and footage are handled by properly vetted, accountable professionals." },
+      { q: "How quickly do you respond to a CCTV alert?", a: "Within seconds in the control room. An operator verifies the alert in real time and acts immediately, whether that's an audio challenge, a dispatched patrol or a call to police. We'll agree your response protocol and any patrol response times up front." },
+      { q: "Is there a minimum contract for CCTV monitoring?", a: "Monitoring is usually a monthly service with a minimum term we'll set out clearly in your quote. We keep it flexible where we can, and we'll match the tier and term to your sites, cameras and risk rather than locking you into more than you need." },
+    ],
+  },
+
+  {
     slug: "vip-close-protection-melbourne",
     primaryKW: "vip security melbourne",
     breadcrumb: "VIP & Close Protection",
@@ -530,7 +629,7 @@ export const services = [
           { icon: "clock", b: "After-hours break-ins", p: "Patrols and alarm response when the shutters are down." },
         ] },
       { id: "services", h2: "What do our retail security services include?", type: "cards", bg: "bg-white", cta: true,
-        leadHtml: "Our retail security spans uniformed guards, plain-clothes loss prevention officers, CCTV monitoring support, entry and exit checks and shopping-centre patrols. It's staffed by the same licensed <a href='/security-guards-melbourne/'>Melbourne security guards</a> we run citywide, with retail-specific training on top.",
+        leadHtml: "Our retail security spans uniformed guards, plain-clothes loss prevention officers, CCTV monitoring support, entry and exit checks and shopping-centre patrols. It's staffed by the same licensed <a href='/security-guards-melbourne/'>Melbourne security guards</a> we run citywide, with retail-specific training on top, backed by <a href='/cctv-electronic-security-melbourne/'>CCTV monitoring</a> when you want eyes on the store after hours.",
         items: [
           { icon: "shieldcheck", name: "Uniformed retail guards", note: "Visible deterrence on the door and across the shop floor." },
           { icon: "eye", name: "Plain-clothes officers", note: "Covert loss prevention that catches concealed theft." },

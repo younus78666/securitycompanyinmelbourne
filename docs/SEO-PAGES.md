@@ -31,7 +31,7 @@ Status legend: ✅ LIVE | ⏳ PLANNED (brief ready, page not built yet)
 | /retail-security-melbourne/ | retail security melbourne | low | ~ | "retail security melbourne" | LIVE ✅ |
 | /k9-security-melbourne/ | k9 security melbourne | 10 | low | "k9 security melbourne" | LIVE ✅ |
 | /vip-close-protection-melbourne/ | vip security melbourne | 10 | low | "vip security" / "close protection" + melbourne | LIVE ✅ |
-| /cctv-electronic-security-melbourne/ | cctv monitoring melbourne | 10 | low | "cctv" + "security melbourne" | ⏳ |
+| /cctv-electronic-security-melbourne/ | cctv monitoring melbourne | 10 | low | "cctv" + "security melbourne" | LIVE ✅ |
 | /warehouse-security-melbourne/ | warehouse security melbourne | low | low | "warehouse security melbourne" | ⏳ |
 | /healthcare-security-melbourne/ | hospital security melbourne | 10 | low | "healthcare/hospital security melbourne" | ⏳ |
 
