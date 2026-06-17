@@ -30,7 +30,7 @@ const features = [
     rev: true,
   },
   {
-    title: "24/7 monitoring and genuinely rapid response",
+    title: "24/7 monitoring and rapid local response",
     body: "Our control room never sleeps. With GPS-verified patrols and alarm response across Greater Melbourne, we get a guard on site fast and confirm a window the moment you call.",
     proof: [
       "GPS-verified patrol logs you can audit",
@@ -53,11 +53,13 @@ const steps = [
 
 const faqs = [
   { q: "Are your security guards licensed in Victoria?", a: "Yes. Every guard holds a current Victorian security licence and is police-checked. We also hold a Private Security Business Licence you can verify with the Victoria Police Licensing and Regulation Division at any time." },
+  { q: "What licence does a security company need in Victoria?", a: "In Victoria, a security business needs a Private Security Business Licence from Victoria Police, and every guard needs an individual security licence. Always ask for the licence number and check it before you book." },
   { q: "How quickly can you get a security guard on site?", a: "We can usually get a licensed guard on site within hours, not days, because we run a 24/7 dispatch team across Melbourne. For urgent jobs we'll confirm a deployment window the moment you call." },
-  { q: "How much does it cost to hire a security guard in Melbourne?", a: "Cost depends on guard type, shift length and timing. We publish transparent hourly ranges so you can budget before you call, then give you an itemised quote with no surprises." },
-  { q: "Can I hire a security guard for one day or a short-term event?", a: "Yes. We cover one-off events, short-term cover and ongoing contracts. Tell us the dates and site and we'll scope the right number of guards for the job." },
-  { q: "Do you provide security for the Christmas and event season?", a: "Yes. Spring and summer events, retail peaks and end-of-year functions are our busiest period. Book early, because licensed crowd controllers fill up fast across Melbourne in November and December." },
+  { q: "How much does it cost to hire a security guard in Melbourne?", a: "Cost depends on guard type, shift length and timing. We publish clear hourly ranges so you can budget before you call, then give you an itemised quote with no surprises." },
+  { q: "Can I hire a security guard for one day or a short-term event?", a: "Yes. We cover one-off events, short-term cover and ongoing contracts. Tell us the dates and the site, and we'll work out the right number of guards for the job." },
+  { q: "Do you provide security for the Christmas and event season?", a: "Yes. Spring and summer events, retail peaks and end-of-year functions are our busiest time. Book early, because licensed crowd controllers fill up fast across Melbourne in November and December." },
   { q: "Are your guards insured and police-checked?", a: "Yes. We carry public liability insurance and every officer passes a national police check before they work a single shift, so your business and your visitors are properly protected." },
+  { q: "Can I request male or female security guards?", a: "Yes. Tell us what your site or event needs and we'll roster the right team, including female guards for bag checks, change rooms or events where that matters." },
 ];
 
 const icons = {
@@ -190,7 +192,7 @@ const animMark = (shield, chev, ring) => `
       <div>
         <span class="eyebrow" style="color:var(--lime-soft)">Licensed security company in Melbourne</span>
         <h1 style="margin-top:14px">Melbourne security<br/>that protects<br/>what <em class="u-underline">matters</em></h1>
-        <p class="lead">Forget unreliable guards and locked-up worries. SCM gives you licensed, insured, police-checked security that's on call 24/7, so your people, property and events stay safe.</p>
+        <p class="lead">Forget unreliable guards and locked-up worries. SCM gives you licensed, insured, police-checked security that's on call 24/7. Your people, property and events, properly protected.</p>
         <div style="display:flex;gap:14px;flex-wrap:wrap">
           <a class="btn btn-primary" href="/contact/">Get a Free Quote</a>
           <a class="btn btn-ghost" style="border-color:var(--lime);color:var(--cream)" href={site.phoneHref}>Talk to our team</a>
@@ -238,6 +240,15 @@ const animMark = (shield, chev, ring) => `
       {industries.map(i => <span aria-hidden="true">{i}</span>)}
     </div>
   </div>
+
+  <!-- INTRO / POSITIONING -->
+  <section class="section" style="padding-bottom:0">
+    <div class="container reveal" style="max-width:780px;text-align:center;margin:0 auto">
+      <span class="eyebrow">Licensed security, done properly</span>
+      <p style="font-family:var(--serif);font-size:clamp(1.35rem,2.6vw,1.85rem);line-height:1.38;color:var(--ink);margin:14px 0 0">SCM is a licensed Melbourne security company. We protect local businesses, building sites, events and homes with professional, police-checked guards, right across Greater Melbourne.</p>
+      <p style="color:var(--muted);margin-top:16px">The phone gets answered around the clock, and every shift is backed by a current Victorian security licence and full insurance. Need one guard for a single night, or an ongoing patrol contract? Either way, you deal with a local team that turns up on time, looks the part, and does the job properly.</p>
+    </div>
+  </section>
 
   <!-- FEATURES -->
   <section class="section">
@@ -310,8 +321,9 @@ const animMark = (shield, chev, ring) => `
   <section class="section" id="sectors" style="background:var(--cream-soft)">
     <div class="container">
       <div class="center-head reveal">
-        <span class="eyebrow">Sectors we serve</span>
+        <span class="eyebrow">Sectors &amp; areas we serve</span>
         <h2>Security tailored to <em>every kind of site</em></h2>
+        <p style="color:var(--muted);margin-top:12px">We work right across Greater Melbourne, from the CBD, Southbank and Docklands out through the suburbs, plus Geelong and Dandenong. Wherever your site sits, you get a local crew that knows the area and can be there quickly.</p>
       </div>
       <div class="sectors">
         {site.sectors.map(s => (
@@ -330,6 +342,7 @@ const animMark = (shield, chev, ring) => `
       <div class="center-head reveal">
         <span class="eyebrow">The SCM difference</span>
         <h2>Built on trust, response <em>and real accountability</em></h2>
+        <p style="color:var(--muted);margin-top:12px">Plenty of companies can send a guard. Far fewer can prove they're licensed, turn up when they said they would, and tell you exactly what happened on site. That's the gap we close, every single shift.</p>
       </div>
       <div class="diff">
         <div class="col reveal">
@@ -392,18 +405,32 @@ const animMark = (shield, chev, ring) => `
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section" style="padding-top:0">
-    <div class="cta-band">
-      <div class="wm wm-cta" aria-hidden="true" set:html={animMark('#3B3B25', '#C7D43F', '#3B3B25')} />
-      <div style="position:relative;z-index:2">
-        <span class="eyebrow">Ready when you are</span>
-        <h2>Ready to protect <em>what matters?</em></h2>
-        <p style="color:var(--muted);max-width:48ch;margin:8px auto 24px">Get a fast, free quote from a licensed Melbourne security company. We answer the phone 24/7, every day of the year.</p>
-        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-          <a class="btn btn-dark" href="/contact/">Book a free quote</a>
-          <a class="btn btn-ghost" href={site.phoneHref}>Call {site.phone}</a>
+  <!-- PRE-FOOTER: CTA + SUBSCRIBE -->
+  <section class="prefooter">
+    <div class="wm wm-cta" aria-hidden="true" set:html={animMark('#C7D43F', '#2D2D1C', '#C7D43F')} />
+    <div class="container prefoot-grid">
+      <div class="prefoot-cta reveal">
+        <span class="eyebrow" style="color:var(--lime-soft)">Protecting Melbourne, around the clock</span>
+        <h2>Talk to a real Melbourne <em>security team</em> today</h2>
+        <p>Get a free, no-obligation quote. Tell us about your site, your event or what's worrying you, and we'll recommend the right cover at a fair price, fast.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:22px">
+          <a class="btn btn-primary" href="/contact/">Book a free quote</a>
+          <a class="btn btn-ghost" style="border-color:var(--lime);color:var(--cream)" href={site.phoneHref}>Call {site.phone}</a>
         </div>
+        <div class="prefoot-trust">
+          <span>Victorian licensed</span><span>Fully insured</span><span>Police-checked</span><span>24/7 response</span>
+        </div>
+      </div>
+      <div class="subscribe-card reveal">
+        <h3>Security tips for Melbourne businesses</h3>
+        <p class="sub-intro">Get occasional, practical security advice plus seasonal alerts for event and holiday cover. No spam, and you can unsubscribe anytime.</p>
+        <form class="sub-form" id="subForm" novalidate>
+          <label for="subEmail" class="visually-hidden" style="position:absolute;left:-9999px">Your email address</label>
+          <input type="email" id="subEmail" name="email" placeholder="Your email address" required autocomplete="email" />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="sub-note">We only email when it's worth your time.</p>
+        <p class="sub-success" id="subSuccess" hidden>Thanks. You're on the list.</p>
       </div>
     </div>
   </section>
@@ -523,5 +550,18 @@ const animMark = (shield, chev, ring) => `
       }
     });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { setDrawer(false); document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open')); } });
+
+    // Subscribe form (front-end only; wire to a real provider before launch — CLIENT INPUT)
+    const subForm = document.getElementById('subForm');
+    if (subForm) {
+      subForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('subEmail');
+        if (!email.value || !email.checkValidity()) { email.focus(); return; }
+        // TODO: POST to email provider (Resend / Mailchimp / Formspree) before launch.
+        subForm.hidden = true;
+        document.getElementById('subSuccess').hidden = false;
+      });
+    }
   </script>
 </Base>

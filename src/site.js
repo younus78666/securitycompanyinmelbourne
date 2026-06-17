@@ -111,13 +111,13 @@ export const site = {
 
   services: [
     { name: "Security Guards", href: "/security-guards-melbourne/", icon: "guard",
-      blurb: "Licensed, police-checked static and manned guards for sites, buildings and retail across Melbourne." },
+      blurb: "Licensed, police-checked guards for retail, offices, building sites and more. They deter trouble, control who comes and goes, and log every incident." },
     { name: "Mobile Patrols", href: "/mobile-patrol-security-melbourne/", icon: "patrol",
-      blurb: "GPS-verified patrols and rapid alarm response, lock-up and unlock, 24/7 across Greater Melbourne." },
+      blurb: "Marked patrol vehicles and rapid alarm response on a random schedule. We lock up, unlock, and reach your site fast. Every visit is GPS-stamped." },
     { name: "Event Security", href: "/event-security-melbourne/", icon: "event",
-      blurb: "Crowd control, entry screening and RSA-trained crowd controllers for events of any size." },
+      blurb: "Crowd controllers, bag checks and event guards for any size function. Our RSA-trained team keeps guests safe and the night moving." },
     { name: "Commercial Security", href: "/commercial-security-melbourne/", icon: "building",
-      blurb: "End-to-end protection for offices, warehouses, construction sites and retail businesses." },
+      blurb: "One local provider for the whole site, from front-desk concierge to construction and warehouse cover. Less juggling, tighter security." },
   ],
 
   sectors: [
