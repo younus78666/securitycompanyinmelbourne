@@ -388,7 +388,7 @@ const schema = {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
         if(!form.checkValidity()){ form.reportValidity(); return; }
-        // TODO: POST to lead handler (Resend / Formspree) before launch — CLIENT INPUT.
+        // TODO: POST to lead handler (Resend / Formspree) before launch (CLIENT INPUT).
         form.style.display='none';
         document.getElementById('qSuccess').classList.add('show');
       });

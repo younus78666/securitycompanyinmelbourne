@@ -23,7 +23,7 @@ export const site = {
   founded: "20XX",                                          // CLIENT INPUT
   guardCount: "100+",                                       // CLIENT INPUT
   reviewRating: "5.0",                                      // CLIENT INPUT
-  reviewCount: "—",                                         // CLIENT INPUT
+  reviewCount: "",                                          // CLIENT INPUT
   responseWindow: "within hours",                           // CLIENT INPUT (confirm exact)
 
   // Palette (Kindsight-inspired, olive + cream + lime)

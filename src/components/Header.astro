@@ -115,7 +115,7 @@ import { logoSvg, icons, drawerIcon } from "../lib/brand.js";
     }
   });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { setDrawer(false); document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open')); } });
-  // reveal-on-scroll (shared) — wait for full DOM since Header is early in body
+  // reveal-on-scroll (shared): wait for full DOM since Header is early in body
   const initReveal = () => {
     const reveals = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window) {
