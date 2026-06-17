@@ -173,6 +173,116 @@ export const services = [
     ],
   },
   {
+    slug: "corporate-security-melbourne",
+    primaryKW: "corporate security melbourne",
+    breadcrumb: "Corporate Security",
+    title: "Corporate Security Melbourne | Office & HQ Guards 24/7",
+    metaDesc: "Need corporate security in Melbourne? We protect offices, HQ buildings and executive floors with licensed, insured, police-checked guards. Get a fast quote.",
+    h1: "Corporate Security in Melbourne for Offices and HQ Buildings",
+    heroImg: "/assets/feature-corporate.webp",
+    heroAlt: "Licensed corporate security guard at a Melbourne office reception",
+    og: "/assets/og/corporate-security-melbourne.jpg",
+    intro: "Corporate security in Melbourne protects offices, HQ buildings and executive floors with licensed, well-presented guards. We handle reception, access control, visitor management and after-hours cover, so your workplace runs smoothly and your people, data and premises stay safe. It's the office-focused side of business security.",
+    midcta: { b: "Office or HQ needs proper cover?", span: "Discreet, licensed corporate security across Melbourne, 24/7." },
+    related: ["commercial-security-melbourne", "concierge-security-melbourne", "security-guards-melbourne"],
+    quote: { text: "Our head office has a busy reception and three executive floors. SCM's guards present like part of our team, manage every visitor, and the after-hours access logs give our risk committee exactly what they want. Discreet and professional throughout.", name: "Head of Workplace", role: "Professional services firm, Melbourne CBD", initials: "HW" },
+    sections: [
+      { id: "what", h2: "What is corporate security in Melbourne?", type: null, bg: "bg-white", cta: true,
+        leadHtml: "Corporate security in Melbourne is guarding and access control for offices and corporate workplaces, a focused subset of broader commercial security. It covers reception, visitor management, executive floor protection and after-hours cover, keeping your staff, premises and information safe. It sits under our wider <a href='/commercial-security-melbourne/'>commercial security services</a>.",
+        bodyHtml: "<p>Where a building site needs muscle and a venue needs crowd control, an office needs something different: a calm, well-presented guard who fits the workplace and still locks it down properly. Corporate security is about discretion and control at once. Your visitors feel looked after, your staff feel safe, and the wrong people never get past reception or onto the executive floor.</p>",
+        bool: { q: "Is corporate security the same as commercial security?", a: "No. Corporate security is the office and workplace part of the picture, while commercial security is the broad umbrella covering all business types, including retail, warehouse and construction. Corporate is a focused vertical under that wider commercial banner." } },
+      { id: "why-need", h2: "Why does your office need corporate security?", type: "iconlist", bg: "bg-mist",
+        lead: "Your office needs corporate security to stop unauthorised access, close visitor-management gaps, deter theft and workplace conflict, cover after-hours breaches, and meet your duty of care to staff. A licensed guard at reception controls the building without making it feel like a fortress.",
+        bodyHtml: "<p>Modern offices are surprisingly soft targets. Tailgating through the front doors, contractors wandering unescorted, laptops walking out at lunch, and the occasional difficult visitor or former staff member. Add after-hours risk when the floor's empty but full of equipment and data, and the case for a trained presence at the door is clear. Corporate security closes those gaps quietly.</p>",
+        items: [
+          { icon: "lock", b: "Unauthorised access", p: "Stop tailgating and keep the wrong people out of the building." },
+          { icon: "eye", b: "Visitor management", p: "Every guest signed in, escorted and accounted for." },
+          { icon: "shieldcheck", b: "Theft deterrence", p: "Protect laptops, devices and company property on site." },
+          { icon: "users", b: "Workplace conflict", p: "Calm handling of difficult visitors or staff situations." },
+          { icon: "clock", b: "After-hours breaches", p: "Cover the empty office when the data and gear sit unguarded." },
+          { icon: "heart", b: "Duty of care", p: "Meet your legal obligation to keep staff safe at work." },
+        ] },
+      { id: "services", h2: "What do our corporate security services include?", type: "cards", bg: "bg-white", cta: true,
+        leadHtml: "Our corporate security covers the whole workplace: front-desk reception, access control, visitor management, executive floor protection, after-hours guarding and alarm response. It draws on the same <a href='/security-guards-melbourne/'>Melbourne security guards</a> and <a href='/concierge-security-melbourne/'>corporate concierge security</a> we run across the city.",
+        items: [
+          { icon: "briefcase", name: "Reception security", note: "A professional front-desk presence that manages every arrival." },
+          { icon: "lock", name: "Access control", note: "Passes, turnstiles and entry points managed and logged." },
+          { icon: "eye", name: "Visitor management", note: "Guests signed in, badged, escorted and signed out." },
+          { icon: "shieldcheck", name: "Executive floor protection", note: "Discreet cover for boardrooms and senior leadership areas." },
+          { icon: "clock", name: "After-hours guarding", note: "The building stays watched once the team goes home." },
+          { icon: "alert", name: "Alarm & incident response", note: "Fast response and clear reporting into your risk processes." },
+        ] },
+      { id: "who", h2: "Which corporate workplaces do we protect?", type: "pills", bg: "bg-mist",
+        lead: "We protect corporate workplaces of every kind across Melbourne, from a single professional office to a multi-floor head office. If staff, visitors and information need managing at the door, we've got the right guard for it.",
+        items: [
+          { icon: "building", label: "Corporate HQs" }, { icon: "briefcase", label: "Professional firms" },
+          { icon: "grid", label: "Tech offices" }, { icon: "users", label: "Coworking spaces" },
+          { icon: "shieldcheck", label: "Government tenancies" }, { icon: "home", label: "Multi-tenant towers" },
+        ] },
+      { id: "how", h2: "How does our corporate security service work?", type: "steps",
+        leadHtml: "Our corporate security works in five steps, shaped around your workplace and its risk profile. See <a href='/our-process/'>our process</a> for the full method.",
+        items: [
+          { icon: "eye", n: "1", t: "Assess", d: "A workplace risk assessment of entries, floors and flow." },
+          { icon: "grid", n: "2", t: "Plan", d: "A security plan that plugs into your access and BCP." },
+          { icon: "shieldcheck", n: "3", t: "Deploy", d: "Well-presented, licensed guards matched to your workplace." },
+          { icon: "users", n: "4", t: "Supervise", d: "Consistent shift cover and a single point of contact." },
+          { icon: "check", n: "5", t: "Report", d: "Access logs and incident reports your risk team can use." },
+        ] },
+      { id: "why-choose", h2: "Why choose us for corporate security in Melbourne?", type: "iconlist", bg: "bg-white",
+        leadHtml: "Choose us for corporate security because our guards are licensed, insured and police-checked, present discreetly, and we cover Melbourne 24/7 with rapid response. We're a <a href='/licensing-compliance/'>fully licensed and insured</a> Victorian firm, so you get workplace-appropriate guards backed by real accountability.",
+        items: [
+          { icon: "shieldcheck", b: "Licensed & insured", p: "Police-checked guards and a verifiable business licence." },
+          { icon: "briefcase", b: "Discreet presentation", p: "Guards who fit a corporate workplace, not just a worksite." },
+          { icon: "clock", b: "24/7 cover", p: "Reception hours, after-hours and everything between." },
+          { icon: "bolt", b: "Rapid response", p: "A Melbourne dispatch team that reaches your office fast." },
+        ] },
+      { id: "diff", h2: "Corporate security vs commercial security: what's the difference?", type: null, bg: "bg-mist",
+        lead: "Corporate security covers offices and workplaces specifically, while commercial security is the umbrella covering all business types, including retail, warehouse and construction. Corporate is one focused vertical inside that wider commercial picture, with its own tone, tasks and presentation standard.",
+        bodyHtml: "<p>The distinction matters when you're buying. If you run an office or an HQ, you want corporate security: discreet guards, reception polish, access control and floor protection. If you run a mix of sites, a retail chain, a warehouse and a build, you want the broader <a href='/commercial-security-melbourne/'>commercial security services</a> umbrella that spans all of them. Here's how the two relate.</p>",
+        viz: `<svg viewBox="0 0 820 252" role="img" aria-label="How corporate security sits as an office vertical under the wider commercial security umbrella">
+  <g font-family="Inter, system-ui, sans-serif">
+    <text x="30" y="32" font-size="14" font-weight="700" fill="#1C1C16">Commercial security, the broad business umbrella</text>
+    <rect x="16" y="44" width="788" height="138" rx="18" fill="#EEF1E0" stroke="#3B3B25" stroke-width="2"/>
+    <g>
+      <rect x="34" y="92" width="138" height="64" rx="12" fill="#FFFFFF" stroke="#3B3B25" stroke-width="1.5"/><text x="103" y="129" text-anchor="middle" font-size="13.5" fill="#3B3B25">Retail</text>
+      <rect x="186" y="92" width="138" height="64" rx="12" fill="#FFFFFF" stroke="#3B3B25" stroke-width="1.5"/><text x="255" y="129" text-anchor="middle" font-size="13.5" fill="#3B3B25">Warehouse</text>
+      <rect x="338" y="92" width="138" height="64" rx="12" fill="#FFFFFF" stroke="#3B3B25" stroke-width="1.5"/><text x="407" y="129" text-anchor="middle" font-size="13.5" fill="#3B3B25">Construction</text>
+      <rect x="490" y="92" width="138" height="64" rx="12" fill="#FFFFFF" stroke="#3B3B25" stroke-width="1.5"/><text x="559" y="129" text-anchor="middle" font-size="13.5" fill="#3B3B25">Healthcare</text>
+      <rect x="642" y="92" width="146" height="64" rx="12" fill="#C7D43F" stroke="#2D2D1C" stroke-width="2"/><text x="715" y="122" text-anchor="middle" font-size="13.5" font-weight="700" fill="#2D2D1C">Corporate</text><text x="715" y="140" text-anchor="middle" font-size="11" fill="#2D2D1C">offices, this page</text>
+    </g>
+    <text x="30" y="214" font-size="13" fill="#6B6B57">Corporate security is the office and workplace vertical inside the wider commercial umbrella.</text>
+    <text x="30" y="236" font-size="13" fill="#6B6B57">Run a mix of sites? Start at commercial. Run an office or HQ? You're in the right place.</text>
+  </g>
+</svg>
+<p class="viz-cap">Corporate security is the office-focused vertical inside our broader commercial security umbrella.</p>` },
+      { id: "cost", h2: "How much does corporate security cost in Melbourne?", type: "table", bg: "bg-white", cta: true,
+        lead: "Corporate security in Melbourne usually costs $48 to $75 per hour in 2026, depending on whether you need reception security, a static office guard or a corporate concierge. Night rates and weekend or public-holiday loadings apply, and most workplaces book a minimum shift of around four hours.",
+        bodyHtml: "<p>Because corporate cover is usually an ongoing presence during business hours, most clients run set daily shifts rather than one-off bookings. Reception security sits at the lower end, executive-floor and concierge cover a little higher. The total depends on hours, the number of guards and how late the cover runs. <a href='/contact/'>Get a free quote</a> and we'll price your workplace.</p>",
+        head: ["Service type", "Day ($/hr)", "Night ($/hr)", "Min shift"],
+        rows: [
+          ["Reception / front-desk security", "$48 to $62", "$58 to $72", "~4 hrs"],
+          ["Static office guard", "$50 to $68", "$60 to $78", "~4 hrs"],
+          ["Corporate concierge", "$52 to $75", "$62 to $82", "~4 hrs"],
+        ],
+        note: "Estimate only for 2026. Weekend and public-holiday loadings apply. Get a quote for your office." },
+      { id: "areas", h2: "Where do we provide corporate security across Melbourne?", type: "areas", bg: "bg-mist",
+        lead: "We provide corporate security across the Melbourne CBD office towers, Southbank and Docklands, the inner-city business districts and suburban office parks, plus Geelong and Dandenong. Wherever your workplace sits, a local team can cover it.",
+        items: ["Melbourne CBD", "Southbank & Docklands", "East Melbourne", "Inner suburbs", "Suburban office parks", "Geelong", "Dandenong"],
+        link: { href: "/service-areas/", label: "See all areas we cover" } },
+    ],
+    faqs: [
+      { q: "What is the difference between corporate and commercial security?", a: "Corporate security covers offices and workplaces specifically, with reception, access control and discreet guards. Commercial security is the broader umbrella covering all business types, including retail, warehouse and construction. Corporate is one focused vertical inside that wider commercial picture." },
+      { q: "How do I hire corporate security in Melbourne?", a: "Tell us about your office, your hours and your access setup. We'll run a workplace risk assessment, recommend the right cover, and give you a clear written quote. Once you approve it, we place and brief well-presented licensed guards on your schedule." },
+      { q: "Can I request male or female security guards?", a: "Yes. Tell us what your workplace needs and we'll roster the right team, including female guards where that suits your staff, visitors or reception. We match the guard to your office's tone and presentation standard." },
+      { q: "Are your corporate security guards licensed in Victoria?", a: "Yes. Every corporate guard holds a current Victorian security licence and is police-checked, and our business holds a Private Security Business Licence you can verify with the Victoria Police Licensing and Regulation Division at any time." },
+      { q: "Are your guards insured and police-checked?", a: "Yes. We carry public liability insurance and every guard passes a national police check before their first shift, so your office, your staff and your visitors are properly protected throughout every shift." },
+      { q: "How quickly can I get a corporate guard on site?", a: "Usually within hours for urgent cover, and within a day or two for an ongoing reception or office roster. We run a 24/7 dispatch team across Melbourne, so we'll confirm a start time the moment you're ready to go." },
+      { q: "Is there a minimum shift length for corporate security?", a: "Most corporate security has a minimum shift, commonly around four hours, because guards need travel and briefing time. We'll confirm the minimum in your written quote before you commit, with no hidden conditions." },
+      { q: "Are there extra charges for night, weekend or public holiday cover?", a: "Yes. Like most security work, corporate security carries loadings for nights, weekends and public holidays. We'll set out every rate and the minimum shift clearly in your written quote before you commit, so there are no surprises." },
+    ],
+  },
+
+  {
     slug: "construction-site-security-melbourne",
     primaryKW: "construction site security melbourne",
     breadcrumb: "Construction Site Security",
@@ -382,7 +492,7 @@ export const services = [
         ] },
       { id: "diff", h2: "Residential vs corporate concierge security: what's the difference?", type: null, bg: "bg-white",
         lead: "Residential concierge security serves apartment buildings and owners corporations, focusing on residents, visitors and parcels. Corporate concierge serves office lobbies and reception areas, focusing on staff, clients and access control. Both blend reception with licensed security, but the tone and tasks differ.",
-        bodyHtml: "<p>In a residential tower, the job leans toward service. Your concierge guard knows the residents, takes their parcels, lets in their guests and keeps the building calm around the clock. In a corporate lobby, it leans toward control. The guard manages a steady flow of staff and visitors, issues passes, and keeps the reception professional and on-brand. We match the guard and the procedures to whichever building you run, and you can fold either into a wider business security plan when you need roving guards or patrols as well.</p>" },
+        bodyHtml: "<p>In a residential tower, the job leans toward service. Your concierge guard knows the residents, takes their parcels, lets in their guests and keeps the building calm around the clock. In a corporate lobby, it leans toward control. The guard manages a steady flow of staff and visitors, issues passes, and keeps the reception professional and on-brand. We match the guard and the procedures to whichever building you run, and you can fold either into our wider <a href='/corporate-security-melbourne/'>corporate security</a> plan when you need executive-floor cover, roving guards or patrols as well.</p>" },
       { id: "cost", h2: "How much does concierge security cost in Melbourne?", type: "table", bg: "bg-mist", cta: true,
         lead: "Concierge security in Melbourne usually costs $45 to $70 per hour in 2026, with higher rates overnight and loadings for weekends and public holidays. Residential concierge often sits at the lower end, corporate at the higher. Most buildings book a minimum shift of around four hours.",
         bodyHtml: "<p>Because concierge is usually an ongoing daily presence rather than a one-off, most clients run set shifts that cover their busiest hours or a full 24-hour roster. The more hours and the later they run, the more it costs, but a single concierge guard doing reception and security together is cheaper than paying for both separately. <a href='/contact/'>Get a free quote</a> and we'll price your roster.</p>",
