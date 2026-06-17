@@ -33,7 +33,7 @@ Status legend: ✅ LIVE | ⏳ PLANNED (brief ready, page not built yet)
 | /vip-close-protection-melbourne/ | vip security melbourne | 10 | low | "vip security" / "close protection" + melbourne | LIVE ✅ |
 | /cctv-electronic-security-melbourne/ | cctv monitoring melbourne | 10 | low | "cctv" + "security melbourne" | LIVE ✅ |
 | /warehouse-security-melbourne/ | warehouse security melbourne | low | low | "warehouse security melbourne" | LIVE ✅ |
-| /healthcare-security-melbourne/ | hospital security melbourne | 10 | low | "healthcare/hospital security melbourne" | ⏳ |
+| /healthcare-security-melbourne/ | hospital security melbourne | 10 | low | "healthcare/hospital security melbourne" | LIVE ✅ |
 
 ## COST GUIDES (near blue-ocean)
 | Page | Primary KW | Vol | H1 must contain | Status |
