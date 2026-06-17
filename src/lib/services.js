@@ -173,6 +173,147 @@ export const services = [
     ],
   },
   {
+    slug: "crowd-control-melbourne",
+    primaryKW: "crowd control melbourne",
+    breadcrumb: "Crowd Control",
+    title: "Crowd Control Melbourne | Licensed Crowd Controllers",
+    metaDesc: "Need crowd control in Melbourne? We supply licensed, RSA-certified crowd controllers for venues, festivals and events. Insured, police-checked. Get a quote.",
+    h1: "Crowd Control in Melbourne, Licensed Crowd Controllers",
+    heroImg: "/assets/feature-crowd.webp",
+    heroAlt: "Licensed crowd controllers managing entry at a Melbourne venue",
+    og: "/assets/og/crowd-control-melbourne.jpg",
+    intro: "Crowd control in Melbourne is the licensed management of people at venues and events. Our crowd controllers screen entry, check IDs, watch capacity, support RSA and de-escalate trouble before it spreads, keeping your venue safe and compliant from doors open to last drinks.",
+    midcta: { b: "Venue or event need crowd control?", span: "Licensed, RSA-certified crowd controllers across Melbourne." },
+    related: ["event-security-melbourne", "security-guards-melbourne", "commercial-security-melbourne"],
+    quote: { text: "Our Friday and Saturday door is run by their crowd controllers now. They're firm but calm, they know the RSA rules cold, and we've had zero serious incidents since they started. Patrons actually respect them.", name: "Licensee", role: "Live-music venue, inner Melbourne", initials: "LV" },
+    sections: [
+      { id: "what", h2: "What is crowd control in Melbourne?", type: null, bg: "bg-white", cta: true,
+        leadHtml: "Crowd control in Melbourne is the licensed management of people at venues and events by trained crowd controllers. They screen entry, manage capacity and de-escalate conflict, working under a Victorian licence to keep crowds safe at pubs, clubs, festivals and functions across the city.",
+        bodyHtml: "<p>It's a specific, licensed job, not just a big person on a door. A crowd controller in Victoria is trained in conflict management, capacity awareness and the law around refusing entry and removing patrons. They read a room, spot trouble early, and step in before a tense moment turns into a fight. Done well, you barely notice them. Done badly, the whole night unravels.</p><p>Crowd control sits under the wider <a href='/event-security-melbourne/'>event security</a> umbrella, and our controllers hold the same Victorian licensing you'll find across our <a href='/security-services-melbourne/'>full range of security services</a>.</p>",
+        bool: { q: "Is a crowd controller the same as a bouncer?", a: "Yes, more or less. Crowd controller is the licensed Victorian term for what people casually call a bouncer. The difference is the licence. A real crowd controller is trained, ticketed and accountable, not just someone big standing at the door." } },
+      { id: "why-need", h2: "Why do you need crowd control?", type: "iconlist", bg: "bg-mist",
+        lead: "You need crowd control to screen who comes in, keep your venue within its capacity limits, de-escalate conflict, and meet your duty of care, especially where alcohol's served. Licensed controllers handle the door and the floor so your staff can run the event.",
+        bodyHtml: "<p>For any licensed venue serving alcohol, crowd control isn't optional. Your liquor licence and your insurance both assume trained people are managing the crowd, and a single capacity breach or a mishandled ejection can put both at risk. The right controllers protect your patrons, your staff and your licence all at once.</p>",
+        items: [
+          { icon: "shieldcheck", b: "Entry screening", p: "ID and ticket checks, refusing anyone who shouldn't come in." },
+          { icon: "users", b: "Capacity limits", p: "Counting in and out so you never breach your venue cap." },
+          { icon: "bolt", b: "Conflict de-escalation", p: "Reading tension early and calming it before it escalates." },
+          { icon: "alert", b: "Evacuation safety", p: "Clear, calm crowd movement if the venue has to empty fast." },
+          { icon: "check", b: "RSA & alcohol", p: "Backing your bar staff on intoxicated or aggressive patrons." },
+          { icon: "lock", b: "Duty of care", p: "Meeting the legal obligation you carry for everyone inside." },
+        ] },
+      { id: "services", h2: "What do our crowd control services include?", type: "cards", bg: "bg-white", cta: true,
+        leadHtml: "Our crowd control covers the door and the floor: supervision, entry and exit screening, ID checks, RSA support, queue and capacity management, and ejections handled by the book. It folds neatly into our <a href='/security-services-melbourne/'>full range of security services</a> for bigger jobs.",
+        items: [
+          { icon: "shieldcheck", name: "Door supervision", note: "A controlled, professional presence on every entry point." },
+          { icon: "eye", name: "Entry & exit screening", note: "ID checks, ticket scanning and refusing entry where needed." },
+          { icon: "users", name: "Queue & capacity", note: "Managing lines and counting heads to hold your cap." },
+          { icon: "alert", name: "RSA support", note: "Backing bar staff on intoxicated and disorderly patrons." },
+          { icon: "guard", name: "Ejections by the book", note: "Removing patrons calmly and within the law when it's needed." },
+          { icon: "bolt", name: "Incident response", note: "Fast, trained response and clear escalation to police." },
+        ] },
+      { id: "who", h2: "Who do we provide crowd control for?", type: "pills", bg: "bg-mist",
+        leadHtml: "We provide crowd control for any Melbourne venue or event where people gather and alcohol or numbers raise the risk. Need a full team for a larger function? See our <a href='/event-security-melbourne/'>event security guards</a>.",
+        items: [
+          { icon: "event", label: "Nightclubs" }, { icon: "home", label: "Pubs & bars" },
+          { icon: "users", label: "Festivals" }, { icon: "event", label: "Concerts" },
+          { icon: "shieldcheck", label: "Sporting events" }, { icon: "heart", label: "Private functions" },
+        ] },
+      { id: "licence", h2: "What licence do crowd controllers need in Victoria?", type: null, bg: "bg-white",
+        leadHtml: "Crowd controllers in Victoria need a Private Security Individual Operator Licence with a crowd control registration, plus an RSA certificate to work at licensed venues that serve alcohol. The licence is issued by Victoria Police under the Private Security Act, and you can ask to see it.",
+        bodyHtml: "<p>This is the detail most security pages skip, and it's exactly what you should check before you book anyone. A crowd control registration is a separate category from a general security guard licence. It means the person has done conflict-management training and passed the police suitability checks for working face-to-face with crowds. If a company can't produce current licences on request, that's your answer right there.</p><p>Every controller we roster is licensed for crowd control, RSA-certified where the venue serves alcohol, police-checked and insured. You can see how we verify all of it on our <a href='/licensing-compliance/'>licensing and compliance</a> page.</p>",
+        bool: { q: "Do crowd controllers need an RSA certificate?", a: "Yes, for licensed venues. Any crowd controller working where alcohol's served needs a current Responsible Service of Alcohol certificate on top of their crowd control licence. It's how they lawfully support your bar staff with intoxicated patrons." } },
+      { id: "legal", h2: "What can a crowd controller legally do?", type: null, bg: "bg-mist",
+        lead: "A crowd controller can refuse entry, ask a patron to leave, remove someone who won't, and detain a person until police arrive where the law allows. They follow a clear escalation path, using the least force needed, and they're trained to know exactly where the legal line sits.",
+        bodyHtml: "<p>Here's the part that protects both you and your patrons. Crowd controllers don't get to do whatever they like. Their powers run on a ladder, and they're trained to climb it one rung at a time, never skipping straight to force. Detaining someone is a last resort under Victoria's citizen's-arrest provisions, used only when a serious offence has happened and police are on the way.</p>",
+        viz: `<svg viewBox="0 0 820 300" role="img" aria-label="Crowd controller de-escalation and ejection protocol, step by step">
+  <g font-family="Inter, system-ui, sans-serif">
+    <g>
+      <rect x="14" y="232" width="118" height="52" rx="10" fill="#3B3B25"/>
+      <text x="73" y="256" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">1</text>
+      <text x="73" y="274" text-anchor="middle" font-size="13" fill="#F5F1E8">Observe</text>
+    </g>
+    <g>
+      <rect x="146" y="196" width="118" height="52" rx="10" fill="#3B3B25"/>
+      <text x="205" y="220" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">2</text>
+      <text x="205" y="238" text-anchor="middle" font-size="13" fill="#F5F1E8">Engage calmly</text>
+    </g>
+    <g>
+      <rect x="278" y="160" width="118" height="52" rx="10" fill="#3B3B25"/>
+      <text x="337" y="184" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">3</text>
+      <text x="337" y="202" text-anchor="middle" font-size="13" fill="#F5F1E8">Verbal warning</text>
+    </g>
+    <g>
+      <rect x="410" y="124" width="118" height="52" rx="10" fill="#3B3B25"/>
+      <text x="469" y="148" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">4</text>
+      <text x="469" y="166" text-anchor="middle" font-size="13" fill="#F5F1E8">Refuse / remove</text>
+    </g>
+    <g>
+      <rect x="542" y="88" width="118" height="52" rx="10" fill="#3B3B25"/>
+      <text x="601" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#DCE77A">5</text>
+      <text x="601" y="130" text-anchor="middle" font-size="12.5" fill="#F5F1E8">Detain in limits</text>
+    </g>
+    <g>
+      <rect x="674" y="52" width="118" height="52" rx="10" fill="#C7D43F"/>
+      <text x="733" y="76" text-anchor="middle" font-size="13" font-weight="700" fill="#2D2D1C">6</text>
+      <text x="733" y="94" text-anchor="middle" font-size="13" font-weight="600" fill="#2D2D1C">Hand to police</text>
+    </g>
+    <path d="M132 250 L150 224" stroke="#C7D43F" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M264 214 L282 188" stroke="#C7D43F" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M396 178 L414 152" stroke="#C7D43F" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M528 142 L546 116" stroke="#C7D43F" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M660 106 L678 80" stroke="#C7D43F" stroke-width="2.4" stroke-linecap="round"/>
+    <text x="14" y="24" font-size="13" font-weight="700" fill="#1C1C16">Least force first</text>
+    <text x="792" y="24" text-anchor="end" font-size="12" font-style="italic" fill="#6B6B57">Controllers climb one rung at a time, never skipping to force</text>
+  </g>
+</svg>
+<p class="viz-cap">Our de-escalation and ejection protocol. Controllers use the least force needed and only detain within Victorian legal limits.</p>`,
+        bool: { q: "Do crowd controllers have the power to detain someone?", a: "Yes, within strict limits. Under Victoria's citizen's-arrest provisions a controller can detain a person who's committed a serious offence until police arrive, using only reasonable force. They can't punish, search at will, or hold someone for a minor issue." } },
+      { id: "how", h2: "How does our crowd control service work?", type: "steps",
+        leadHtml: "Our crowd control works in five steps, and we shape it around your venue and event. Want the full method? See <a href='/our-process/'>our process</a>.",
+        items: [
+          { icon: "eye", n: "1", t: "Assess", d: "A venue risk assessment of entries, capacity and flow." },
+          { icon: "grid", n: "2", t: "Plan", d: "A crowd plan with controller numbers and positions." },
+          { icon: "shieldcheck", n: "3", t: "Deploy", d: "Licensed, RSA-certified controllers on the door and floor." },
+          { icon: "users", n: "4", t: "Supervise", d: "A head controller running the team through the night." },
+          { icon: "check", n: "5", t: "Report", d: "Incident reports after the event, clear and verified." },
+        ] },
+      { id: "why-choose", h2: "Why choose us for crowd control in Melbourne?", type: "iconlist", bg: "bg-mist",
+        lead: "Choose us for crowd control because every controller's licensed and RSA-certified, insured and police-checked, and we dispatch 24/7 across Melbourne. You get a Victorian-licensed firm that knows the venues, runs a clear protocol, and backs its crew with real accountability.",
+        items: [
+          { icon: "shieldcheck", b: "Licensed & RSA-certified", p: "Crowd control registration plus RSA where alcohol's served." },
+          { icon: "bolt", b: "Clear protocol", p: "A trained de-escalation and ejection path, used every time." },
+          { icon: "pin", b: "Melbourne venues", p: "We know the rooms, the rules and the local crowds." },
+          { icon: "clock", b: "24/7 dispatch", p: "Rapid response and cover whenever your doors are open." },
+        ] },
+      { id: "cost", h2: "How much does crowd control cost in Melbourne?", type: "table", bg: "bg-white", cta: true,
+        lead: "Crowd control in Melbourne usually costs $55 to $80 per controller per hour in 2026, with higher rates at night and loadings for weekends and public holidays. A head controller or supervisor costs more. Most venues book a minimum shift of around four hours.",
+        bodyHtml: "<p>Your total comes down to how many controllers your venue needs, the hours they work, and when those hours fall. A quiet weeknight needs fewer than a Saturday headline show, and late finishes carry a loading. We'll match the team to your real risk and your capacity, not pad it out. <a href='/contact/'>Get a free quote</a> for your venue and we'll price it properly.</p>",
+        head: ["Controller type", "Day ($/hr)", "Night ($/hr)", "Min shift"],
+        rows: [
+          ["Crowd controller", "$55 to $70", "$65 to $80", "~4 hrs"],
+          ["Head controller / supervisor", "$70 to $90", "$80 to $95", "~4 hrs"],
+          ["Event team (per controller)", "quoted", "+ loadings", "~4 hrs"],
+        ],
+        note: "Estimate only for 2026. Weekend and public-holiday loadings apply. Get a quote for your venue." },
+      { id: "areas", h2: "Where do we provide crowd control across Melbourne?", type: "areas", bg: "bg-mist",
+        lead: "We provide crowd control across the Melbourne CBD, inner-city venues, the suburbs, plus Geelong and Dandenong. From a laneway bar to a festival main stage, you get a local, licensed crew that knows the venue and the crowd it draws.",
+        items: ["Melbourne CBD", "Inner-city venues", "Northern suburbs", "Eastern suburbs", "Western suburbs", "Geelong", "Dandenong"],
+        link: { href: "/service-areas/", label: "See all areas we cover" } },
+    ],
+    faqs: [
+      { q: "What does crowd control involve at an event?", a: "Crowd control involves managing how people enter, move and behave. Licensed controllers run the door, check IDs and tickets, watch capacity and pinch points, support RSA, and step in to de-escalate or remove anyone causing trouble, all within the law." },
+      { q: "What licence does a crowd controller need in Victoria?", a: "A crowd controller in Victoria needs a Private Security Individual Operator Licence with a crowd control registration, issued by Victoria Police under the Private Security Act. For licensed venues they also need a current RSA certificate. Always ask to see both." },
+      { q: "Do crowd controllers need an RSA certificate?", a: "Yes, for licensed venues. Any controller working where alcohol's served needs a current Responsible Service of Alcohol certificate on top of their crowd control licence, so they can lawfully support bar staff in managing intoxicated patrons." },
+      { q: "Do crowd controllers have the power to detain someone?", a: "Yes, within strict limits. Under Victoria's citizen's-arrest provisions a controller can detain someone who's committed a serious offence until police arrive, using only reasonable force. They can't punish, search freely or hold someone over a minor issue." },
+      { q: "How many crowd controllers do I need for my event?", a: "As a rough guide, plan one licensed controller for every 100 guests, then adjust up for alcohol, late finishes and higher-risk crowds. A licensed venue or festival needs more. We'll calculate the exact number for your venue and capacity." },
+      { q: "Are your crowd controllers licensed in Victoria?", a: "Yes. Every controller holds a current Victorian crowd control registration and is police-checked, RSA-certified where required, and insured. Our business holds a Private Security Business Licence you can verify with Victoria Police at any time." },
+      { q: "Can I hire crowd control for a one-day event?", a: "Yes. We cover one-off events, single nights and short-term bookings with no lock-in. Tell us the venue, date and expected numbers, and we'll roster the right team of licensed controllers just for that event." },
+      { q: "Are there extra charges for night, weekend or public holiday work?", a: "Yes. Like most security work, crowd control carries loadings for nights, weekends and public holidays, and there's usually a minimum shift of around four hours. We'll set it all out clearly in your written quote before you commit." },
+    ],
+  },
+
+  {
     slug: "mobile-patrol-security-melbourne",
     primaryKW: "security patrol melbourne",
     breadcrumb: "Mobile Patrols",
