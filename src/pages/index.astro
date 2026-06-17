@@ -5,6 +5,8 @@ import Footer from "../components/Footer.astro";
 import { site } from "../site.js";
 import { animMark, icons } from "../lib/brand.js";
 import { posts } from "../lib/posts.js";
+import { isBuilt } from "../lib/built.js";
+const lk = (h) => isBuilt(h) ? h : "/security-services-melbourne/";
 
 const features = [
   { title: "Protect your property, not just patrol it", body: "Stop relying on luck and locked doors. Our licensed guards deter theft, vandalism and trespass before they happen, then prove it with clear reporting.",
@@ -200,7 +202,7 @@ const schema = {
             <h2>{f.title}</h2>
             <p>{f.body}</p>
             <ul class="proof">{f.proof.map(p => <li>{p}</li>)}</ul>
-            <a class="link" href={f.link.href}>{f.link.label} &rarr;</a>
+            <a class="link" href={lk(f.link.href)}>{f.link.label} &rarr;</a>
           </div>
           <div class="feature-media">
             <span class="scan" aria-hidden="true"></span>
@@ -235,7 +237,7 @@ const schema = {
             <div class="ic" set:html={icons[s.icon]} />
             <h3>{s.name}</h3>
             <p>{s.blurb}</p>
-            <a class="link" href={s.href}>Learn more &rarr;</a>
+            <a class="link" href={lk(s.href)}>Learn more &rarr;</a>
           </div>
         ))}
       </div>
@@ -286,7 +288,7 @@ const schema = {
       </div>
       <div class="sectors">
         {sectors.map(s => (
-          <a class="sector reveal" href={s.href}>
+          <a class="sector reveal" href={lk(s.href)}>
             <img src={s.img} alt={s.alt} loading="lazy" />
             <span class="label">{s.name} &nearr;</span>
           </a>

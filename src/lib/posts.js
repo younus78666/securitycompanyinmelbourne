@@ -40,7 +40,7 @@ export const posts = [
 <tr><td>Crowd controller (events)</td><td>$55 to $80 / hr</td><td>Min shift applies</td></tr>
 </tbody>
 </table>
-<p>Want the full breakdown? Read our <a href="/security-guard-cost-melbourne/">security guard cost guide</a>.</p>
+<p>Want the full breakdown? Get a quick <a href="/contact/">no-obligation quote</a> for your exact numbers.</p>
 <h2 id="red-flags">What are the warning signs of a bad security company?</h2>
 <p>No licence number on the website. Cash-only pricing. No insurance certificate. Guards who turn up in street clothes. Vague answers about who actually shows up. Any one of these is a reason to keep looking.</p>
 <h2 id="next-step">What's the fastest way to get cover sorted?</h2>
@@ -81,7 +81,7 @@ export const posts = [
 </ul>
 <h2 id="save">How can I keep event security costs down?</h2>
 <p>Book early, especially in November and December when Melbourne crowd controllers fill up fast. Share a clear run sheet so we roster the exact numbers you need, not a guess. And bundle setup, event and pack-down into one booking rather than separate call-outs.</p>
-<p>Planning an event? See our <a href="/event-security-melbourne/">event security service</a> or get a quick quote.</p>
+<p>Planning an event? <a href="/contact/">Get a quick quote</a> and we'll scope the right crowd-control team.</p>
 `,
   },
   {
@@ -113,7 +113,7 @@ export const posts = [
 <p>Pick static cover when people need managing in real time: retail floors, building sites during work hours, receptions, and events. If you need someone to control access, respond instantly, and be a visible deterrent, a static guard earns its keep.</p>
 <h2 id="choose-mobile">When is mobile patrol the smarter option?</h2>
 <p>Mobile patrol suits empty or after-hours sites: closed warehouses, car parks, vacant buildings, and strata complexes. You get random checks that keep opportunists guessing, alarm response, and lock-up or unlock, without paying for a guard to stand still all night.</p>
-<p>Not sure which fits? We'll tell you straight. Compare <a href="/security-guards-melbourne/">static guards</a> and <a href="/mobile-patrol-security-melbourne/">mobile patrols</a>.</p>
+<p>Not sure which fits? We'll tell you straight. See our <a href="/security-guards-melbourne/">security guards</a> or <a href="/contact/">get a quick quote</a>.</p>
 `,
   },
   {

@@ -1,0 +1,67 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { site } from "../site.js";
+import { services } from "../lib/services.js";
+import { icons } from "../lib/brand.js";
+const built = new Set(services.map(s => s.slug));
+const cats = site.mega.services.columns;
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "BreadcrumbList", itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Security Services", item: site.url + "/security-services-melbourne/" },
+    ]},
+    { "@type": "Service", name: "Security Services Melbourne", serviceType: "security services melbourne",
+      areaServed: "Melbourne, Victoria, Australia", provider: { "@type": ["Organization","SecurityService","LocalBusiness"], name: site.brand, url: site.url, telephone: site.phone },
+      url: site.url + "/security-services-melbourne/", description: "Full range of licensed security services across Melbourne." },
+  ],
+};
+---
+<Base title="Security Services Melbourne | Licensed & Insured" description="The full range of licensed security services in Melbourne: guards, mobile patrols, event, commercial and more. Insured, police-checked, 24/7. Get a free quote." path="/security-services-melbourne/" ogImage="/assets/og/security-guards-melbourne.jpg">
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schema)} />
+  <Header />
+  <section class="page-hero">
+    <div class="container">
+      <div class="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; Security Services</div>
+      <span class="eyebrow" style="color:var(--lime-soft)">What we do</span>
+      <h1 style="margin-top:8px">Security services in Melbourne</h1>
+      <p>One licensed, insured local team for every part of your security, from a single guard to a full event crew. Every service uses police-checked guards, available 24/7 across Greater Melbourne.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:22px">
+        <a class="btn btn-primary" href="/contact/">Get a Free Quote</a>
+        <a class="btn btn-ghost" style="border-color:var(--lime);color:var(--cream)" href={site.phoneHref}>Call {site.phone}</a>
+      </div>
+    </div>
+  </section>
+  <section class="section bg-white">
+    <div class="container">
+      {cats.map(col => (
+        <div style="margin-bottom:36px">
+          <h2 style="font-family:var(--serif);font-size:1.5rem;margin-bottom:18px">{col.heading}</h2>
+          <div class="cards" style="grid-template-columns:repeat(4,1fr)">
+            {col.items.map(it => {
+              const isBuilt = built.has(it.href.replace(/\//g,""));
+              return (
+                <div class="card">
+                  <h3 style="font-size:1.08rem">{it.name}</h3>
+                  <p>{it.note}</p>
+                  {isBuilt
+                    ? <a class="link" href={it.href}>Learn more &rarr;</a>
+                    : <span class="link" style="color:var(--muted)">Details coming soon</span>}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+      <div class="cta-band" style="margin-top:10px">
+        <h2>Not sure which service <em>you need?</em></h2>
+        <p style="color:var(--muted);max-width:46ch;margin:8px auto 22px">Tell us about your site and we'll scope the right cover, fast.</p>
+        <a class="btn btn-dark" href="/contact/">Get a free quote</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Base>

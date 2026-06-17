@@ -14,7 +14,7 @@ Status legend: ✅ LIVE | ⏳ PLANNED (brief ready, page not built yet)
 | Page | Primary KW | Vol | SD | Title (draft) | H1 must contain | Status |
 |---|---|---|---|---|---|---|
 | / | security company melbourne | 1,000 | 34 | Security Company Melbourne \| Licensed Guards 24/7 | "Melbourne security company" | ✅ LIVE |
-| /security-guards-melbourne/ | security guards melbourne | 590 | 35 | Security Guards Melbourne \| Licensed & Insured | "security guards melbourne" | ⏳ |
+| /security-guards-melbourne/ | security guards melbourne | 590 | 35 | Security Guards Melbourne \| Licensed & Available 24/7 | "Security Guards in Melbourne" | ✅ LIVE |
 | /security-services-melbourne/ | security services melbourne | 480 | 46 | Security Services Melbourne \| All Services | "security services melbourne" | ⏳ |
 | /commercial-security-melbourne/ | commercial security melbourne | 110 | 11 ⭐ | Commercial Security Melbourne \| Business Guards | "commercial security melbourne" | ⏳ |
 

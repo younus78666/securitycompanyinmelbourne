@@ -1,18 +1,81 @@
-// Service pages. Data-driven: each entry renders via src/pages/[service].astro.
-// Content is UC v6.4 + humanized: answer-first, en-AU, 0 em dashes, 20+ contractions, 0 banned phrases.
+// Service landing pages. Data-driven: each renders via src/pages/[service].astro.
+// UC v6.4 + humanized: answer-first, en-AU, 0 em dashes, 20+ contractions, 0 banned phrases.
+// Section types: cards | iconlist | pills | steps | table | areas (+ optional bool, cta, leadHtml).
 export const services = [
   {
     slug: "security-guards-melbourne",
     primaryKW: "security guards melbourne",
+    breadcrumb: "Security Guards",
     title: "Security Guards Melbourne | Licensed & Available 24/7",
     metaDesc: "Need security guards in Melbourne? Hire licensed, insured, police-checked guards for any site or event. We deploy fast, 24/7. Get your free quote today.",
     h1: "Security Guards in Melbourne, Licensed and Available 24/7",
-    breadcrumb: "Security Guards",
     heroImg: "/assets/feature-guard.webp",
     heroAlt: "Licensed security guards available for hire in Melbourne",
     og: "/assets/og/security-guards-melbourne.jpg",
     intro: "Every security guard we supply in Melbourne holds a current Victorian security licence, carries insurance, and passes a national police check. We deploy fast across the city, around the clock, for sites and events of any size.",
+    midcta: { b: "Need security guards fast?", span: "Licensed guards on call 24/7 across Greater Melbourne." },
     related: ["mobile-patrol-security-melbourne", "event-security-melbourne", "commercial-security-melbourne"],
+    sections: [
+      { id: "types", h2: "What types of security guards do we provide?", type: "cards", bg: "bg-white", cta: true,
+        leadHtml: "We provide every main type of security guard in Melbourne, all licensed, insured and police-checked. Need the bigger picture? Browse our <a href='/security-services-melbourne/'>full range of security services</a>.",
+        items: [
+          { icon: "shieldcheck", name: "Static & manned guards", note: "Fixed-post presence, access control and visible deterrence." },
+          { icon: "patrol", name: "Mobile patrol guards", note: "Scheduled checks, alarm response and lock-up across sites." },
+          { icon: "event", name: "Event & crowd control", note: "RSA-trained crowd controllers for venues and functions." },
+          { icon: "briefcase", name: "Corporate & concierge", note: "Reception, front-of-house and office security." },
+          { icon: "cart", name: "Retail & loss prevention", note: "Uniformed or plain-clothes retail protection." },
+          { icon: "hardhat", name: "Construction site guards", note: "Theft, trespass and after-hours site cover." },
+          { icon: "dog", name: "K9 dog units", note: "Handler-led canine patrol and detection." },
+          { icon: "lock", name: "Armed & unarmed", note: "Matched to your assessed risk and licence class." },
+        ] },
+      { id: "why-need", h2: "Why do you need professional security guards?", type: "iconlist", bg: "bg-mist",
+        lead: "You need professional security guards to deter crime, respond fast to incidents, protect your people and assets, and meet insurance and duty-of-care obligations. A visible licensed guard stops most problems before they start.",
+        items: [
+          { icon: "eye", b: "Deterrence", p: "A uniformed presence turns opportunists away on sight." },
+          { icon: "bolt", b: "Rapid response", p: "Trained guards act in seconds, not minutes." },
+          { icon: "lock", b: "Asset protection", p: "Stock, equipment and premises stay secure." },
+          { icon: "check", b: "Compliance", p: "Meet insurance, OH&S and duty-of-care obligations." },
+        ] },
+      { id: "who", h2: "Who do our Melbourne security guards protect?", type: "pills", bg: "bg-white", cta: true,
+        lead: "We protect almost every kind of site across Greater Melbourne, from a single shopfront to a major build. If people, stock or property need watching, we've got a guard for it.",
+        items: [
+          { icon: "cart", label: "Retail & shopping centres" }, { icon: "briefcase", label: "Offices & corporate" },
+          { icon: "hardhat", label: "Construction sites" }, { icon: "event", label: "Events & functions" },
+          { icon: "building", label: "Warehouses & logistics" }, { icon: "heart", label: "Healthcare & aged care" },
+          { icon: "home", label: "Residential & strata" },
+        ] },
+      { id: "how-hire", h2: "How do you hire a security guard in Melbourne?", type: "steps",
+        lead: "Hiring a security guard in Melbourne takes four simple steps. You deal with a local team the whole way, and for urgent jobs we confirm a deployment window the moment you call.",
+        items: [
+          { icon: "check", n: "1", t: "Tell us", d: "Your site, dates and concerns, on the phone or on site." },
+          { icon: "tag", n: "2", t: "Quote", d: "A clear written quote with the right number of guards." },
+          { icon: "shieldcheck", n: "3", t: "Deploy", d: "Licensed guards on site fast, in uniform and briefed." },
+          { icon: "eye", n: "4", t: "Report", d: "Verified reports after every shift, so you always know." },
+        ] },
+      { id: "why-choose", h2: "Why choose us for security guards in Melbourne?", type: "iconlist", bg: "bg-white",
+        lead: "Choose us because every guard's licensed, insured and police-checked, we deploy fast across Melbourne, our pricing's transparent, and we're a local Victorian team that backs its work with a real licence.",
+        items: [
+          { icon: "shieldcheck", b: "Licensed & insured", p: "Every guard licensed, insured and police-checked." },
+          { icon: "bolt", b: "Fast local response", p: "A 24/7 Melbourne dispatch team, deployed in hours." },
+          { icon: "tag", b: "Transparent pricing", p: "Clear ranges and itemised quotes, no hidden loadings." },
+          { icon: "pin", b: "Local Victorian team", p: "We know Melbourne, and we prove it on every shift." },
+        ],
+        bool: { q: "Are your security guards licensed in Victoria?", a: "Yes. Every officer holds a current Victorian security licence, and our business holds a Private Security Business Licence you can verify on our <a href='/licensing-compliance/'>licensing and compliance page</a>." } },
+      { id: "cost", h2: "How much do security guards cost in Melbourne?", type: "table", bg: "bg-soft", cta: true,
+        lead: "Licensed security guards in Melbourne typically cost a set hourly range, with higher rates for nights, weekends and public holidays. The exact figure depends on guard type, shift length and site risk. Here's a rough 2026 guide.",
+        head: ["Guard type", "Day rate ($/hr)", "Night / weekend", "Min shift"],
+        rows: [
+          ["Unarmed static guard", "$45 to $65", "+ loading", "~4 hrs"],
+          ["Mobile patrol", "from $40 / visit", "+ loading", "per route"],
+          ["Crowd controller (events)", "$55 to $80", "+ loading", "~4 hrs"],
+          ["Corporate / concierge", "$50 to $70", "+ loading", "~4 hrs"],
+        ],
+        note: "Figures are estimates only. Get a quote for exact pricing." },
+      { id: "areas", h2: "Where do we supply security guards across Melbourne?", type: "areas", bg: "bg-white",
+        lead: "We supply security guards across the Melbourne CBD, all metro suburbs, plus Geelong and Dandenong. Wherever your site sits, you get a local crew that knows the area and can be there quickly.",
+        items: ["Melbourne CBD", "Southbank & Docklands", "Inner suburbs", "Eastern suburbs", "Western suburbs", "Geelong", "Dandenong"],
+        link: { href: "/service-areas/", label: "See all areas we cover" } },
+    ],
     faqs: [
       { q: "Are your security guards licensed in Victoria?", a: "Yes. Every guard holds a current Victorian security licence and is police-checked, and we hold a Private Security Business Licence you can verify with the Victoria Police Licensing and Regulation Division at any time." },
       { q: "How quickly can I get a security guard on site?", a: "Usually within hours, not days. We run a 24/7 dispatch team across Melbourne, so for urgent jobs we'll confirm a deployment window the moment you call and get a licensed guard moving fast." },
@@ -23,82 +86,94 @@ export const services = [
       { q: "Are your guards insured and police-checked?", a: "Yes. We carry public liability insurance and every officer passes a national police check before their first shift, so your business, your visitors and your assets are properly protected." },
       { q: "Do security guards have the power to detain someone?", a: "Yes, within limits. Under Victorian law a guard can ask someone to leave, refuse entry, and detain a person until police arrive where the law allows. Our guards are trained to know exactly where that line sits." },
     ],
-    bodyHtml: `
-<h2 id="hire">Hire licensed security guards in Melbourne</h2>
-<p>Every guard we supply holds a current Victorian security licence, is fully insured, and is police-checked, and we can have one on call 24/7. You're not dealing with a faceless agency. You're hiring professional people who turn up on time, look the part, and represent your business well. We're a <a href="/">leading Melbourne security company</a>, and everything we do is backed by a real licence you can check. See exactly how we're <a href="/licensing-compliance/">fully licensed and insured</a>.</p>
+  },
 
-<h2 id="types">What types of security guards do we provide?</h2>
-<p>We provide every main type of security guard in Melbourne: static or manned guards, mobile patrol guards, event and crowd control guards, corporate and concierge guards, retail loss-prevention guards, and construction site guards. All are licensed, insured and police-checked for any site.</p>
-<ul>
-<li><b>Static (manned) guards</b> for a fixed post, access control and visible deterrence</li>
-<li><b>Mobile patrol guards</b> for scheduled checks, alarm response and lock-up across multiple sites</li>
-<li><b>Event and crowd control guards</b>, RSA-trained, for venues and functions</li>
-<li><b>Corporate and concierge guards</b> for reception, front-of-house and offices</li>
-<li><b>Retail and loss-prevention guards</b>, uniformed or plain-clothes</li>
-<li><b>Construction site guards</b> for theft, trespass and after-hours cover</li>
-<li><b>Armed and unarmed guards</b>, matched to your assessed risk</li>
-</ul>
-<p>Need the bigger picture? Browse our <a href="/security-services-melbourne/">full range of security services</a>, or compare <a href="/mobile-patrol-security-melbourne/">static security guards</a> with mobile patrols.</p>
-
-<h2 id="why-need">Why do you need professional security guards?</h2>
-<p>You need professional security guards to deter crime, respond fast to incidents, protect your staff, customers and assets, and meet insurance and duty-of-care obligations. A visible licensed guard stops most problems before they start, which protects both your property and your reputation.</p>
-<ul>
-<li><b>Deterrence:</b> a uniformed presence turns opportunists away on sight</li>
-<li><b>Rapid response:</b> trained guards act in seconds, not minutes</li>
-<li><b>Asset protection:</b> stock, equipment and premises stay secure</li>
-<li><b>Compliance:</b> you meet insurance, OH&amp;S and duty-of-care requirements</li>
-</ul>
-
-<h2 id="who">Who do our Melbourne security guards protect?</h2>
-<p>We protect almost every kind of site across Greater Melbourne, from a single shopfront to a major build. If people, stock or property need watching, we've got a guard for it.</p>
-<ul>
-<li>Retail stores and shopping centres</li>
-<li>Offices and corporate buildings</li>
-<li>Construction and building sites</li>
-<li>Events, festivals and private functions</li>
-<li>Warehouses and logistics sites</li>
-<li>Healthcare and aged-care facilities</li>
-<li>Residential and body-corporate properties</li>
-</ul>
-<p>For business cover end to end, see <a href="/commercial-security-melbourne/">commercial security in Melbourne</a>.</p>
-
-<h2 id="how-hire">How do you hire a security guard in Melbourne?</h2>
-<p>Hiring a security guard in Melbourne takes four steps. Tell us your site and what you need. We send a written quote. Once you approve, we deploy licensed guards fast. Then you receive reports, so you always know your site's covered.</p>
-<ol>
-<li>Tell us your site, dates and concerns</li>
-<li>Get a clear written quote with the right number of guards</li>
-<li>We deploy licensed guards fast, in uniform</li>
-<li>You get verified reports after every shift</li>
-</ol>
-<p>Here's the detail on <a href="/our-process/">our process</a>, and a full guide on how to <a href="/blog/how-to-hire-a-security-guard-melbourne/">hire a security guard in Melbourne</a>.</p>
-
-<h2 id="why-choose">Why choose us for security guards in Melbourne?</h2>
-<p>Choose us because every guard's licensed, insured and police-checked, we deploy fast across Melbourne, our pricing's transparent, and we're a local Victorian team. We back our work with a real Private Security Business Licence you can verify with Victoria Police anytime. That's what separates a proper security guard company from a cheap quote.</p>
-<h3>Are your security guards licensed in Victoria?</h3>
-<p>Yes. Every officer holds a current Victorian security licence, and our business holds a Private Security Business Licence. Ask for the number and check it before you book, with us or anyone else.</p>
-
-<h2 id="cost">How much do security guards cost in Melbourne?</h2>
-<p>Licensed security guards in Melbourne typically cost a set hourly range, with higher rates for nights, weekends and public holidays. The exact figure depends on guard type, shift length and site risk. Here's a rough 2026 guide, then get a quote for your exact number.</p>
-<table>
-<thead><tr><th>Guard type</th><th>Day rate ($/hr)</th><th>Night / weekend</th><th>Min shift</th></tr></thead>
-<tbody>
-<tr><td>Unarmed static guard</td><td>$45 to $65</td><td>+ loading</td><td>~4 hrs</td></tr>
-<tr><td>Mobile patrol</td><td>from $40 / visit</td><td>+ loading</td><td>per route</td></tr>
-<tr><td>Crowd controller (events)</td><td>$55 to $80</td><td>+ loading</td><td>~4 hrs</td></tr>
-<tr><td>Corporate / concierge</td><td>$50 to $70</td><td>+ loading</td><td>~4 hrs</td></tr>
-</tbody>
-</table>
-<p style="font-size:.88rem;color:var(--muted)">Figures are estimates only. <a href="/contact/">Get a quote</a> for exact pricing.</p>
-
-<h2 id="areas">Where do we supply security guards across Melbourne?</h2>
-<p>We supply security guards across the Melbourne CBD, all metro suburbs, plus Geelong and Dandenong. Wherever your site sits, you get a local crew that knows the area and can be there quickly. See the <a href="/service-areas/">areas we cover</a>.</p>
-`,
+  {
+    slug: "commercial-security-melbourne",
+    primaryKW: "commercial security melbourne",
+    breadcrumb: "Commercial Security",
+    title: "Commercial Security Melbourne | Business Protection",
+    metaDesc: "Protect your Melbourne business with licensed commercial security. We secure offices, retail, warehouses and sites with insured guards 24/7. Get a free quote now.",
+    h1: "Commercial Security in Melbourne for Business and Property",
+    heroImg: "/assets/control-room.jpg",
+    heroAlt: "Commercial security monitoring protecting a Melbourne business",
+    og: "/assets/og/commercial-security-melbourne.jpg",
+    intro: "Commercial security means licensed guards and systems protecting your business premises, staff and assets from theft, vandalism and trespass. We secure offices, retail, warehouses and industrial sites across Melbourne, with insured, police-checked guards around the clock.",
+    midcta: { b: "Protect your business premises", span: "Licensed commercial security on call 24/7 across Melbourne." },
+    related: ["security-guards-melbourne", "mobile-patrol-security-melbourne", "construction-site-security-melbourne"],
+    sections: [
+      { id: "included", h2: "What's included in our commercial security services?", type: "cards", bg: "bg-white", cta: true,
+        leadHtml: "Commercial security in Melbourne covers far more than a guard at the door. We integrate people and systems so security supports how your business runs. See our <a href='/security-services-melbourne/'>full range of security services</a>.",
+        items: [
+          { icon: "shieldcheck", name: "Manned guarding", note: "Licensed static guards on your premises, day or night." },
+          { icon: "lock", name: "Access control", note: "Reception and entry control, integrated with your systems." },
+          { icon: "patrol", name: "Mobile patrols", note: "After-hours checks and lock-up across your sites." },
+          { icon: "alert", name: "Alarm response", note: "Fast response when an alarm trips, logged and verified." },
+          { icon: "camera", name: "CCTV monitoring", note: "Remote eyes on your premises around the clock." },
+          { icon: "eye", name: "Incident reporting", note: "Clear written reports after every shift and event." },
+        ] },
+      { id: "why-need", h2: "Why does your business need commercial security?", type: "iconlist", bg: "bg-mist",
+        lead: "Your business needs commercial security to deter theft and vandalism, keep staff and visitors safe, protect premises after hours, and meet insurance and duty-of-care obligations. A licensed guard on site cuts losses and lowers risk.",
+        items: [
+          { icon: "eye", b: "Deter theft & vandalism", p: "A visible presence stops most incidents before they start." },
+          { icon: "users", b: "Staff & visitor safety", p: "Your people and customers feel safe in the space." },
+          { icon: "lock", b: "After-hours protection", p: "Premises stay secure when the lights go out." },
+          { icon: "check", b: "Insurance & duty of care", p: "Meet your obligations and lower your risk profile." },
+        ] },
+      { id: "who", h2: "Which businesses and properties do we protect?", type: "pills", bg: "bg-white", cta: true,
+        lead: "We protect business premises of every kind across Greater Melbourne, from a single office to a full industrial estate.",
+        items: [
+          { icon: "briefcase", label: "Office buildings" }, { icon: "cart", label: "Retail & shopping centres" },
+          { icon: "building", label: "Warehouses" }, { icon: "shieldcheck", label: "Corporate HQs" },
+          { icon: "home", label: "Body corporate & strata" }, { icon: "hardhat", label: "Industrial estates" },
+        ] },
+      { id: "how", h2: "How does our commercial security service work?", type: "steps",
+        lead: "Our commercial security works in four steps, and we adjust the plan as your premises, hours or risks change, so your cover always fits.",
+        items: [
+          { icon: "eye", n: "1", t: "Assess", d: "We run a site risk assessment of your premises." },
+          { icon: "tag", n: "2", t: "Plan", d: "We build a tailored security plan and quote." },
+          { icon: "shieldcheck", n: "3", t: "Deploy", d: "Licensed guards and systems, on site fast." },
+          { icon: "check", n: "4", t: "Review", d: "Ongoing reporting and reviews as your needs change." },
+        ] },
+      { id: "why-choose", h2: "Why choose us for commercial security in Melbourne?", type: "iconlist", bg: "bg-white",
+        lead: "Choose us because every guard's licensed, insured and police-checked, we deploy fast across Melbourne, and we integrate guarding with access control, reporting and business continuity, so security fits how you actually operate.",
+        items: [
+          { icon: "shieldcheck", b: "Licensed & insured", p: "Police-checked guards and a verifiable business licence." },
+          { icon: "lock", b: "Integrated security", p: "Guards plus access control, CCTV and reporting." },
+          { icon: "bolt", b: "Fast local response", p: "24/7 Melbourne dispatch and rapid deployment." },
+          { icon: "tag", b: "Transparent pricing", p: "Clear quotes built around your premises and hours." },
+        ],
+        bool: { q: "Are your commercial security guards licensed and insured?", a: "Yes. Every guard is licensed and police-checked, and we carry public liability insurance. See the detail on our <a href='/licensing-compliance/'>licensing and compliance page</a>." } },
+      { id: "cost", h2: "How much does commercial security cost in Melbourne?", type: "table", bg: "bg-soft", cta: true,
+        lead: "Commercial security in Melbourne typically costs a set hourly range for licensed guards, with loadings for nights, weekends and public holidays. Mobile patrols can cost less than full-time static cover. The total depends on hours, site risk and guard numbers.",
+        head: ["Cover type", "Day rate ($/hr)", "Loadings", "Min shift"],
+        rows: [
+          ["Static guard (manned)", "$45 to $65", "+ night / weekend", "~4 hrs"],
+          ["Mobile patrol", "from $40 / visit", "+ after-hours", "per route"],
+          ["Concierge / reception", "$50 to $70", "+ night / weekend", "~4 hrs"],
+          ["CCTV monitoring", "quoted", "per site", "ongoing"],
+        ],
+        note: "Figures are estimates only. Request a quote for your premises." },
+      { id: "areas", h2: "Where do we provide commercial security across Melbourne?", type: "areas", bg: "bg-white",
+        lead: "We protect businesses across the Melbourne CBD, metro business districts and industrial precincts, plus Geelong and Dandenong. Wherever your premises are, a local team can be there quickly.",
+        items: ["Melbourne CBD", "Southbank & Docklands", "Industrial precincts", "Eastern suburbs", "Western suburbs", "Geelong", "Dandenong"],
+        link: { href: "/service-areas/", label: "See all areas we cover" } },
+    ],
+    faqs: [
+      { q: "Are your security guards licensed in Victoria?", a: "Yes. Every guard holds a current Victorian security licence and is police-checked, and we hold a Private Security Business Licence you can verify with Victoria Police at any time." },
+      { q: "What licence does a security company need in Victoria?", a: "In Victoria, a security business needs a Private Security Business Licence from Victoria Police, and every guard needs an individual security licence. Always ask for the licence number and check it before you book." },
+      { q: "Are your guards insured and police-checked?", a: "Yes. We carry public liability insurance and every officer passes a national police check before their first shift, so your business, staff and visitors are properly protected." },
+      { q: "How quickly can I get commercial security on site?", a: "Usually within hours, not days. We run a 24/7 dispatch team across Melbourne, so for urgent cover we'll confirm a deployment window the moment you call." },
+      { q: "How much does commercial security cost per hour?", a: "Licensed guards in Melbourne sit in a set hourly range, with loadings for nights, weekends and public holidays. The total depends on hours, site risk and guard numbers. Get a quote for exact pricing." },
+      { q: "Is there a minimum shift length?", a: "Most commercial security has a minimum shift, commonly around four hours, because guards need travel and setup time. We'll confirm the minimum in your written quote before you commit." },
+      { q: "Do security guards have the power to detain someone?", a: "Yes, within limits. Under Victorian law a guard can refuse entry, ask someone to leave, and detain a person until police arrive where the law allows. Our guards are trained to know exactly where that line sits." },
+      { q: "Can I request male or female security guards?", a: "Yes. Tell us what your premises or event needs and we'll roster the right team, including female guards where that matters for your staff or visitors." },
+    ],
   },
 ];
 
 export const getService = (slug) => services.find(s => s.slug === slug);
 
-// Display names for every planned service (used for related cards + sidebar links)
 export const serviceNames = {
   "security-guards-melbourne": "Security Guards",
   "mobile-patrol-security-melbourne": "Mobile Patrols",

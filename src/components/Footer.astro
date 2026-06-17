@@ -1,6 +1,9 @@
 ---
 import { site } from "../site.js";
 import { logoSvg, animMark } from "../lib/brand.js";
+import { isBuilt } from "../lib/built.js";
+const fl = (href, label) => ({ href, label });
+const companyLinks = [fl("/about/","About"), fl("/licensing-compliance/","Licensing & compliance"), fl("/reviews/","Reviews"), fl("/service-areas/","Service areas"), fl("/blog/","Blog")];
 ---
 <!-- PRE-FOOTER: CTA + SUBSCRIBE -->
 <section class="prefooter">
@@ -42,18 +45,14 @@ import { logoSvg, animMark } from "../lib/brand.js";
     <div>
       <h4>Services</h4>
       <ul>
-        {site.services.map(s => <li><a href={s.href}>{s.name}</a></li>)}
+        {site.services.map(s => <li>{isBuilt(s.href) ? <a href={s.href}>{s.name}</a> : <span class="navna">{s.name}</span>}</li>)}
         <li><a href="/security-services-melbourne/">All services</a></li>
       </ul>
     </div>
     <div>
       <h4>Company</h4>
       <ul>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/licensing-compliance/">Licensing &amp; compliance</a></li>
-        <li><a href="/reviews/">Reviews</a></li>
-        <li><a href="/service-areas/">Service areas</a></li>
-        <li><a href="/blog/">Blog</a></li>
+        {companyLinks.map(l => <li>{isBuilt(l.href) ? <a href={l.href}>{l.label}</a> : <span class="navna">{l.label}</span>}</li>)}
       </ul>
     </div>
     <div>
@@ -68,7 +67,7 @@ import { logoSvg, animMark } from "../lib/brand.js";
   </div>
   <div class="container footer-bottom">
     <span>&copy; {new Date().getFullYear()} {site.brand}. All rights reserved.</span>
-    <span><a href="/privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms-of-service/">Terms</a></span>
+    <span>{isBuilt("/privacy-policy/") ? <a href="/privacy-policy/">Privacy</a> : <span class="navna">Privacy</span>} &nbsp;&middot;&nbsp; {isBuilt("/terms-of-service/") ? <a href="/terms-of-service/">Terms</a> : <span class="navna">Terms</span>}</span>
   </div>
 </footer>
 

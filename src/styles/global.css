@@ -631,3 +631,63 @@ em{font-style:italic}
 
 /* Logo background watermarks: static (animations removed per request) */
 .wm,.wm-cta,.amark .c1,.amark .c2,.amark .dia,.amark .ring{animation:none !important}
+
+/* ===== SERVICE LANDING PAGE SECTIONS ===== */
+.svc-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.svc-hero-grid .shot{border-radius:var(--radius);box-shadow:0 30px 60px -28px rgba(0,0,0,.55);width:100%}
+.svc-lead{font-size:1.12rem;color:var(--ink);max-width:62ch;margin:0 0 26px}
+.svc-lead.center{margin:0 auto 32px;text-align:center}
+.svc-sec .center-head{margin-bottom:34px}
+/* icon feature list (why-need / why-choose) */
+.iconlist{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:940px;margin:0 auto}
+.iconlist .it{display:flex;gap:14px;align-items:flex-start;background:var(--white);border:1px solid var(--line);
+  border-radius:14px;padding:20px;transition:transform .18s ease,box-shadow .2s ease}
+.iconlist .it:hover{transform:translateY(-3px);box-shadow:0 18px 36px -24px rgba(40,40,20,.4)}
+.iconlist .it .ic{width:44px;height:44px;border-radius:11px;background:var(--olive);color:var(--lime);display:grid;place-items:center;flex:none}
+.iconlist .it .ic svg{width:22px;height:22px}
+.iconlist .it b{display:block;margin-bottom:4px;font-size:1.02rem}
+.iconlist .it p{margin:0;font-size:.92rem;color:var(--muted)}
+/* pill grid (who we protect / areas) */
+.pillgrid{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:880px;margin:0 auto}
+.pillgrid .pill{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:.62rem 1.15rem;
+  font-weight:600;color:var(--olive);display:inline-flex;gap:9px;align-items:center;font-size:.95rem;transition:.18s ease}
+.pillgrid .pill:hover{transform:translateY(-3px);border-color:var(--lime)}
+.pillgrid .pill svg{width:17px;height:17px;color:var(--olive)}
+/* styled cost card */
+.cost-card{max-width:860px;margin:0 auto;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 20px 44px -30px rgba(40,40,20,.4)}
+.cost-card table{width:100%;border-collapse:collapse;font-size:.96rem}
+.cost-card th,.cost-card td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--line)}
+.cost-card thead th{background:var(--olive);color:var(--cream);font-family:var(--sans);font-weight:600;font-size:.84rem;letter-spacing:.03em}
+.cost-card tbody tr:last-child td{border-bottom:0}
+.cost-card tbody td:first-child{font-weight:600;color:var(--ink)}
+.cost-note{text-align:center;font-size:.86rem;color:var(--muted);margin:16px auto 0;max-width:60ch}
+/* mid-page CTA band (compact, repeatable) */
+.midcta{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  background:linear-gradient(158deg,#45452c,var(--olive) 60%,var(--olive-deep));color:var(--cream);
+  border-radius:var(--radius);padding:26px 32px;max-width:1000px;margin:0 auto}
+.midcta b{font-family:var(--serif);font-size:1.35rem;display:block}
+.midcta span{color:#CFCDBC;font-size:.95rem}
+.midcta .btns{display:flex;gap:12px;flex-wrap:wrap;flex:none}
+/* step cards on olive */
+.stepgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stepgrid .step{background:var(--olive-deep);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:26px 22px}
+.stepgrid .step .ic{width:42px;height:42px;border-radius:11px;background:rgba(199,212,63,.15);color:var(--lime);display:grid;place-items:center;margin-bottom:14px}
+.stepgrid .step .ic svg{width:22px;height:22px}
+.stepgrid .step .n{font-family:var(--serif);font-size:1.5rem;color:var(--lime)}
+.stepgrid .step h3{color:var(--cream);margin:4px 0 8px}
+.stepgrid .step p{color:#CFCDBC;font-size:.93rem;margin:0}
+@media(max-width:960px){
+  .svc-hero-grid{grid-template-columns:1fr}
+  .svc-hero-grid .shot{display:none}
+  .iconlist{grid-template-columns:1fr}
+  .stepgrid{grid-template-columns:1fr 1fr}
+  .midcta{flex-direction:column;align-items:flex-start;text-align:left}
+}
+@media(max-width:560px){ .stepgrid{grid-template-columns:1fr} }
+
+/* Nav items for pages not yet built: plain text, not dead links */
+.navna{color:var(--muted);cursor:default;opacity:.65}
+.mega-col .navna{display:block;padding:7px 0;font-weight:600;font-size:.96rem}
+.mega-col .navna span{display:block;font-weight:400;font-size:.78rem}
+.dropdown.simple .navna{display:block;padding:9px 12px;font-weight:500;font-size:.94rem}
+.dacc-body .navna{display:block;padding:9px 0;font-weight:500;font-size:.96rem}

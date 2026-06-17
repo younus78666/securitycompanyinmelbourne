@@ -1,0 +1,86 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { site } from "../site.js";
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "BreadcrumbList", itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Contact", item: site.url + "/contact/" },
+    ]},
+    { "@type": ["Organization", "SecurityService", "LocalBusiness"], name: site.brand, url: site.url,
+      telephone: site.phone, email: site.email, areaServed: "Melbourne, Victoria, Australia",
+      address: { "@type": "PostalAddress", addressLocality: "Melbourne", addressRegion: "VIC", addressCountry: "AU" },
+      openingHours: "Mo-Su 00:00-24:00" },
+  ],
+};
+---
+<Base title="Contact SCM | Get a Free Melbourne Security Quote" description="Contact Security Company Melbourne for a fast, free security quote. Licensed guards on call 24/7 across Greater Melbourne. Call or send your details now." path="/contact/" ogImage="/assets/og/security-guards-melbourne.jpg">
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schema)} />
+  <Header />
+  <section class="page-hero">
+    <div class="container">
+      <div class="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; Contact</div>
+      <span class="eyebrow" style="color:var(--lime-soft)">We answer 24/7</span>
+      <h1 style="margin-top:8px">Get a free security quote</h1>
+      <p>Tell us about your site, your event or what's worrying you, and a licensed SCM team member will call you back fast with the right cover and a fair price.</p>
+    </div>
+  </section>
+  <section class="section bg-white" style="padding-top:44px">
+    <div class="container blog-layout">
+      <div class="blog-main">
+        <div class="hero-form" style="box-shadow:0 24px 50px -30px rgba(40,40,20,.4)">
+          <form id="quoteForm" novalidate>
+            <h2 class="hf-title">Request your quote</h2>
+            <p class="hf-sub">Fast response, no obligation, available 24/7.</p>
+            <div class="hf-row">
+              <div class="hf-field"><label for="qName">Your name</label><input id="qName" name="name" type="text" required placeholder="Full name" /></div>
+              <div class="hf-field"><label for="qPhone">Phone</label><input id="qPhone" name="phone" type="tel" required placeholder="04xx xxx xxx" /></div>
+            </div>
+            <div class="hf-field"><label for="qEmail">Email</label><input id="qEmail" name="email" type="email" placeholder="you@business.com.au" /></div>
+            <div class="hf-field"><label for="qService">What do you need?</label>
+              <select id="qService" name="service" required>
+                <option value="">Choose a service</option>
+                <option>Security guards</option><option>Mobile patrols</option><option>Event security</option>
+                <option>Construction site security</option><option>Commercial / concierge</option><option>Something else</option>
+              </select></div>
+            <div class="hf-field"><label for="qMsg">Tell us more</label><textarea id="qMsg" name="message" rows="3" placeholder="Site, dates, number of guards, any concerns"></textarea></div>
+            <button type="submit" class="btn btn-primary">Get my free quote</button>
+            <p class="hf-note">Prefer to talk? Call <a href={site.phoneHref} style="color:var(--olive);font-weight:600">{site.phone}</a>, 24/7.</p>
+          </form>
+          <div class="hf-success" id="qSuccess">
+            <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg></div>
+            <h3>Thanks, request received</h3>
+            <p style="color:var(--muted);margin:0">A licensed SCM team member will call you back fast. For urgent cover, call {site.phone}.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="blog-side">
+        <div class="side-card">
+          <h4>Talk to us</h4>
+          <ul class="side-links">
+            <li><a href={site.phoneHref}>{site.phone}</a></li>
+            <li><a href={"mailto:" + site.email}>{site.email}</a></li>
+            <li>Greater Melbourne, VIC</li>
+            <li>Open 24 hours, 7 days</li>
+          </ul>
+          <p class="hf-note" style="text-align:left;margin-top:10px">Phone, address and licence number are placeholders. [CLIENT INPUT]</p>
+        </div>
+        <div class="side-card side-cta">
+          <h4>Urgent cover?</h4>
+          <p>Need a guard on site fast? Call our 24/7 dispatch line now.</p>
+          <a class="btn btn-primary" href={site.phoneHref}>Call {site.phone}</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+  <Footer />
+  <script is:inline>
+    (function(){
+      const f=document.getElementById('quoteForm'); if(!f) return;
+      f.addEventListener('submit',function(e){e.preventDefault(); if(!f.checkValidity()){f.reportValidity();return;} f.style.display='none'; document.getElementById('qSuccess').classList.add('show');});
+    })();
+  </script>
+</Base>

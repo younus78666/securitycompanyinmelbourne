@@ -1,0 +1,51 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { site } from "../site.js";
+const regions = [
+  { name: "Melbourne CBD", areas: "Collins St, Bourke St Mall, the laneways, Southbank, Docklands, Carlton, Fitzroy" },
+  { name: "Inner suburbs", areas: "Richmond, St Kilda, Footscray, Brunswick, Preston, Prahran, South Yarra" },
+  { name: "Eastern & southern", areas: "Box Hill, Glen Waverley, Dandenong, Frankston, Cranbourne, Clayton" },
+  { name: "Northern & western", areas: "Epping, Craigieburn, Sunshine, Werribee, Point Cook, Melton" },
+  { name: "Geelong & regional", areas: "Geelong CBD, Waterfront, Corio, Norlane, Armstrong Creek" },
+];
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "BreadcrumbList", itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Service Areas", item: site.url + "/service-areas/" },
+    ]},
+    { "@type": ["Organization","SecurityService","LocalBusiness"], name: site.brand, url: site.url, telephone: site.phone,
+      areaServed: regions.map(r => r.name) },
+  ],
+};
+---
+<Base title="Security Service Areas | Greater Melbourne & Geelong" description="SCM provides licensed security guards and patrols right across Greater Melbourne, from the CBD and suburbs to Geelong and Dandenong. See the areas we cover." path="/service-areas/" ogImage="/assets/og/security-guards-melbourne.jpg">
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schema)} />
+  <Header />
+  <section class="page-hero">
+    <div class="container">
+      <div class="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; Service Areas</div>
+      <span class="eyebrow" style="color:var(--lime-soft)">Where we work</span>
+      <h1 style="margin-top:8px">Security across Greater Melbourne</h1>
+      <p>We cover the whole of Greater Melbourne, plus Geelong and Dandenong. Wherever your site sits, you get a local crew that knows the area and can be there quickly, 24/7.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:22px">
+        <a class="btn btn-primary" href="/contact/">Get a Free Quote</a>
+        <a class="btn btn-ghost" style="border-color:var(--lime);color:var(--cream)" href={site.phoneHref}>Call {site.phone}</a>
+      </div>
+    </div>
+  </section>
+  <section class="section bg-white">
+    <div class="container">
+      <div class="diff" style="grid-template-columns:repeat(2,1fr)">
+        {regions.map(r => (
+          <div class="col"><h3 style="font-family:var(--serif)">{r.name}</h3><p>{r.areas}</p></div>
+        ))}
+      </div>
+      <p style="color:var(--muted);margin-top:24px;text-align:center">Don't see your suburb? We almost certainly cover it. <a href="/contact/" style="color:var(--olive);font-weight:600">Ask us</a> or call {site.phone}.</p>
+    </div>
+  </section>
+  <Footer />
+</Base>

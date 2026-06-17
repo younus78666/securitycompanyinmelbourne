@@ -1,6 +1,7 @@
 ---
 import { site } from "../site.js";
 import { logoSvg, icons, drawerIcon } from "../lib/brand.js";
+import { isBuilt } from "../lib/built.js";
 ---
 <header class="site-header">
   <div class="container nav">
@@ -14,7 +15,9 @@ import { logoSvg, icons, drawerIcon } from "../lib/brand.js";
             {site.mega.services.columns.map(col => (
               <div class="mega-col">
                 <div class="mega-h">{col.heading}</div>
-                {col.items.map(it => <a href={it.href}>{it.name}<span>{it.note}</span></a>)}
+                {col.items.map(it => isBuilt(it.href)
+                  ? <a href={it.href}>{it.name}<span>{it.note}</span></a>
+                  : <span class="navna">{it.name}<span>{it.note}</span></span>)}
               </div>
             ))}
             <div class="mega-feat">
@@ -30,7 +33,7 @@ import { logoSvg, icons, drawerIcon } from "../lib/brand.js";
         <div class="has-menu">
           <button class="menu-trigger" aria-expanded="false" aria-haspopup="true">{m.label}<span set:html={icons.chev} /></button>
           <div class="dropdown simple">
-            {m.items.map(it => <a href={it.href}>{it.name}</a>)}
+            {m.items.map(it => isBuilt(it.href) ? <a href={it.href}>{it.name}</a> : <span class="navna">{it.name}</span>)}
           </div>
         </div>
       ))}
@@ -59,7 +62,7 @@ import { logoSvg, icons, drawerIcon } from "../lib/brand.js";
       <details class="dacc" open>
         <summary><span class="di" set:html={icons.shieldcheck} /><span class="dlabel">Services</span><span class="dchev" set:html={icons.chev} /></summary>
         <div class="dacc-body">
-          {site.mega.services.columns.flatMap(c => c.items).map(it => <a href={it.href}>{it.name}</a>)}
+          {site.mega.services.columns.flatMap(c => c.items).map(it => isBuilt(it.href) ? <a href={it.href}>{it.name}</a> : <span class="navna">{it.name}</span>)}
           <a class="dacc-all" href={site.mega.services.hubHref}>All services &rarr;</a>
         </div>
       </details>
@@ -67,7 +70,7 @@ import { logoSvg, icons, drawerIcon } from "../lib/brand.js";
         <details class="dacc">
           <summary><span class="di" set:html={icons[drawerIcon[m.label]]} /><span class="dlabel">{m.label}</span><span class="dchev" set:html={icons.chev} /></summary>
           <div class="dacc-body">
-            {m.items.map(it => <a href={it.href}>{it.name}</a>)}
+            {m.items.map(it => isBuilt(it.href) ? <a href={it.href}>{it.name}</a> : <span class="navna">{it.name}</span>)}
           </div>
         </details>
       ))}
