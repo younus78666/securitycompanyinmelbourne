@@ -21,7 +21,7 @@ Status legend: ✅ LIVE | ⏳ PLANNED (brief ready, page not built yet)
 ## SERVICE PAGES (build low-SD first)
 | Page | Primary KW | Vol | SD | H1 must contain | Status |
 |---|---|---|---|---|---|
-| /mobile-patrol-security-melbourne/ | security patrol melbourne | 140 | 8 ⭐ | "mobile patrol" + "melbourne" | ⏳ |
+| /mobile-patrol-security-melbourne/ | security patrol melbourne | 140 | 8 ⭐ | "mobile patrol" + "melbourne" | LIVE ✅ |
 | /event-security-melbourne/ | event security melbourne | 210 | 7 ⭐ | "event security melbourne" | LIVE ✅ |
 | /construction-site-security-melbourne/ | construction site security melbourne | 70 | 14 ⭐ | "construction site security melbourne" | ⏳ |
 | /crowd-control-melbourne/ | crowd control melbourne | 20-70 | 8 ⭐ | "crowd control melbourne" | ⏳ |

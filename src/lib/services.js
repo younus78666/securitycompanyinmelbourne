@@ -173,6 +173,134 @@ export const services = [
     ],
   },
   {
+    slug: "mobile-patrol-security-melbourne",
+    primaryKW: "security patrol melbourne",
+    breadcrumb: "Mobile Patrols",
+    title: "Mobile Patrol Security Melbourne | GPS-Verified 24/7",
+    metaDesc: "Mobile patrol security in Melbourne with licensed guards and GPS-verified reports. We cover your sites 24/7 with scheduled, random patrols. Get a free quote.",
+    h1: "Security Patrol in Melbourne, Mobile Patrols On Your Schedule",
+    heroImg: "/assets/feature-patrol.webp",
+    heroAlt: "Mobile patrol security vehicle on a Melbourne site at night",
+    og: "/assets/og/mobile-patrol-security-melbourne.jpg",
+    intro: "Security patrol in Melbourne, also called mobile patrol, puts licensed guards in marked vehicles making scheduled and random checks across your sites. We inspect perimeters, lock up, respond to alarms, and log every visit with GPS, so you get real coverage and proof of it without a full-time guard.",
+    midcta: { b: "Sites sitting unwatched after hours?", span: "GPS-verified mobile patrols on call 24/7 across Melbourne." },
+    related: ["security-guards-melbourne", "commercial-security-melbourne", "event-security-melbourne"],
+    quote: { text: "We've got four sites across the western suburbs and one patrol team covers the lot overnight. The GPS reports land in my inbox by morning, so I know every check actually happened. Break-ins have dropped right off.", name: "Property Manager", role: "Industrial estates, western Melbourne", initials: "PM" },
+    sections: [
+      { id: "what", h2: "What is mobile patrol security in Melbourne?", type: null, bg: "bg-white", cta: true,
+        leadHtml: "Mobile patrol security in Melbourne uses licensed guards in marked vehicles to make scheduled and random checks across your sites. Patrol guards inspect perimeters, lock up, respond to alarms and log every visit with GPS, giving you visible deterrence and proof of coverage without a full-time guard.",
+        bodyHtml: "<p>Think of it as a guard who covers ground instead of standing in one spot. A marked vehicle rolls up at varied times through the night, the guard walks your perimeter, checks doors and gates, tests the lighting, then logs the visit and moves to the next site. Because the timing's random, an intruder can't learn the pattern and wait it out.</p><p>We're <a href='/licensing-compliance/'>fully licensed and insured</a>, every patrol guard holds a current Victorian security licence, and each one's police-checked. Mobile patrol is one slice of what we do, so if you want the bigger picture, here's our <a href='/security-services-melbourne/'>full range of security services</a>. For after-hours sites, though, patrols usually give you the best cover for the money.</p>" },
+      { id: "why-need", h2: "Why do you need mobile patrol security?", type: "iconlist", bg: "bg-mist",
+        lead: "You need mobile patrol security to cover several sites cost-effectively, deter intruders with a visible presence, and protect property after hours. Patrols cost less than a full-time static guard and respond faster than waiting for someone to arrive, so you get strong coverage for less.",
+        bodyHtml: "<p>The maths is simple. A static guard standing on one site all night is one of the priciest ways to buy security. If your real risk is after-hours break-ins across a few locations, a patrol team that visits each one on a rotating schedule covers far more ground for a fraction of the cost. You're paying for presence where and when it counts, not for someone to watch an empty car park at 3am.</p>",
+        items: [
+          { icon: "patrol", b: "Multi-site coverage", p: "One team covers several sites a night, not one fixed post." },
+          { icon: "eye", b: "Visible deterrence", p: "A marked vehicle turning up at random times warns intruders off." },
+          { icon: "clock", b: "After-hours protection", p: "Cover the risky overnight and weekend windows specifically." },
+          { icon: "bolt", b: "Faster than static", p: "A patrol's already mobile, so alarm response is quick." },
+        ] },
+      { id: "included", h2: "What's included in our mobile patrol services?", type: "cards", bg: "bg-white", cta: true,
+        leadHtml: "Our mobile patrol service covers the full after-hours job: scheduled and random checks, alarm response, lock-up and the GPS-verified reporting that proves it happened. Need a guard who stays put instead? See our <a href='/security-guards-melbourne/'>static security guards</a>.",
+        bodyHtml: "<p>The part that sets a good patrol apart from a cheap one is proof. Anyone can claim they drove past. We log every check with GPS and a timestamp, so you can see exactly when the guard was on site and what they inspected. That's the difference between hoping your security ran and knowing it did.</p>",
+        items: [
+          { icon: "patrol", name: "Scheduled & random patrols", note: "Set checks plus unpredictable timing intruders can't learn." },
+          { icon: "pin", name: "GPS-verified reports", note: "Every visit time-stamped and geo-tagged, sent straight to you." },
+          { icon: "alert", name: "Alarm response", note: "Fast dispatch when an alarm trips, attended and logged." },
+          { icon: "lock", name: "Lock-up & unlock", note: "Open and secure your premises at the start and end of day." },
+          { icon: "eye", name: "Perimeter & lighting", note: "Fences, gates, doors and lighting checked every visit." },
+          { icon: "check", name: "Incident escalation", note: "Clear escalation to you and to police when something's wrong." },
+        ] },
+      { id: "report", h2: "What does a GPS-verified patrol report look like?", type: null, bg: "bg-mist",
+        lead: "A GPS-verified patrol report shows each checkpoint we visited, the exact time we were there, and a geo-tag confirming our location. You get it after every patrol, so there's never any doubt the work was done. Here's a sample from a typical overnight run.",
+        bodyHtml: "<p>This is the proof most stale patrol companies still won't give you, and it's why we lead with it. No more taking a guard's word for it. Our stated alarm-response window is part of the same promise: when an alarm trips on a site we patrol, we attend within an agreed time and log the outcome.</p>",
+        viz: `<svg viewBox="0 0 820 312" role="img" aria-label="Sample GPS-verified mobile patrol report for a Melbourne site">
+  <rect x="0" y="0" width="820" height="50" rx="10" fill="#3B3B25"/>
+  <text x="24" y="32" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="700" fill="#F5F1E8">Patrol report</text>
+  <text x="796" y="32" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#DCE77A">Site 14 · Western suburbs · overnight</text>
+  <g font-family="Inter, system-ui, sans-serif">
+    <line x1="150" y1="78" x2="150" y2="280" stroke="#E2DCCD" stroke-width="2"/>
+    <g>
+      <text x="128" y="95" text-anchor="end" font-size="15" font-weight="700" fill="#1C1C16">22:14</text>
+      <circle cx="150" cy="90" r="7" fill="#3B3B25"/>
+      <text x="172" y="95" font-size="15" fill="#1C1C16">Perimeter fence &amp; main gates checked</text>
+      <rect x="636" y="78" width="160" height="24" rx="12" fill="#EAF0CF"/><text x="716" y="95" text-anchor="middle" font-size="12" font-weight="700" fill="#5B6420">GPS verified</text>
+    </g>
+    <g>
+      <text x="128" y="143" text-anchor="end" font-size="15" font-weight="700" fill="#1C1C16">22:31</text>
+      <circle cx="150" cy="138" r="7" fill="#3B3B25"/>
+      <text x="172" y="143" font-size="15" fill="#1C1C16">Loading dock &amp; roller doors secure</text>
+      <rect x="636" y="126" width="160" height="24" rx="12" fill="#EAF0CF"/><text x="716" y="143" text-anchor="middle" font-size="12" font-weight="700" fill="#5B6420">GPS verified</text>
+    </g>
+    <g>
+      <text x="128" y="191" text-anchor="end" font-size="15" font-weight="700" fill="#1C1C16">23:02</text>
+      <circle cx="150" cy="186" r="7" fill="#3B3B25"/>
+      <text x="172" y="191" font-size="15" fill="#1C1C16">Car park &amp; lighting check, all clear</text>
+      <rect x="636" y="174" width="160" height="24" rx="12" fill="#EAF0CF"/><text x="716" y="191" text-anchor="middle" font-size="12" font-weight="700" fill="#5B6420">GPS verified</text>
+    </g>
+    <g>
+      <text x="128" y="239" text-anchor="end" font-size="15" font-weight="700" fill="#1C1C16">23:20</text>
+      <circle cx="150" cy="234" r="7" fill="#C7D43F" stroke="#3B3B25" stroke-width="2"/>
+      <text x="172" y="239" font-size="15" fill="#1C1C16">Lock-up complete, alarm set &amp; armed</text>
+      <rect x="636" y="222" width="160" height="24" rx="12" fill="#EAF0CF"/><text x="716" y="239" text-anchor="middle" font-size="12" font-weight="700" fill="#5B6420">GPS verified</text>
+    </g>
+    <text x="172" y="276" font-size="13" font-style="italic" fill="#6B6B57">4 checkpoints logged · next random patrol scheduled before 02:00</text>
+  </g>
+</svg>
+<p class="viz-cap">A sample overnight patrol report. Every check is time-stamped and geo-tagged, then sent to you.</p>` },
+      { id: "who", h2: "Who do our mobile patrols protect?", type: "pills", bg: "bg-white", cta: true,
+        leadHtml: "We patrol almost any site that sits empty or unstaffed after hours across Melbourne. If it's vacant overnight and worth protecting, a patrol route can cover it. We also fold patrols into wider <a href='/commercial-security-melbourne/'>business security solutions</a> for multi-site clients.",
+        items: [
+          { icon: "hardhat", label: "Construction sites" }, { icon: "cart", label: "Retail strips" },
+          { icon: "briefcase", label: "Business parks" }, { icon: "building", label: "Warehouses" },
+          { icon: "patrol", label: "Car parks" }, { icon: "home", label: "Vacant properties" },
+          { icon: "users", label: "Body corporate & strata" },
+        ] },
+      { id: "how", h2: "How does our mobile patrol service work?", type: "steps",
+        leadHtml: "Our mobile patrol service works in four steps, and you set the frequency. We set your route, deploy licensed guards, log every check with GPS, then send verified reports. Want the detail? See <a href='/our-process/'>our process</a>.",
+        items: [
+          { icon: "pin", n: "1", t: "Set route", d: "We map your sites, checkpoints and patrol frequency." },
+          { icon: "patrol", n: "2", t: "Deploy", d: "Licensed patrol guards in marked vehicles, on schedule." },
+          { icon: "eye", n: "3", t: "Log checks", d: "Every checkpoint logged with GPS and a timestamp." },
+          { icon: "check", n: "4", t: "Report", d: "Verified reports to your inbox after every patrol." },
+        ] },
+      { id: "why-choose", h2: "Why choose us for mobile patrols in Melbourne?", type: "iconlist", bg: "bg-mist",
+        lead: "Choose us for mobile patrols because every guard's licensed and insured, every check is GPS-verified, and our team dispatches 24/7 across Melbourne. You get real proof of each visit, a stated alarm-response window, and a local Victorian team that knows your suburbs and their risks.",
+        items: [
+          { icon: "pin", b: "GPS-verified every visit", p: "Proof of each check, not a guard's word for it." },
+          { icon: "bolt", b: "Stated alarm SLA", p: "An agreed response window when an alarm trips." },
+          { icon: "shieldcheck", b: "Licensed & insured", p: "Police-checked guards and a verifiable business licence." },
+          { icon: "tag", b: "Less than static", p: "Strong overnight cover for a fraction of a full-time guard." },
+        ],
+        bool: { q: "Are mobile patrols cheaper than a static guard?", a: "Yes, usually. One patrol team covers several sites a night, so you spread the cost across locations instead of paying a guard to stand on one post for a whole shift. For after-hours risk, patrols give you far more cover per dollar." } },
+      { id: "cost", h2: "How much does mobile patrol security cost in Melbourne?", type: "table", bg: "bg-white", cta: true,
+        lead: "Mobile patrol security in Melbourne is usually priced per patrol visit or at an hourly rate, and it costs less than a full-time static guard because one team covers many sites. Night, weekend and public-holiday loadings apply. Get a quote for your patrol schedule and sites.",
+        bodyHtml: "<p>What you pay depends on how many visits you want, how many sites are on the route, and when the patrols run. A handful of checks a night across nearby sites is cheap per visit. A dedicated vehicle on an hourly contract costs more but gives you exclusive cover. We'll price the option that fits your real risk, not the most expensive one. <a href='/contact/'>Get a free quote</a> and we'll map it out.</p>",
+        head: ["Patrol option", "Per-patrol or $/hr", "Loadings", "Min commitment"],
+        rows: [
+          ["Per-patrol visit", "from $40 / visit", "+ night / weekend", "per route"],
+          ["Scheduled route (nightly)", "quoted per route", "+ public holiday", "ongoing"],
+          ["Dedicated patrol vehicle", "$40 to $60 / hr", "+ after midnight", "~4 hrs"],
+          ["Alarm response call-out", "quoted", "per attendance", "as needed"],
+        ],
+        note: "Figures are estimates only. Get a quote for your patrol schedule." },
+      { id: "areas", h2: "Where do we run mobile patrols across Melbourne?", type: "areas", bg: "bg-mist",
+        lead: "We run mobile patrols across the Melbourne CBD, all metro suburbs and industrial precincts, plus Geelong and Dandenong. Wherever your sites sit, a local patrol vehicle can build them into a route that makes sense and keeps drive times short.",
+        items: ["Melbourne CBD", "Northern suburbs", "Eastern suburbs", "Western suburbs", "South-east", "Geelong", "Dandenong"],
+        link: { href: "/service-areas/", label: "See all areas we cover" } },
+    ],
+    faqs: [
+      { q: "What is the difference between static guards and mobile patrols?", a: "A static guard stays on one site for the whole shift, while a mobile patrol guard visits several sites in a marked vehicle, checking each at set and random times. Static suits constant on-site risk. Patrols suit after-hours cover across multiple locations for less." },
+      { q: "Are mobile patrols cheaper than a static guard?", a: "Yes, usually. One patrol team covers several sites a night, so you spread the cost rather than paying a guard to hold one post for a full shift. For after-hours and multi-site risk, patrols give you far more coverage per dollar spent." },
+      { q: "Do your mobile patrol guards carry weapons?", a: "No, almost never. Mobile patrol work in Victoria is unarmed. Our guards rely on presence, training and fast escalation to police rather than weapons. Armed work needs a separate licence class and is rare outside specific high-risk cash or asset transport." },
+      { q: "Are your security guards licensed in Victoria?", a: "Yes. Every patrol guard holds a current Victorian security licence and is police-checked, and our business holds a Private Security Business Licence you can verify with the Victoria Police Licensing and Regulation Division at any time." },
+      { q: "How quickly can I get a mobile patrol on site?", a: "Usually within hours for an alarm response, and we can build a new site into a nightly route within a day or two. We run a 24/7 dispatch team across Melbourne, so we'll confirm timing the moment you call." },
+      { q: "Are your guards insured and police-checked?", a: "Yes. We carry public liability insurance and every patrol guard passes a national police check before their first shift, so your sites, your stock and anyone nearby are properly protected throughout every patrol." },
+      { q: "Is there a minimum commitment for mobile patrols?", a: "It depends on the option. Per-patrol visits work on a route basis, while a dedicated vehicle has a minimum booking of around four hours. We'll confirm the minimum in your written quote before you commit, with no surprises." },
+      { q: "How much do mobile patrols cost per visit in Melbourne?", a: "Per-patrol visits often start from around $40, depending on how many sites are on the route and when the checks run. Night, weekend and public-holiday loadings apply. Get a quote for your sites and schedule for an exact figure." },
+    ],
+  },
+
+  {
     slug: "event-security-melbourne",
     primaryKW: "event security melbourne",
     breadcrumb: "Event Security",
