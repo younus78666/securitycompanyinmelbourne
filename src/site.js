@@ -40,12 +40,73 @@ export const site = {
     blush: "#F3CFC6",
   },
 
+  // Simple fallback nav (mobile drawer + footer use the richer structures below)
   nav: [
     { label: "Services", href: "/security-services-melbourne/" },
     { label: "Sectors", href: "#sectors" },
     { label: "Pricing", href: "/security-guard-cost-melbourne/" },
     { label: "Resources", href: "/blog/" },
     { label: "Company", href: "/about/" },
+  ],
+
+  // MEGA MENU (desktop) + MOBILE DRAWER source of truth
+  mega: {
+    services: {
+      hubHref: "/security-services-melbourne/",
+      columns: [
+        { heading: "Guarding", items: [
+          { name: "Security Guards", href: "/security-guards-melbourne/", note: "Static & manned" },
+          { name: "Mobile Patrols", href: "/mobile-patrol-security-melbourne/", note: "+ alarm response" },
+          { name: "Concierge Security", href: "/concierge-security-melbourne/", note: "Front of house" },
+          { name: "K9 Dog Security", href: "/k9-security-melbourne/", note: "Handler units" },
+        ]},
+        { heading: "Specialist", items: [
+          { name: "Event Security", href: "/event-security-melbourne/", note: "Crowds & venues" },
+          { name: "Crowd Control", href: "/crowd-control-melbourne/", note: "RSA-trained" },
+          { name: "VIP & Close Protection", href: "/vip-close-protection-melbourne/", note: "Bodyguards" },
+          { name: "CCTV & Electronic", href: "/cctv-electronic-security-melbourne/", note: "Remote guarding" },
+        ]},
+        { heading: "By industry", items: [
+          { name: "Commercial Security", href: "/commercial-security-melbourne/", note: "Business sites" },
+          { name: "Construction Sites", href: "/construction-site-security-melbourne/", note: "Theft & trespass" },
+          { name: "Retail & Loss Prevention", href: "/retail-security-melbourne/", note: "Shrinkage" },
+          { name: "Healthcare & Warehouse", href: "/healthcare-security-melbourne/", note: "Specialised" },
+        ]},
+      ],
+      featured: {
+        title: "Not sure what you need?",
+        text: "Tell us about your site and we'll scope the right cover, fast.",
+        href: "/contact/", cta: "Get a free quote",
+      },
+    },
+    menus: [
+      { label: "Pricing", items: [
+        { name: "Security guard cost", href: "/security-guard-cost-melbourne/" },
+        { name: "Event security cost", href: "/event-security-cost-melbourne/" },
+      ]},
+      { label: "Resources", items: [
+        { name: "All guides", href: "/blog/" },
+        { name: "How to hire a security guard", href: "/blog/how-to-hire-a-security-guard-melbourne/" },
+        { name: "Static guards vs mobile patrol", href: "/blog/static-guards-vs-mobile-patrol/" },
+        { name: "VIC licence changes 2026", href: "/blog/victoria-security-licence-changes-2026/" },
+      ]},
+      { label: "Company", items: [
+        { name: "About us", href: "/about/" },
+        { name: "Licensing & compliance", href: "/licensing-compliance/" },
+        { name: "Reviews", href: "/reviews/" },
+        { name: "Our process", href: "/our-process/" },
+        { name: "Service areas", href: "/service-areas/" },
+        { name: "Contact", href: "/contact/" },
+      ]},
+    ],
+  },
+
+  // Proof stats (CLIENT INPUT — confirm real numbers)
+  stats: [
+    { n: "100+", label: "Licensed guards on the ground" },
+    { n: "24/7", label: "Control room & dispatch" },
+    { n: "<2 hrs", label: "Typical deployment window" },
+    { n: "100%", label: "Police-checked & insured" },
   ],
 
   services: [

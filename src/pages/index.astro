@@ -1,33 +1,54 @@
 ---
 import Base from "../layouts/Base.astro";
 import { site } from "../site.js";
-const c = site.colors;
 
 const features = [
   {
     title: "Protect your property, not just patrol it",
-    body: "Stop relying on luck and locked doors. Our licensed guards deter theft, vandalism and trespass before they happen, with clear incident reports so you always know what's going on at your site.",
+    body: "Stop relying on luck and locked doors. Our licensed guards deter theft, vandalism and trespass before they happen, then prove it with clear reporting.",
+    proof: [
+      "Visible deterrence that stops incidents on sight",
+      "Written incident reports after every shift",
+      "Uniformed, professional guards who represent you well",
+    ],
     img: "/assets/feature-property.webp",
     alt: "Security guard monitoring a Melbourne commercial property entrance",
     link: { label: "Explore security guards", href: "/security-guards-melbourne/" },
     rev: false,
   },
   {
-    title: "Licensed, vetted guards — every shift",
-    body: "Every officer holds a current Victorian security licence, passes a national police check, and is fully insured. You get professional, uniformed people who represent your business well, not a faceless agency.",
+    title: "Licensed, vetted guards — every single shift",
+    body: "You get professional people who represent your business well, not a faceless agency. Every officer is screened, licensed and accountable.",
+    proof: [
+      "Current Victorian security licence for every officer",
+      "National police check before the first shift",
+      "Fully insured with public liability cover",
+    ],
     img: "/assets/feature-guard.webp",
     alt: "Confident licensed security officer in uniform",
     link: { label: "See how we're licensed & insured", href: "/licensing-compliance/" },
     rev: true,
   },
   {
-    title: "24/7 monitoring and rapid response",
-    body: "Our control room never sleeps. With GPS-verified mobile patrols and alarm response across Greater Melbourne, we can get a guard on site fast and confirm a deployment window the moment you call.",
+    title: "24/7 monitoring and genuinely rapid response",
+    body: "Our control room never sleeps. With GPS-verified patrols and alarm response across Greater Melbourne, we get a guard on site fast and confirm a window the moment you call.",
+    proof: [
+      "GPS-verified patrol logs you can audit",
+      "Alarm response, lock-up and unlock cover",
+      "A confirmed deployment window, not a vague promise",
+    ],
     img: "/assets/feature-response.webp",
     alt: "Security patrol vehicle on duty in Melbourne at dusk",
     link: { label: "Discover mobile patrols", href: "/mobile-patrol-security-melbourne/" },
     rev: false,
   },
+];
+
+const steps = [
+  { n: "1", t: "Assess", d: "We review your site and risks, on the phone or on site, fast." },
+  { n: "2", t: "Quote", d: "You get a clear written quote with the right number of guards." },
+  { n: "3", t: "Deploy", d: "Once approved, licensed guards are on site fast, in uniform." },
+  { n: "4", t: "Report", d: "You get verified reports, so you always know what's happening." },
 ];
 
 const faqs = [
@@ -39,40 +60,34 @@ const faqs = [
   { q: "Are your guards insured and police-checked?", a: "Yes. We carry public liability insurance and every officer passes a national police check before they work a single shift, so your business and your visitors are properly protected." },
 ];
 
-// Inline SVG icons
 const icons = {
   guard: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l7 3v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V5l7-3z"/><circle cx="12" cy="10" r="2.2"/><path d="M8.5 16c.6-2 2-3 3.5-3s2.9 1 3.5 3"/></svg>',
   patrol: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13l2-5h11l3 4h2v3h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H4v-1m11 1H9"/></svg>',
   event: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="2.4"/><circle cx="16" cy="9" r="2"/><path d="M3 19c0-3 2.7-5 6-5s6 2 6 5M14.5 19c0-2 1-3.4 2.5-3.9"/></svg>',
   building: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="10" height="18" rx="1"/><path d="M14 9h6v12h-6M7 7h2M7 11h2M7 15h2"/></svg>',
+  chev: '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>',
 };
+const tags = ["Most requested", "", "Seasonal", "Highest value"];
 
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": ["Organization", "SecurityService", "LocalBusiness"],
-      "@id": site.url + "/#org",
-      name: site.brand,
-      url: site.url,
-      telephone: site.phone,
-      areaServed: "Melbourne, Victoria, Australia",
+    { "@type": ["Organization", "SecurityService", "LocalBusiness"], "@id": site.url + "/#org",
+      name: site.brand, url: site.url, telephone: site.phone, areaServed: "Melbourne, Victoria, Australia",
       address: { "@type": "PostalAddress", addressLocality: "Melbourne", addressRegion: "VIC", addressCountry: "AU" },
-      description: "Licensed Melbourne security company providing security guards, mobile patrols, event and commercial security across Greater Melbourne.",
-    },
-    {
-      "@type": "WebSite",
-      "@id": site.url + "/#website",
-      url: site.url,
-      name: site.brand,
-      publisher: { "@id": site.url + "/#org" },
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: faqs.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
-    },
+      description: "Licensed Melbourne security company providing security guards, mobile patrols, event and commercial security across Greater Melbourne." },
+    { "@type": "WebSite", "@id": site.url + "/#website", url: site.url, name: site.brand, publisher: { "@id": site.url + "/#org" } },
+    { "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
   ],
 };
+
+const logoSvg = (lt, st, tag) => `
+  <svg class="logo" viewBox="0 0 250 50" role="img" aria-label="${site.brand}">
+    <path d="M16 4l13 5v11c0 9-6.5 15.5-13 18-6.5-2.5-13-9-13-18V9l13-5z" fill="${lt}"/>
+    <path d="M9.5 19.5l4.5 4.5 9-10" fill="none" stroke="${st}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="40" y="26" font-family="Fraunces, Georgia, serif" font-size="21" font-weight="600" fill="${lt}" letter-spacing="1">SENTINEL</text>
+    <text x="41" y="40" font-family="Inter, sans-serif" font-size="8.2" font-weight="600" fill="${tag}" letter-spacing="3">SECURITY · MELBOURNE</text>
+  </svg>`;
 ---
 <Base>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(schema)} />
@@ -80,38 +95,91 @@ const schema = {
   <!-- HEADER -->
   <header class="site-header">
     <div class="container nav">
-      <a href="/" aria-label={site.brand + " home"}>
-        <svg class="logo" viewBox="0 0 250 50" role="img" aria-label={site.brand}>
-          <path d="M16 4l13 5v11c0 9-6.5 15.5-13 18-6.5-2.5-13-9-13-18V9l13-5z" fill="#3B3B25"/>
-          <path d="M9.5 19.5l4.5 4.5 9-10" fill="none" stroke="#C7D43F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="40" y="26" font-family="Fraunces, Georgia, serif" font-size="21" font-weight="600" fill="#3B3B25" letter-spacing="1">SENTINEL</text>
-          <text x="41" y="40" font-family="Inter, sans-serif" font-size="8.2" font-weight="600" fill="#6B6B57" letter-spacing="3">SECURITY · MELBOURNE</text>
-        </svg>
-      </a>
-      <nav class="nav-links">
-        {site.nav.map(n => <a href={n.href}>{n.label}</a>)}
+      <a href="/" aria-label={site.brand + " home"} set:html={logoSvg('#3B3B25', '#C7D43F', '#6B6B57')} />
+
+      <nav class="nav-links" aria-label="Primary">
+        <!-- Services mega -->
+        <div class="has-menu wide">
+          <button class="menu-trigger" aria-expanded="false" aria-haspopup="true">Services<span set:html={icons.chev} /></button>
+          <div class="dropdown">
+            <div class="mega-inner">
+              {site.mega.services.columns.map(col => (
+                <div class="mega-col">
+                  <h5>{col.heading}</h5>
+                  {col.items.map(it => <a href={it.href}>{it.name}<span>{it.note}</span></a>)}
+                </div>
+              ))}
+              <div class="mega-feat">
+                <h5>Get started</h5>
+                <p style="font-family:var(--serif);font-size:1.2rem;color:var(--cream);margin:6px 0">{site.mega.services.featured.title}</p>
+                <p>{site.mega.services.featured.text}</p>
+                <a class="btn btn-primary" href={site.mega.services.featured.href}>{site.mega.services.featured.cta}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Simple dropdowns -->
+        {site.mega.menus.map(m => (
+          <div class="has-menu">
+            <button class="menu-trigger" aria-expanded="false" aria-haspopup="true">{m.label}<span set:html={icons.chev} /></button>
+            <div class="dropdown simple">
+              {m.items.map(it => <a href={it.href}>{it.name}</a>)}
+            </div>
+          </div>
+        ))}
+        <a href="/service-areas/" class="menu-trigger">Areas</a>
       </nav>
+
       <div class="nav-cta">
         <a class="btn btn-ghost" href={site.phoneHref}>Call {site.phone}</a>
         <a class="btn btn-primary" href="/contact/">Get a Free Quote</a>
       </div>
-      <button class="menu-btn" aria-label="Menu">&#9776;</button>
+      <button class="menu-btn" id="openDrawer" aria-label="Open menu" aria-expanded="false">&#9776;</button>
     </div>
   </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-bg" data-close></div>
+    <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="drawer-head">
+        <span set:html={logoSvg('#3B3B25', '#C7D43F', '#6B6B57')} />
+        <button class="drawer-close" data-close aria-label="Close menu">&times;</button>
+      </div>
+      <details open>
+        <summary>Services</summary>
+        {site.mega.services.columns.flatMap(c => c.items).map(it => <a href={it.href}>{it.name}</a>)}
+        <a href={site.mega.services.hubHref}>All services</a>
+      </details>
+      {site.mega.menus.map(m => (
+        <details>
+          <summary>{m.label}</summary>
+          {m.items.map(it => <a href={it.href}>{it.name}</a>)}
+        </details>
+      ))}
+      <a href="/service-areas/" style="display:block;font-family:var(--serif);font-size:1.2rem;padding:14px 4px;border-bottom:1px solid var(--line)">Service areas</a>
+      <div class="drawer-cta">
+        <a class="btn btn-primary" href="/contact/">Get a Free Quote</a>
+        <a class="btn btn-dark" href={site.phoneHref}>Call {site.phone}</a>
+      </div>
+    </div>
+  </div>
 
   <!-- HERO -->
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <h1>Melbourne security<br/>that protects<br/>what <em class="u-underline">matters</em></h1>
+        <span class="eyebrow" style="color:var(--lime-soft)">Licensed security company in Melbourne</span>
+        <h1 style="margin-top:14px">Melbourne security<br/>that protects<br/>what <em class="u-underline">matters</em></h1>
         <p class="lead">Forget unreliable guards and locked-up worries. Sentinel gives you licensed, insured, police-checked security that's on call 24/7, so your people, property and events stay safe.</p>
         <div style="display:flex;gap:14px;flex-wrap:wrap">
           <a class="btn btn-primary" href="/contact/">Get a Free Quote</a>
           <a class="btn btn-ghost" style="border-color:var(--lime);color:var(--cream)" href={site.phoneHref}>Talk to our team</a>
         </div>
+        <p style="margin-top:18px;font-size:.86rem;color:#B9B7A6">Victorian licensed &middot; Fully insured &middot; Guards on site in hours</p>
       </div>
       <div class="hero-media">
-        <img src="/assets/hero.webp" width="720" height="540" alt="Licensed Sentinel security guard outside a modern Melbourne building" />
+        <img src="/assets/hero.webp" width="720" height="540" alt="Licensed Sentinel security guard outside a modern Melbourne building" fetchpriority="high" />
         <div class="hero-badge">
           <strong>24/7</strong>
           <span>Licensed guards on call across Greater Melbourne</span>
@@ -122,7 +190,7 @@ const schema = {
 
   <!-- TRUST STRIP -->
   <div class="container trust">
-    <span class="eyebrow">Protecting Melbourne businesses, sites and events</span>
+    <span class="eyebrow">Trusted to protect Melbourne businesses, sites and events</span>
     <div class="trust-row">
       <span class="trust-pill">Victorian Licensed</span>
       <span class="trust-pill">Fully Insured</span>
@@ -140,6 +208,7 @@ const schema = {
           <div class="feature-text">
             <h2>{f.title}</h2>
             <p>{f.body}</p>
+            <ul class="proof">{f.proof.map(p => <li>{p}</li>)}</ul>
             <a class="link" href={f.link.href}>{f.link.label} &rarr;</a>
           </div>
           <div class="feature-media">
@@ -150,22 +219,38 @@ const schema = {
     </div>
   </section>
 
+  <!-- STATS BAND -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="stats">
+        {site.stats.map(s => (
+          <div class="stat"><b>{s.n}</b><span>{s.label}</span></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICES -->
   <section class="section" id="services" style="background:var(--cream-soft)">
     <div class="container">
       <div class="center-head">
         <span class="eyebrow">What we do</span>
         <h2>Security services built <em>around your site</em></h2>
+        <p style="color:var(--muted);margin-top:10px">From a single guard to a full event team, every service uses licensed, insured, police-checked people.</p>
       </div>
       <div class="cards">
-        {site.services.map(s => (
+        {site.services.map((s, i) => (
           <div class="card">
+            {tags[i] && <span class="tag">{tags[i]}</span>}
             <div class="ic" set:html={icons[s.icon]} />
             <h3>{s.name}</h3>
             <p>{s.blurb}</p>
             <a class="link" href={s.href}>Learn more &rarr;</a>
           </div>
         ))}
+      </div>
+      <div style="text-align:center;margin-top:34px">
+        <a class="btn btn-dark" href={site.mega.services.hubHref}>View all security services &rarr;</a>
       </div>
     </div>
   </section>
@@ -174,9 +259,9 @@ const schema = {
   <section class="section">
     <div class="container">
       <div class="quote-band">
-        <span class="eyebrow">Client story · [CLIENT INPUT]</span>
+        <span class="eyebrow">Client story &middot; [CLIENT INPUT]</span>
         <blockquote>"Sentinel's guards turned up on time, looked the part, and our incidents dropped to zero. They feel like part of our team."</blockquote>
-        <cite>Facilities Manager, Melbourne CBD property [placeholder — swap for a real review]</cite>
+        <cite>Facilities Manager, Melbourne CBD property [placeholder &mdash; swap for a real review]</cite>
       </div>
     </div>
   </section>
@@ -230,19 +315,14 @@ const schema = {
         <span class="eyebrow" style="color:var(--lime-soft)">How it works</span>
         <h2 style="color:var(--cream)">Protection in <em style="color:var(--lime)">four simple steps</em></h2>
       </div>
-      <div class="diff">
-        <div class="col" style="background:var(--olive-deep);border-color:rgba(255,255,255,.1)">
-          <h3 style="color:var(--cream)">1. Assess</h3>
-          <p style="color:#CFCDBC">We review your site and risks, on the phone or on site, fast.</p>
-        </div>
-        <div class="col" style="background:var(--olive-deep);border-color:rgba(255,255,255,.1)">
-          <h3 style="color:var(--cream)">2. Quote</h3>
-          <p style="color:#CFCDBC">You get a clear written quote with the right number of guards.</p>
-        </div>
-        <div class="col" style="background:var(--olive-deep);border-color:rgba(255,255,255,.1)">
-          <h3 style="color:var(--cream)">3. Deploy</h3>
-          <p style="color:#CFCDBC">Once approved, licensed guards are on site fast, in uniform.</p>
-        </div>
+      <div class="diff" style="grid-template-columns:repeat(4,1fr)">
+        {steps.map(s => (
+          <div class="col" style="background:var(--olive-deep);border-color:rgba(255,255,255,.1)">
+            <b style="font-family:var(--serif);font-size:1.8rem;color:var(--lime)">{s.n}</b>
+            <h3 style="color:var(--cream);margin:8px 0 8px">{s.t}</h3>
+            <p style="color:#CFCDBC">{s.d}</p>
+          </div>
+        ))}
       </div>
       <div style="text-align:center;margin-top:30px">
         <a class="btn btn-primary" href="/our-process/">See our full process &rarr;</a>
@@ -273,7 +353,7 @@ const schema = {
     <div class="cta-band">
       <span class="eyebrow">Ready when you are</span>
       <h2>Ready to protect <em>what matters?</em></h2>
-      <p style="color:var(--muted);max-width:48ch;margin:8px auto 24px">Get a fast, free quote from a licensed Melbourne security company. We answer the phone 24/7.</p>
+      <p style="color:var(--muted);max-width:48ch;margin:8px auto 24px">Get a fast, free quote from a licensed Melbourne security company. We answer the phone 24/7, every day of the year.</p>
       <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
         <a class="btn btn-dark" href="/contact/">Book a free quote</a>
         <a class="btn btn-ghost" href={site.phoneHref}>Call {site.phone}</a>
@@ -285,13 +365,8 @@ const schema = {
   <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <svg class="logo" viewBox="0 0 250 50" role="img" aria-label={site.brand}>
-          <path d="M16 4l13 5v11c0 9-6.5 15.5-13 18-6.5-2.5-13-9-13-18V9l13-5z" fill="#C7D43F"/>
-          <path d="M9.5 19.5l4.5 4.5 9-10" fill="none" stroke="#3B3B25" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="40" y="26" font-family="Fraunces, Georgia, serif" font-size="21" font-weight="600" fill="#F5F1E8" letter-spacing="1">SENTINEL</text>
-          <text x="41" y="40" font-family="Inter, sans-serif" font-size="8.2" font-weight="600" fill="#B9B7A6" letter-spacing="3">SECURITY · MELBOURNE</text>
-        </svg>
-        <p>Licensed, insured, 24/7 security guards, mobile patrols, event and commercial security across Greater Melbourne.</p>
+        <span set:html={logoSvg('#F5F1E8', '#C7D43F', '#B9B7A6')} />
+        <p style="margin-top:16px">Licensed, insured, 24/7 security guards, mobile patrols, event and commercial security across Greater Melbourne.</p>
         <p style="font-size:.82rem;color:#B9B7A6">{site.licenceNo}</p>
       </div>
       <div>
@@ -323,7 +398,46 @@ const schema = {
     </div>
     <div class="container footer-bottom">
       <span>&copy; {new Date().getFullYear()} {site.brand}. All rights reserved.</span>
-      <span><a href="/privacy-policy/">Privacy</a> &nbsp;·&nbsp; <a href="/terms-of-service/">Terms</a></span>
+      <span><a href="/privacy-policy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms-of-service/">Terms</a></span>
     </div>
   </footer>
+
+  <!-- STICKY MOBILE CTA BAR -->
+  <div class="mobile-bar">
+    <a class="btn btn-dark" href={site.phoneHref}>Call now</a>
+    <a class="btn btn-primary" href="/contact/">Free quote</a>
+  </div>
+
+  <script is:inline>
+    // Mobile drawer
+    const drawer = document.getElementById('drawer');
+    const openBtn = document.getElementById('openDrawer');
+    const setDrawer = (open) => {
+      drawer.classList.toggle('open', open);
+      drawer.setAttribute('aria-hidden', String(!open));
+      openBtn.setAttribute('aria-expanded', String(open));
+      document.body.style.overflow = open ? 'hidden' : '';
+    };
+    openBtn.addEventListener('click', () => setDrawer(true));
+    drawer.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', () => setDrawer(false)));
+
+    // Desktop dropdown: click/keyboard toggle (hover handled by CSS)
+    document.querySelectorAll('.has-menu .menu-trigger').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const dd = btn.parentElement.querySelector('.dropdown');
+        const isOpen = dd.classList.contains('open');
+        document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+        document.querySelectorAll('.menu-trigger[aria-expanded="true"]').forEach(b => b.setAttribute('aria-expanded','false'));
+        if (!isOpen) { dd.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.has-menu')) {
+        document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+        document.querySelectorAll('.menu-trigger[aria-expanded="true"]').forEach(b => b.setAttribute('aria-expanded','false'));
+      }
+    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { setDrawer(false); document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open')); } });
+  </script>
 </Base>
