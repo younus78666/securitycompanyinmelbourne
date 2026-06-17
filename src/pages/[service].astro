@@ -158,14 +158,16 @@ const accreditations = [
   )}
 
   <!-- FINAL CTA -->
-  <section class="section" style="padding-top:0">
-    <div class="cta-band">
-      <span class="eyebrow">Ready when you are</span>
-      <h2>Get {svc.breadcrumb.toLowerCase()} in Melbourne <em>today</em></h2>
-      <p style="color:var(--muted);max-width:48ch;margin:8px auto 24px">Licensed, insured, police-checked, and on call 24/7. Get a fast, free quote now.</p>
-      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-        <a class="btn btn-dark" href="/contact/">Book a free quote</a>
-        <a class="btn btn-ghost" href={site.phoneHref}>Call {site.phone}</a>
+  <section class="section bg-white" style="padding-top:0">
+    <div class="container">
+      <div class="cta-final">
+        <span class="eyebrow">Ready when you are</span>
+        <h2>Get {svc.breadcrumb.toLowerCase()} in Melbourne <em>today</em></h2>
+        <p>Licensed, insured, police-checked, and on call 24/7. Get a fast, free quote now.</p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+          <a class="btn btn-primary" href="/contact/">Book a free quote</a>
+          <a class="btn btn-ghost" style="border-color:var(--lime);color:var(--cream)" href={site.phoneHref}>Call {site.phone}</a>
+        </div>
       </div>
     </div>
   </section>
