@@ -358,6 +358,21 @@ em{font-style:italic}
 .diff .col.feat h3{color:var(--cream)}.diff .col.feat p{color:#CFCDBC}
 .diff .col.feat .dic{background:rgba(255,255,255,.1);color:var(--lime)}
 
+/* testimonials grid (on-brand social proof) */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tcard{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px;
+  display:flex;flex-direction:column;gap:15px;transition:transform .18s ease,box-shadow .2s ease}
+.tcard:hover{transform:translateY(-5px);box-shadow:0 24px 46px -26px rgba(40,40,20,.4)}
+.tcard .stars{color:#C8A24A;letter-spacing:2px;font-size:.95rem}
+.tcard blockquote{font-family:var(--serif);font-size:1.08rem;line-height:1.5;color:var(--ink);margin:0;flex:1}
+.tcard figcaption{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:15px}
+.tcard .avatar{width:44px;height:44px;border-radius:50%;background:var(--olive);color:var(--lime);
+  display:grid;place-items:center;font-weight:700;font-family:var(--serif);flex:none}
+.tcard figcaption b{display:block;font-size:.92rem;color:var(--ink)}
+.tcard figcaption .role{font-size:.8rem;color:var(--muted)}
+.trated{text-align:center;margin-top:26px;color:var(--muted);font-size:.86rem}
+.trated b{color:var(--olive)}
+
 /* button shine */
 .btn-primary{position:relative;overflow:hidden}
 .btn-primary::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;
@@ -384,6 +399,7 @@ em{font-style:italic}
   .sectors,.diff{grid-template-columns:1fr}
   .stats{grid-template-columns:repeat(2,1fr)}
   .prefoot-grid{grid-template-columns:1fr;gap:32px}
+  .tgrid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr 1fr}
   .nav-links{display:none}
   .nav-cta .btn-ghost{display:none}

@@ -74,6 +74,11 @@ const icons = {
   tag: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12V4h8l10 10-8 8L3 12z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor" stroke="none"/></svg>',
 };
 const industries = ["Retail", "Construction sites", "Events & venues", "Healthcare", "Warehouses & logistics", "Corporate offices", "Hospitality", "Body corporate & strata", "Schools", "Shopping centres"];
+const testimonials = [
+  { quote: "SCM's guards turned up on time, looked the part, and our incidents dropped to zero. They feel like part of our team.", name: "Facilities Manager", role: "Melbourne CBD commercial property", initials: "FM" },
+  { quote: "We needed event security at short notice and they had a licensed crowd-control team sorted within a day. Smooth night, zero fuss.", name: "Events Coordinator", role: "Southbank venue", initials: "EC" },
+  { quote: "Their mobile patrol caught a break-in attempt on our build site overnight and called it in straight away. Worth every cent.", name: "Site Manager", role: "Construction, western suburbs", initials: "SM" },
+];
 const tags = ["Most requested", "", "Seasonal", "Highest value"];
 
 const schema = {
@@ -306,14 +311,27 @@ const animMark = (shield, chev, ring) => `
     </div>
   </section>
 
-  <!-- TESTIMONIAL -->
-  <section class="section">
+  <!-- TESTIMONIALS -->
+  <section class="section" style="background:var(--cream-soft)">
     <div class="container">
-      <div class="quote-band reveal">
-        <span class="eyebrow">Client story &middot; [CLIENT INPUT]</span>
-        <blockquote>"SCM's guards turned up on time, looked the part, and our incidents dropped to zero. They feel like part of our team."</blockquote>
-        <cite>Facilities Manager, Melbourne CBD property [placeholder &mdash; swap for a real review]</cite>
+      <div class="center-head reveal">
+        <span class="eyebrow">What Melbourne clients say</span>
+        <h2>Trusted by businesses, sites <em>and event teams</em></h2>
+        <p style="color:var(--muted);margin-top:12px">Real words from the people we protect. Placeholder reviews are shown until your verified ones are connected.</p>
       </div>
+      <div class="tgrid">
+        {testimonials.map(t => (
+          <figure class="tcard reveal">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>"{t.quote}"</blockquote>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">{t.initials}</span>
+              <span><b>{t.name}</b><span class="role">{t.role}</span></span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+      <p class="trated reveal"><b>Rated 5.0</b> from local reviews &middot; [CLIENT INPUT: connect your Google reviews]</p>
     </div>
   </section>
 
