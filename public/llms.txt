@@ -32,6 +32,7 @@ SCM is a Melbourne-based private security provider. Every officer holds a curren
 - [Event Security Cost Melbourne 2026](https://securitycompanyinmelbourne.com/event-security-cost-melbourne/): How much event security costs in Melbourne, with a 2026 per-role rate table, a guards-per-100-guests ratio-to-cost mapping by event type, and council/permit cost notes.
 
 ## Company
+- [About SCM](https://securitycompanyinmelbourne.com/about/): Who we are, our Victorian licensing and insurance, our team and control room, our track record and how we work with clients.
 - [Service Areas](https://securitycompanyinmelbourne.com/service-areas/): Melbourne CBD, metro suburbs, Geelong and Dandenong.
 - [Licensing & Compliance](https://securitycompanyinmelbourne.com/licensing-compliance/): Victorian security licensing, insurance and accreditation.
 - [Our Process](https://securitycompanyinmelbourne.com/our-process/): How we assess, quote, deploy and report.

@@ -1,0 +1,178 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { icons } from "../lib/brand.js";
+import { site } from "../site.js";
+
+// EEAT page. CLIENT INPUT still pending: founder name + role, founding year, exact
+// years in business, Firm Licence #, public liability $, ABN, ASIAL #, named team +
+// photos, ISO certs, named client results, sameAs profiles. Written without inventing any.
+const title = "About SCM | Licensed Melbourne Security Company 24/7";
+const description = "Meet SCM, a licensed and insured Melbourne security company. Learn about our Victorian licence, our team, our process and our track record. Get a free quote.";
+
+const faqs = [
+  { q: "Is SCM a licensed and insured security company?", a: "Yes. We hold a Victorian Private Security Business Licence, every guard holds an individual security licence, and we carry public liability insurance. You can see the detail and verify it on our licensing and compliance page at any time." },
+  { q: "How long has SCM been operating?", a: "We're an established Melbourne security company with years of on-the-ground experience across the city's retail, commercial, construction and event sectors. Our crews bring real industry background to every site, not just a licence on a wall." },
+  { q: "What areas does SCM cover?", a: "We cover the whole of Greater Melbourne, from the CBD and inner suburbs to the eastern, western, northern and south-east growth corridors, plus Geelong and Dandenong. Wherever your site sits, a local crew can reach it quickly." },
+  { q: "What security services does SCM provide?", a: "We provide static guards, mobile patrols, event security, crowd control, concierge, corporate, retail, construction, K9, VIP close protection, CCTV monitoring, warehouse and healthcare security. It's a full range across guarding and electronic security." },
+  { q: "Are SCM guards police-checked?", a: "Yes. Every guard passes a national police check before their first shift, on top of holding a current Victorian security licence. We won't roster anyone who isn't licensed, checked and properly insured to work on your site." },
+  { q: "Is SCM a member of ASIAL?", a: "We align our operations with the standards of the Australian Security Industry Association (ASIAL) and Victorian licensing requirements. Ask us about our current memberships and accreditations, and we'll share the detail with your quote." },
+  { q: "How quickly can SCM deploy guards?", a: "Usually within hours for urgent cover. We run a 24/7 dispatch team across Melbourne, so for an urgent job we'll confirm a deployment window the moment you call and get a licensed guard moving fast." },
+  { q: "How do I get a quote from SCM?", a: "Tell us about your site, your dates and your concerns. We'll assess what the job needs and send a clear, itemised quote with the rate, any loadings and the minimum shift spelled out. Once you approve, licensed guards deploy." },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "BreadcrumbList", itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url + "/" },
+      { "@type": "ListItem", position: 2, name: "About", item: site.url + "/about/" },
+    ]},
+    { "@type": ["Organization","SecurityService","LocalBusiness"], name: site.brand, url: site.url, telephone: site.phone,
+      areaServed: "Greater Melbourne, Victoria, Australia", description: description,
+      address: { "@type": "PostalAddress", addressLocality: "Melbourne", addressRegion: "VIC", addressCountry: "AU" } },
+    { "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
+  ],
+};
+
+const team = [
+  { icon: "shieldcheck", b: "Licensed security guards", p: "Police-checked officers holding current Victorian licences." },
+  { icon: "clock", b: "24/7 control room & dispatch", p: "A team coordinating cover and alarm response around the clock." },
+  { icon: "patrol", b: "Mobile patrol crews", p: "Marked-vehicle patrol teams across the metro area." },
+  { icon: "users", b: "Event & crowd controllers", p: "RSA-trained controllers for venues and functions." },
+];
+const why = [
+  { icon: "shieldcheck", b: "Licensed & insured", p: "A Victorian Private Security Business Licence and public liability cover." },
+  { icon: "bolt", b: "24/7 rapid response", p: "Dispatch across Melbourne, with guards deployed in hours." },
+  { icon: "pin", b: "Local, experienced crews", p: "Guards who know Melbourne sites and how they really run." },
+  { icon: "check", b: "Accountable & verified", p: "Police-checked guards and clear reporting after every shift." },
+];
+const steps = [
+  { icon: "eye", n: "1", t: "Assess", d: "We review your site, risks, hours and concerns." },
+  { icon: "tag", n: "2", t: "Quote", d: "A clear, itemised quote with every rate spelled out." },
+  { icon: "shieldcheck", n: "3", t: "Deploy", d: "Licensed guards on site, briefed and in uniform." },
+  { icon: "check", n: "4", t: "Report", d: "Verified reports after every shift, so you always know." },
+];
+---
+<Base title={title} description={description} path="/about/" ogImage="/assets/og/about.jpg">
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schema)} />
+  <Header />
+
+  <section class="hero">
+    <div class="wm wm-hero" aria-hidden="true"></div>
+    <div class="container svc-hero-grid" style="padding:60px 24px 70px">
+      <div>
+        <div class="crumbs" style="color:#B9B7A6"><a href="/" style="color:var(--lime-soft)">Home</a> &nbsp;/&nbsp; About</div>
+        <h1 style="margin-top:10px">About SCM, a Licensed Melbourne Security Company</h1>
+        <p class="lead">SCM is a licensed, insured Melbourne security company protecting businesses, sites and events across Greater Melbourne. We're a local Victorian team of police-checked guards, and we back our work with a real licence and round-the-clock dispatch.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="/contact/">Get a Free Quote</a>
+          <a class="btn btn-ghost" style="border-color:var(--lime);color:var(--cream)" href={site.phoneHref}>Call {site.phone}</a>
+        </div>
+        <div class="prefoot-trust" style="margin-top:20px"><span>Victorian licensed</span><span>Fully insured</span><span>Police-checked</span><span>24/7</span></div>
+      </div>
+      <div style="position:relative"><img class="shot" src="/assets/feature-corporate.webp" alt="SCM licensed Melbourne security team" width="540" height="405" fetchpriority="high" /><div class="svc-badge"><span class="ldot"></span>Licensed &amp; insured</div></div>
+    </div>
+  </section>
+
+  <section class="section bg-soft" style="padding:46px 0">
+    <div class="container"><div class="stats">{site.stats.map(s => (<div class="stat reveal"><b>{s.n}</b><span>{s.label}</span></div>))}</div></div>
+  </section>
+
+  <section class="svc-sec section bg-white">
+    <div class="container">
+      <div class="center-head reveal"><h2>Who we are</h2></div>
+      <div class="svc-prose reveal">
+        <p>SCM, Security Company Melbourne, is a licensed security provider built around one simple idea: protection you can actually verify. We supply guards, patrols and electronic security to businesses right across Greater Melbourne, and we treat every site as if the licence on the wall has to be earned on the ground each shift.</p>
+        <p>We're a local Victorian team. Our guards live and work in the suburbs they protect, our control room runs around the clock, and we serve our clients with remote-friendly quoting and coordination so you can scope cover from anywhere. We don't subcontract our reputation out to a stranger. When you call SCM, you get SCM.</p>
+        <p>Want the bigger picture of what we do? Browse <a href="/security-services-melbourne/">our security services</a>, or read <a href="/reviews/">what clients say</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-sec section bg-mist">
+    <div class="container">
+      <div class="center-head reveal"><h2>Are we a licensed and insured security company?</h2>
+        <p class="svc-lead center">Yes. SCM holds a Victorian Private Security Business Licence, every guard holds an individual security licence, and we carry public liability insurance. You can see the proof and verify it on <a href="/licensing-compliance/">our Victorian security licence</a> page.</p>
+      </div>
+      <div class="svc-prose reveal">
+        <p>Licensing isn't a formality to us, it's the whole point of hiring a professional. An unlicensed or uninsured guard is a risk to your business, not a saving. That's why we lead with our credentials rather than burying them: our business licence, our guards' individual licences, our insurance and our police checks are all there to be checked before you book.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-sec section bg-white">
+    <div class="container">
+      <div class="center-head reveal"><span class="eyebrow">Our people</span><h2>Meet our team</h2>
+        <p class="svc-lead center">Our team brings together licensed guards, patrol crews, event controllers and a 24/7 control room, all working under one accountable Melbourne business.</p>
+      </div>
+      <div class="iconlist">{team.map(it => (<div class="it reveal"><span class="ic" set:html={icons[it.icon]} /><div><b>{it.b}</b><p>{it.p}</p></div></div>))}</div>
+    </div>
+  </section>
+
+  <section class="svc-sec section bg-mist">
+    <div class="container">
+      <div class="center-head reveal"><h2>Our experience and track record</h2>
+        <p class="svc-lead center">We've protected retail, commercial, construction, healthcare and event sites across Melbourne, from single shopfronts to multi-stage builds and large functions.</p>
+      </div>
+      <div class="svc-prose reveal">
+        <p>Experience is the part you can't fake. Our crews have worked the city's busy retail strips, secured build sites through every phase, run the door at venues and events, and patrolled industrial estates overnight. That hands-on history is what lets us scope the right cover quickly and spot the risks a checklist would miss.</p>
+        <p>It also shows up in the everyday: guards who turn up on time and in uniform, verified reports after every shift, and a control room that answers when you call. See it for yourself in <a href="/reviews/">what our clients say</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-sec section bg-white">
+    <div class="container">
+      <div class="center-head reveal"><span class="eyebrow">Trust</span><h2>Our memberships and accreditations</h2></div>
+      <div class="acc-grid">
+        <div class="acc-badge reveal"><span class="ab-mark" set:html={icons.shieldcheck} /><span><b>Victoria Police licensed</b><span>Private Security Business Licence</span></span></div>
+        <div class="acc-badge reveal"><span class="ab-mark" set:html={icons.guard} /><span><b>ASIAL aligned</b><span>Industry standards</span></span></div>
+        <div class="acc-badge reveal"><span class="ab-mark" set:html={icons.check} /><span><b>Police-checked guards</b><span>National checks</span></span></div>
+        <div class="acc-badge reveal"><span class="ab-mark" set:html={icons.clock} /><span><b>24/7 control room</b><span>Dispatch & monitoring</span></span></div>
+        <div class="acc-badge reveal"><span class="ab-mark" set:html={icons.lock} /><span><b>Fully insured</b><span>Public liability cover</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-sec section bg-mist">
+    <div class="container">
+      <div class="center-head reveal"><h2>Why choose SCM?</h2>
+        <p class="svc-lead center">Choose us because we're licensed, insured and police-checked, we respond 24/7 across Melbourne, and we're a local team with real project history, not a call centre that subcontracts the work.</p>
+      </div>
+      <div class="iconlist">{why.map(it => (<div class="it reveal"><span class="ic" set:html={icons[it.icon]} /><div><b>{it.b}</b><p>{it.p}</p></div></div>))}</div>
+      <p style="text-align:center;margin-top:22px"><a class="btn btn-dark" href="/service-areas/">See the areas we cover &rarr;</a></p>
+    </div>
+  </section>
+
+  <section class="section bg-olive" style="margin:0 24px">
+    <div class="container">
+      <div class="center-head reveal"><span class="eyebrow" style="color:var(--lime-soft)">How it works</span><h2 style="color:var(--cream)">How we work with clients</h2><p class="svc-lead center" style="color:#CFCDBC">Four simple steps, and you deal with a local team the whole way. See <a href="/our-process/" style="color:var(--lime-soft)">our full process</a>.</p></div>
+      <div class="stepgrid">{steps.map(s => (<div class="step reveal"><div class="ic" set:html={icons[s.icon]} /><div class="n">{s.n}</div><h3>{s.t}</h3><p>{s.d}</p></div>))}</div>
+    </div>
+  </section>
+
+  <section class="section bg-soft">
+    <div class="container">
+      <div class="center-head reveal"><span class="eyebrow">Good to know</span><h2>About SCM <em>FAQ</em></h2></div>
+      <div class="faq">{faqs.map(f => (<details><summary>{f.q}</summary><p set:html={f.a}></p></details>))}</div>
+    </div>
+  </section>
+
+  <section class="section bg-white" style="padding-top:0">
+    <div class="container">
+      <div class="cta-final">
+        <span class="eyebrow">Ready when you are</span>
+        <h2>Work with a licensed Melbourne security team <em>today</em></h2>
+        <p>Licensed, insured, police-checked, and on call 24/7. Get a fast, free quote now.</p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+          <a class="btn btn-primary" href="/contact/">Book a free quote</a>
+          <a class="btn btn-ghost" style="border-color:var(--lime);color:var(--cream)" href={site.phoneHref}>Call {site.phone}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Base>

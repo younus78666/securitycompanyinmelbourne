@@ -63,7 +63,7 @@ Status legend: ✅ LIVE | ⏳ PLANNED (brief ready, page not built yet)
 ## EEAT / LEGAL (support, not ranking targets)
 | Page | Primary KW | Status |
 |---|---|---|
-| /about/ | about (brand) | ⏳ |
+| /about/ | about (brand) | LIVE ✅ |
 | /contact/ | contact / quote | ⏳ |
 | /licensing-compliance/ | security licence victoria (buyer) | ⏳ |
 | /reviews/ | reviews | ⏳ |

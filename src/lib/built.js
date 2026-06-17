@@ -13,6 +13,7 @@ const staticPages = [
   "/service-areas/",
   "/licensing-compliance/",
   "/our-process/",
+  "/about/",
   "/blog/",
 ];
 
