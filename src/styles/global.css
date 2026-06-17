@@ -628,3 +628,6 @@ em{font-style:italic}
   .blog-layout{grid-template-columns:1fr}
   .blog-side{position:static}
 }
+
+/* Logo background watermarks: static (animations removed per request) */
+.wm,.wm-cta,.amark .c1,.amark .c2,.amark .dia,.amark .ring{animation:none !important}
