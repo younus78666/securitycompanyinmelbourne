@@ -730,3 +730,14 @@ em{font-style:italic}
 .svc-viz svg{width:100%;height:auto;display:block}
 .svc-viz .viz-cap{margin:14px 0 0;text-align:center;font-size:.85rem;color:var(--muted)}
 @media(max-width:560px){ .svc-ol li{padding:16px 18px 16px 58px} .svc-viz{padding:22px 16px} }
+
+/* ===== LEGAL PAGES (privacy, terms) ===== */
+.legal{max-width:840px;margin:0 auto;padding:50px 24px 64px}
+.legal h2{font-size:1.45rem;line-height:1.2;margin:34px 0 10px;color:var(--ink)}
+.legal h3{font-size:1.1rem;margin:18px 0 8px;color:var(--ink)}
+.legal p,.legal li{font-size:1rem;line-height:1.72;color:var(--ink)}
+.legal ul{margin:0 0 1rem 1.2rem;padding:0}
+.legal li{margin-bottom:.4rem}
+.legal a{color:var(--olive);font-weight:600;text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:2px;text-underline-offset:3px}
+.legal .updated{color:var(--muted);font-size:.9rem;margin-bottom:8px}
+.legal .legal-note{background:var(--mist);border:1px solid var(--line);border-radius:14px;padding:16px 20px;font-size:.92rem;color:var(--muted);margin-top:28px}

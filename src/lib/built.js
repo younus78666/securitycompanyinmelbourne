@@ -15,6 +15,8 @@ const staticPages = [
   "/our-process/",
   "/about/",
   "/reviews/",
+  "/privacy-policy/",
+  "/terms-of-service/",
   "/blog/",
 ];
 

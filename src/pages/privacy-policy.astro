@@ -1,0 +1,85 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { site } from "../site.js";
+
+// Legal page (AU framework: Privacy Act 1988 (Cth) + Australian Privacy Principles).
+// CLIENT INPUT pending: registered legal name, ABN, registered address.
+// Recommend a final review by the client or their legal adviser before relying on it.
+const title = "Privacy Policy | SCM Melbourne Security";
+const description = "Read SCM's privacy policy. Learn how we collect, use, store and protect your personal information online under the Australian Privacy Act 1988 and the APPs.";
+const updated = "Last updated 18 June 2026";
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "BreadcrumbList", itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Privacy Policy", item: site.url + "/privacy-policy/" },
+    ]},
+    { "@type": "WebPage", name: title, url: site.url + "/privacy-policy/", description: description, inLanguage: "en-AU" },
+  ],
+};
+---
+<Base title={title} description={description} path="/privacy-policy/" ogImage="/assets/logo-lockup.png">
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schema)} />
+  <Header />
+  <section class="hero">
+    <div class="container" style="padding:50px 24px 44px;max-width:840px;text-align:center">
+      <div class="crumbs" style="color:#B9B7A6;justify-content:center"><a href="/" style="color:var(--lime-soft)">Home</a> &nbsp;/&nbsp; Privacy Policy</div>
+      <h1 style="margin-top:10px">Privacy Policy</h1>
+      <p class="lead" style="margin:10px auto 0">How {site.brand} collects, uses, stores and protects your personal information.</p>
+    </div>
+  </section>
+
+  <div class="legal">
+    <p class="updated">{updated}</p>
+    <p>{site.brand} ("we", "us", "our") is committed to protecting your privacy. This policy explains how we handle personal information in line with the Australian Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs). It applies to information we collect through this website, our quote and enquiry forms, and the delivery of our security services across Victoria.</p>
+
+    <h2>Who we are</h2>
+    <p>We're a licensed Melbourne security company operating across Greater Melbourne and Victoria. Our registered business name and ABN are available on request and shown on our quotes and invoices. For privacy matters, you can contact us using the details at the end of this policy. We act as the controller of the personal information we collect from you.</p>
+
+    <h2>What personal information we collect</h2>
+    <p>We collect only the information we need to respond to you and deliver our services, which may include:</p>
+    <ul>
+      <li>Contact and enquiry details you give us, such as your name, email, phone number, business name and the details of your site or event.</li>
+      <li>Information needed to quote and deliver a job, including site addresses, dates, hours and risk details.</li>
+      <li>Operational records created while we provide services, such as incident reports and, where CCTV or monitoring is part of the service, related footage and logs.</li>
+      <li>Website and analytics data, such as your IP address, browser type, pages visited and cookie data.</li>
+    </ul>
+
+    <h2>How we collect your information</h2>
+    <p>We collect information directly from you when you complete a form, call us or email us. We also collect some information automatically through cookies and website analytics when you browse this site. In some cases we may receive information from third parties, such as a referrer or a client engaging us on your behalf.</p>
+
+    <h2>Why we collect and use your information</h2>
+    <p>We use your information to respond to your enquiries and quotes, deliver and manage our security services, handle billing and payments, meet our legal and licensing obligations, and improve our website. Where you've consented, we may also send you relevant updates. You can opt out of marketing at any time.</p>
+
+    <h2>Disclosure of your information</h2>
+    <p>We don't sell your personal information. We may disclose it to our staff and approved contractors who deliver your service, to trusted service providers who support our operations (such as IT and payment providers), and to regulators or law enforcement where the law requires or permits it.</p>
+
+    <h2>Cookies and website analytics</h2>
+    <p>This website uses cookies and analytics tools to understand how visitors use the site and to improve it. You can disable cookies in your browser settings, though some parts of the site may not work as intended if you do.</p>
+
+    <h2>Data storage and security</h2>
+    <p>We take reasonable steps to protect your information from misuse, loss and unauthorised access, including access controls and secure systems. We keep personal information only for as long as we need it for the purposes above, or as required by law, and then take reasonable steps to destroy or de-identify it.</p>
+
+    <h2>Overseas disclosure</h2>
+    <p>Some of the service providers we use (for example cloud hosting or analytics) may store or process data outside Australia. Where that happens, we take reasonable steps to ensure your information is handled consistently with the APPs, including APP 8 on cross-border disclosure.</p>
+
+    <h2>Accessing and correcting your information</h2>
+    <p>You have the right to ask for access to the personal information we hold about you and to ask us to correct it if it's inaccurate, out of date or incomplete. Contact us using the details below and we'll respond within a reasonable time.</p>
+
+    <h2>How to make a privacy complaint</h2>
+    <p>If you believe we've mishandled your personal information, please contact us first so we can try to resolve it. If you're not satisfied with our response, you can escalate your complaint to the Office of the Australian Information Commissioner (OAIC) at oaic.gov.au.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>We may update this policy from time to time to reflect changes in our practices or the law. The current version is always the one published here, so please check the last-updated date above.</p>
+
+    <h2>Contact us</h2>
+    <p>For any privacy question or request, contact us at <a href={"mailto:" + site.email}>{site.email}</a> or on {site.phone}. You can also reach us through our <a href="/contact/">contact page</a>.</p>
+
+    <p class="legal-note">This privacy policy is provided as general information. Final business details (registered name, ABN, registered address) and confirmation of our exact data practices are being finalised, and we recommend reviewing this policy with a legal adviser before relying on it.</p>
+  </div>
+
+  <Footer />
+</Base>

@@ -68,7 +68,7 @@ Status legend: ✅ LIVE | ⏳ PLANNED (brief ready, page not built yet)
 | /licensing-compliance/ | security licence victoria (buyer) | ⏳ |
 | /reviews/ | reviews | LIVE ✅ |
 | /our-process/ | our process | ⏳ |
-| /privacy-policy/ /terms-of-service/ | n/a | ⏳ |
+| /privacy-policy/ /terms-of-service/ | n/a | LIVE ✅ |
 
 ⭐ = lowest-SD quick wins (build these first). Full briefs for every page:
 research-output/security-company-melbourne-au/phase-8-briefs/[slug]-brief.md

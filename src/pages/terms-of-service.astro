@@ -1,0 +1,79 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { site } from "../site.js";
+
+// Legal page (AU framework: Australian Consumer Law; governing law Victoria).
+// CLIENT INPUT pending: registered legal name, ABN, exact payment/cancellation/min-shift terms.
+// Recommend a final review by the client or their legal adviser before relying on it.
+const title = "Terms of Service | SCM Melbourne Security";
+const description = "Read the terms of service for SCM, a licensed Melbourne security company. Learn the conditions for using our website and engaging our security services.";
+const updated = "Last updated 18 June 2026";
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "BreadcrumbList", itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url + "/" },
+      { "@type": "ListItem", position: 2, name: "Terms of Service", item: site.url + "/terms-of-service/" },
+    ]},
+    { "@type": "WebPage", name: title, url: site.url + "/terms-of-service/", description: description, inLanguage: "en-AU" },
+  ],
+};
+---
+<Base title={title} description={description} path="/terms-of-service/" ogImage="/assets/logo-lockup.png">
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(schema)} />
+  <Header />
+  <section class="hero">
+    <div class="container" style="padding:50px 24px 44px;max-width:840px;text-align:center">
+      <div class="crumbs" style="color:#B9B7A6;justify-content:center"><a href="/" style="color:var(--lime-soft)">Home</a> &nbsp;/&nbsp; Terms of Service</div>
+      <h1 style="margin-top:10px">Terms of Service</h1>
+      <p class="lead" style="margin:10px auto 0">The conditions for using this website and engaging {site.brand}'s security services.</p>
+    </div>
+  </section>
+
+  <div class="legal">
+    <p class="updated">{updated}</p>
+    <p>These terms govern your use of this website and your engagement of {site.brand}'s ("we", "us", "our") security services. By using this website or engaging our services, you accept these terms. They operate alongside any separate written quote or service agreement we provide for a specific job.</p>
+
+    <h2>About these terms</h2>
+    <p>These terms apply to all visitors to this website and to clients who engage our services. Our registered business name and ABN are shown on our quotes and invoices and are available on request. Where a signed service agreement covers a specific engagement, that agreement takes precedence over these general terms for that job.</p>
+
+    <h2>Use of our website</h2>
+    <p>You may use this website for lawful purposes only, to learn about our services and request a quote. You must not misuse the site, attempt to gain unauthorised access, disrupt it, or use it to send unlawful or harmful content. We may update or withdraw site content at any time.</p>
+
+    <h2>Our security services</h2>
+    <p>We provide licensed security services across Victoria, including guarding, patrols, event security and electronic security. All services are delivered under our Victorian licensing, which you can read about on our <a href="/licensing-compliance/">licensing and compliance</a> page. Each engagement is subject to a separate quote or service agreement that sets out the specific scope, rates and conditions.</p>
+
+    <h2>Quotes, bookings and payment</h2>
+    <p>Quotes are valid for the period stated on the quote and are based on the information you provide. A booking is confirmed once you accept the quote in writing. A minimum shift or call-out usually applies and is set out in your quote. Invoices are payable by the date shown on the invoice, and late payment may incur reasonable recovery costs.</p>
+
+    <h2>Cancellations and changes</h2>
+    <p>If you need to cancel or change a confirmed booking, please give us as much notice as possible. Short-notice cancellations may attract a fee, because guards and rosters are committed ahead of time. We'll set out any cancellation terms in your quote or service agreement so they're clear before you book.</p>
+
+    <h2>Client responsibilities</h2>
+    <p>To let us do our job safely and well, you agree to provide accurate information about your site and requirements, reasonable site access, and a safe working environment for our personnel. You agree to cooperate with reasonable operational requests so we can deliver the agreed service.</p>
+
+    <h2>Liability and indemnity</h2>
+    <p>Nothing in these terms excludes, restricts or modifies any consumer guarantee, right or remedy you have under the Australian Consumer Law that cannot lawfully be excluded. To the extent permitted by law, our liability is limited to resupplying the relevant service or paying the cost of doing so, and we're not liable for indirect or consequential loss. You agree to indemnify us against loss caused by your breach of these terms or your negligence, to the extent permitted by law.</p>
+
+    <h2>Intellectual property</h2>
+    <p>The content, branding, text, graphics and design on this website are owned by us or our licensors and are protected by law. You may not copy, reproduce or reuse our content without our written permission, except as allowed by law.</p>
+
+    <h2>Privacy</h2>
+    <p>We handle your personal information in line with our <a href="/privacy-policy/">privacy policy</a>, which explains what we collect, how we use it and your rights under the Australian Privacy Act 1988 and the APPs.</p>
+
+    <h2>Governing law</h2>
+    <p>These terms are governed by the laws of Victoria, Australia. You and we submit to the non-exclusive jurisdiction of the courts of Victoria.</p>
+
+    <h2>Changes to these terms</h2>
+    <p>We may update these terms from time to time. The current version is always the one published here, and your continued use of the website or our services means you accept the updated terms. Please check the last-updated date above.</p>
+
+    <h2>Contact us</h2>
+    <p>For any question about these terms, contact us at <a href={"mailto:" + site.email}>{site.email}</a> or on {site.phone}, or through our <a href="/contact/">contact page</a>.</p>
+
+    <p class="legal-note">These terms are provided as general information. Final business details and our exact payment, cancellation and service terms are being finalised, and we recommend reviewing them with a legal adviser before relying on them.</p>
+  </div>
+
+  <Footer />
+</Base>
