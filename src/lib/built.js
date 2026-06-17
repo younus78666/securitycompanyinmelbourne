@@ -3,6 +3,7 @@
 // When you create a new static .astro page, add its path to staticPages.
 import { services } from "./services.js";
 import { posts } from "./posts.js";
+import { locations } from "./locations.js";
 
 const staticPages = [
   "/",
@@ -17,6 +18,7 @@ const staticPages = [
 export const built = new Set([
   ...staticPages,
   ...services.map(s => "/" + s.slug + "/"),
+  ...locations.map(s => "/" + s.slug + "/"),
   ...posts.map(p => "/blog/" + p.slug + "/"),
 ]);
 

@@ -44,7 +44,7 @@ Status legend: ✅ LIVE | ⏳ PLANNED (brief ready, page not built yet)
 ## LOCATION (selective)
 | Page | Primary KW | Vol | SD | H1 must contain | Status |
 |---|---|---|---|---|---|
-| /security-company-geelong/ | security company geelong | 70-90 | 21 ⭐ | "security company geelong" | ⏳ |
+| /security-company-geelong/ | security company geelong | 70-90 | 21 ⭐ | "security company geelong" | LIVE ✅ |
 | /security-services-melbourne-cbd/ | security guards melbourne cbd | local | low | "security" + "melbourne cbd" | ⏳ |
 | /security-company-dandenong/ | security company dandenong | local | low | "security company dandenong" | ⏳ |
 | /service-areas/ | security company near me / areas | local | - | "areas we cover" / "security across melbourne" | ⏳ |

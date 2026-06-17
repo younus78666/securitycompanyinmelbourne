@@ -8,7 +8,7 @@ const regions = [
   { name: "Inner suburbs", areas: "Richmond, St Kilda, Footscray, Brunswick, Preston, Prahran, South Yarra" },
   { name: "Eastern & southern", areas: "Box Hill, Glen Waverley, Dandenong, Frankston, Cranbourne, Clayton" },
   { name: "Northern & western", areas: "Epping, Craigieburn, Sunshine, Werribee, Point Cook, Melton" },
-  { name: "Geelong & regional", areas: "Geelong CBD, Waterfront, Corio, Norlane, Armstrong Creek" },
+  { name: "Geelong & regional", areas: "Geelong CBD, Waterfront, Corio, Norlane, Armstrong Creek", href: "/security-company-geelong/" },
 ];
 const schema = {
   "@context": "https://schema.org",
@@ -30,7 +30,7 @@ const schema = {
       <div class="crumbs"><a href="/">Home</a> &nbsp;/&nbsp; Service Areas</div>
       <span class="eyebrow" style="color:var(--lime-soft)">Where we work</span>
       <h1 style="margin-top:8px">Security across Greater Melbourne</h1>
-      <p>We cover the whole of Greater Melbourne, plus Geelong and Dandenong. Wherever your site sits, you get a local crew that knows the area and can be there quickly, 24/7.</p>
+      <p>We cover the whole of Greater Melbourne, plus our dedicated <a href="/security-company-geelong/" style="color:var(--lime-soft);font-weight:600">security company in Geelong</a> and Dandenong. Wherever your site sits, you get a local crew that knows the area and can be there quickly, 24/7.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:22px">
         <a class="btn btn-primary" href="/contact/">Get a Free Quote</a>
         <a class="btn btn-ghost" style="border-color:var(--lime);color:var(--cream)" href={site.phoneHref}>Call {site.phone}</a>
@@ -41,7 +41,7 @@ const schema = {
     <div class="container">
       <div class="diff" style="grid-template-columns:repeat(2,1fr)">
         {regions.map(r => (
-          <div class="col"><h3 style="font-family:var(--serif)">{r.name}</h3><p>{r.areas}</p></div>
+          <div class="col"><h3 style="font-family:var(--serif)">{r.href ? <a href={r.href} style="color:var(--olive)">{r.name}</a> : r.name}</h3><p>{r.areas}</p></div>
         ))}
       </div>
       <p style="color:var(--muted);margin-top:24px;text-align:center">Don't see your suburb? We almost certainly cover it. <a href="/contact/" style="color:var(--olive);font-weight:600">Ask us</a> or call {site.phone}.</p>
