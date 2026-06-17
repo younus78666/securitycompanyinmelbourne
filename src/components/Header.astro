@@ -4,7 +4,7 @@ import { logoSvg, icons, drawerIcon } from "../lib/brand.js";
 ---
 <header class="site-header">
   <div class="container nav">
-    <a href="/" aria-label={site.brand + " home"} set:html={logoSvg('#3B3B25', '#C7D43F', '#6B6B57')} />
+    <a href="/" aria-label={site.brand + " home"}><img class="logo" src="/assets/logo-lockup.png" alt={site.brand} width="333" height="82" /></a>
 
     <nav class="nav-links" aria-label="Primary">
       <div class="has-menu wide">
@@ -50,7 +50,7 @@ import { logoSvg, icons, drawerIcon } from "../lib/brand.js";
   <div class="drawer-bg" data-close></div>
   <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
     <div class="drawer-head">
-      <a href="/" aria-label={site.brand + " home"} set:html={logoSvg('#3B3B25', '#C7D43F', '#6B6B57')} />
+      <a href="/" aria-label={site.brand + " home"}><img class="logo" src="/assets/logo-lockup.png" alt={site.brand} width="320" height="79" /></a>
       <button class="drawer-close" data-close aria-label="Close menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
