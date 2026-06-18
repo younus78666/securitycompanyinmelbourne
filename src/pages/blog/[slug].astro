@@ -92,24 +92,11 @@ const schema = {
           <div><b>{post.author}</b><span>{post.authorRole}. Licensed in Victoria, protecting Melbourne 24/7.</span></div>
         </div>
 
-        <!-- COMMENTS -->
-        <h2 style="font-family:var(--serif);font-size:1.5rem;margin:8px 0 16px">Comments</h2>
+        <!-- QUESTIONS CTA -->
         <div class="comments">
-          <div class="comment">
-            <span class="av">DM</span>
-            <div><b>David M.</b> <span class="cmeta">Facility manager</span><p style="margin:6px 0 0">Really useful breakdown. The licence-check tip saved us from a dodgy quote.</p></div>
-          </div>
-          <div class="comment" style="border-bottom:0">
-            <span class="av">SP</span>
-            <div><b>Sarah P.</b> <span class="cmeta">Event organiser</span><p style="margin:6px 0 0">The guards-per-guest table is exactly what I needed for our spring event.</p></div>
-          </div>
-          <form class="cform" id="cForm" novalidate>
-            <input type="text" name="name" placeholder="Your name" required />
-            <textarea name="comment" rows="3" placeholder="Add a comment" required></textarea>
-            <div><button type="submit" class="btn btn-primary">Post comment</button></div>
-            <p class="hf-note" id="cMsg" hidden style="text-align:left">Thanks, your comment is awaiting moderation.</p>
-          </form>
-          <p class="hf-note" style="text-align:left">[CLIENT INPUT: connect a comment system such as Disqus, or a moderated form backend.]</p>
+          <h2 style="font-family:var(--serif);font-size:1.5rem;margin:8px 0 12px">Have a question about this guide?</h2>
+          <p style="margin:0 0 16px">If you'd like advice for your specific site, event or budget, our licensed Melbourne team's happy to help, with no obligation.</p>
+          <a class="btn btn-primary" href="/contact/">Ask our team &rarr;</a>
         </div>
       </div>
 

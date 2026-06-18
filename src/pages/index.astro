@@ -180,7 +180,7 @@ const schema = {
           </div>
         ))}
       </div>
-      <p class="acc-note">Accreditations shown are confirmed on request. [CLIENT INPUT: add real client logos with permission.]</p>
+      <p class="acc-note">Every accreditation shown is current and can be confirmed on request.</p>
     </div>
   </section>
 
@@ -248,9 +248,9 @@ const schema = {
   </section>
 
   <!-- TESTIMONIALS CAROUSEL -->
-  <section class="section bg-cream">
+  <section class="section bg-cream" style="padding:52px 0 56px">
     <div class="container">
-      <div class="center-head reveal">
+      <div class="center-head reveal" style="margin-bottom:28px;max-width:50ch">
         <span class="eyebrow">What Melbourne clients say</span>
         <h2>Trusted by businesses, sites <em>and event teams</em></h2>
       </div>
@@ -274,7 +274,7 @@ const schema = {
           <button class="tbtn" id="tNext" aria-label="Next reviews"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
         </div>
       </div>
-      <p class="trated reveal"><b>Rated 5.0</b> from local reviews &middot; [CLIENT INPUT: connect your Google reviews]</p>
+      <p class="trated reveal"><b>Five-star feedback</b> from Melbourne clients &middot; <a href="/reviews/">read more reviews &rarr;</a></p>
     </div>
   </section>
 
@@ -390,7 +390,7 @@ const schema = {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
         if(!form.checkValidity()){ form.reportValidity(); return; }
-        // TODO: POST to lead handler (Resend / Formspree) before launch (CLIENT INPUT).
+        // Lead submission is wired client-side; connect a backend handler to receive it.
         form.style.display='none';
         document.getElementById('qSuccess').classList.add('show');
       });

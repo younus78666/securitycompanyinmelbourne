@@ -419,8 +419,9 @@ em{font-style:italic}
   display:grid;place-items:center;font-weight:700;font-family:var(--serif);flex:none}
 .tcard figcaption b{display:block;font-size:.92rem;color:var(--ink)}
 .tcard figcaption .role{font-size:.8rem;color:var(--muted)}
-.trated{text-align:center;margin-top:26px;color:var(--muted);font-size:.86rem}
+.trated{text-align:center;margin-top:14px;color:var(--muted);font-size:.86rem}
 .trated b{color:var(--olive)}
+.trated a{color:var(--olive);font-weight:600;text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:2px;text-underline-offset:3px}
 
 /* button shine */
 .btn-primary{position:relative;overflow:hidden}
@@ -493,7 +494,7 @@ em{font-style:italic}
 .tviewport::-webkit-scrollbar{display:none}
 .ttrack{display:flex;gap:22px;padding:4px}
 .tcarousel .tcard{flex:0 0 calc((100% - 44px)/3);scroll-snap-align:start}
-.tctrl{display:flex;justify-content:center;gap:10px;margin-top:26px;align-items:center}
+.tctrl{display:flex;justify-content:center;gap:10px;margin-top:20px;align-items:center}
 .tbtn{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--white);
   display:grid;place-items:center;cursor:pointer;color:var(--olive);transition:background .2s,transform .2s}
 .tbtn:hover{background:var(--olive);color:var(--lime)}
