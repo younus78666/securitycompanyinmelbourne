@@ -96,7 +96,7 @@ export const services = [
     title: "Commercial Security Melbourne | Business Protection",
     metaDesc: "Protect your Melbourne business with licensed commercial security. We secure offices, retail, warehouses and sites with insured guards 24/7. Get a free quote now.",
     h1: "Commercial Security in Melbourne for Business and Property",
-    heroImg: "/assets/control-room.jpg",
+    heroImg: "/assets/control-room.webp",
     heroAlt: "Commercial security monitoring protecting a Melbourne business",
     og: "/assets/og/commercial-security-melbourne.jpg",
     intro: "Commercial security means licensed guards and systems protecting your business premises, staff and assets from theft, vandalism and trespass. We secure offices, retail, warehouses and industrial sites across Melbourne, with insured, police-checked guards around the clock.",
