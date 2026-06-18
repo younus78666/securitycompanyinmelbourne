@@ -89,7 +89,8 @@ em{font-style:italic}
   padding-bottom:2px}
 
 /* Services cards */
-.center-head{text-align:center;max-width:42ch;margin:0 auto 44px}
+.center-head{text-align:center;max-width:56ch;margin:0 auto 40px}
+.center-head p{max-width:60ch;margin-left:auto;margin-right:auto}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
   padding:30px 24px;transition:transform .18s ease,box-shadow .2s ease}
@@ -135,7 +136,7 @@ em{font-style:italic}
 .cta-band h2 em{color:var(--olive)}
 
 /* Pre-footer (CTA + subscribe) */
-.prefooter{position:relative;overflow:hidden;color:var(--cream);margin-top:56px;
+.prefooter{position:relative;overflow:hidden;color:var(--cream);margin-top:0;
   border-radius:var(--radius-lg) var(--radius-lg) 0 0;padding:66px 0 72px;
   background:linear-gradient(158deg,#45452c 0%,var(--olive) 55%,var(--olive-deep) 100%)}
 .prefooter::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;
@@ -162,7 +163,7 @@ em{font-style:italic}
 /* Footer */
 .footer{background:var(--olive-deep);color:var(--cream);margin-top:0}
 .footer-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:36px;padding:60px 0 30px}
-.footer .logo{height:38px;margin-bottom:16px}
+.footer .logo{height:40px;width:auto;margin-bottom:16px}
 .footer p{color:#CFCDBC;font-size:.92rem}
 .footer h4{font-family:var(--sans);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;
   color:var(--lime-soft);margin:0 0 14px}
@@ -408,15 +409,18 @@ em{font-style:italic}
 .diff .col.feat .dic{background:rgba(255,255,255,.1);color:var(--lime)}
 
 /* testimonials grid (on-brand social proof) */
-.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.tcard{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px;
-  display:flex;flex-direction:column;gap:15px;transition:transform .18s ease,box-shadow .2s ease}
-.tcard:hover{transform:translateY(-5px);box-shadow:0 24px 46px -26px rgba(40,40,20,.4)}
-.tcard .stars{color:#C8A24A;letter-spacing:2px;font-size:.95rem}
-.tcard blockquote{font-family:var(--serif);font-size:1.08rem;line-height:1.5;color:var(--ink);margin:0;flex:1}
-.tcard figcaption{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:15px}
-.tcard .avatar{width:44px;height:44px;border-radius:50%;background:var(--olive);color:var(--lime);
-  display:grid;place-items:center;font-weight:700;font-family:var(--serif);flex:none}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tcard{position:relative;background:var(--white);border:1px solid rgba(226,220,205,.65);border-radius:20px;
+  padding:26px 26px 22px;display:flex;flex-direction:column;gap:14px;overflow:hidden;
+  box-shadow:0 10px 30px -20px rgba(40,40,20,.32);transition:transform .18s ease,box-shadow .2s ease}
+.tcard::before{content:"\201C";position:absolute;top:6px;right:22px;font-family:var(--serif);font-size:3.6rem;
+  line-height:1;color:var(--lime);opacity:.5;pointer-events:none}
+.tcard:hover{transform:translateY(-4px);box-shadow:0 26px 50px -28px rgba(40,40,20,.45)}
+.tcard .stars{color:#C8A24A;letter-spacing:3px;font-size:.92rem;position:relative;z-index:1}
+.tcard blockquote{font-family:var(--serif);font-size:1.06rem;line-height:1.55;color:var(--ink);margin:0;flex:1;position:relative;z-index:1}
+.tcard figcaption{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:14px;margin-top:2px}
+.tcard .avatar{width:42px;height:42px;border-radius:50%;background:var(--olive);color:var(--lime);
+  display:grid;place-items:center;font-weight:700;font-family:var(--serif);flex:none;font-size:.95rem}
 .tcard figcaption b{display:block;font-size:.92rem;color:var(--ink)}
 .tcard figcaption .role{font-size:.8rem;color:var(--muted)}
 .trated{text-align:center;margin-top:14px;color:var(--muted);font-size:.86rem}
@@ -492,8 +496,8 @@ em{font-style:italic}
 .tcarousel{position:relative}
 .tviewport{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none}
 .tviewport::-webkit-scrollbar{display:none}
-.ttrack{display:flex;gap:22px;padding:4px}
-.tcarousel .tcard{flex:0 0 calc((100% - 44px)/3);scroll-snap-align:start}
+.ttrack{display:flex;gap:16px;padding:4px}
+.tcarousel .tcard{flex:0 0 calc((100% - 32px)/3);scroll-snap-align:start}
 .tctrl{display:flex;justify-content:center;gap:10px;margin-top:20px;align-items:center}
 .tbtn{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--white);
   display:grid;place-items:center;cursor:pointer;color:var(--olive);transition:background .2s,transform .2s}
