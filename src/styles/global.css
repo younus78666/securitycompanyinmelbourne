@@ -746,3 +746,12 @@ em{font-style:italic}
 .legal a{color:var(--olive);font-weight:600;text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:2px;text-underline-offset:3px}
 .legal .updated{color:var(--muted);font-size:.9rem;margin-bottom:8px}
 .legal .legal-note{background:var(--mist);border:1px solid var(--line);border-radius:14px;padding:16px 20px;font-size:.92rem;color:var(--muted);margin-top:28px}
+
+/* ===== SECTION POLISH: consistent modern headers + card depth (within 1280px) ===== */
+.center-head .eyebrow{display:inline-block}
+.center-head .eyebrow::after{content:"";display:block;width:34px;height:2px;background:var(--lime);border-radius:2px;margin:10px auto 8px}
+.center-head h2{font-size:clamp(2.1rem,3.4vw,2.9rem)}
+/* subtle resting depth so content cards feel modern, not flat outlines */
+.card,.diff .col,.bcard,.stats .stat,.acc-badge{box-shadow:0 8px 24px -18px rgba(40,40,20,.26)}
+.diff .col.feat{box-shadow:0 20px 44px -24px rgba(40,40,20,.5)}
+.sector img{box-shadow:0 12px 30px -20px rgba(40,40,20,.4)}
